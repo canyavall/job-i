@@ -1,0 +1,1083 @@
+{
+  "version": 12,
+  "_readme": [
+    "Shared vocabulary for the two labels every job carries: what KIND of work it is",
+    "(profession) and what FIELD it is in (domain). Both are facts about the labour market,",
+    "true no matter who is looking, which is why they live in sources/ and not in a profile.",
+    "Which of these keys belong to a person is the opinion, and that lives in",
+    "profiles/<name>/profile.json under `professions` and `domains`.",
+    "",
+    "The two axes are deliberately independent. Project management happens in a hospital and",
+    "at YouTube; a profession label on its own cannot tell those apart, which is exactly the",
+    "leak this file exists to close. 'Related to me' is profession AND domain, never either.",
+    "",
+    "`description` and `examples` are what the profession and field cards show - a sentence on what it is and",
+    "real job titles (a profession) or employers (a field) that fall in it - in the wizard and the Profile tab. They classify nothing.",
+    "",
+    "`remote: false` on a profession says the work is mostly done on site; the new-profile",
+    "wizard reads it to default the remote question. It filters nothing.",
+    "",
+    "Matching is case-insensitive on title + the first 1500 characters of the description,",
+    "with word boundaries, so 'lead' does not fire on 'leadership' and 'ai' does not fire on",
+    "'chain'. A keyword containing a space is matched as a phrase.",
+    "",
+    "`domains[].categories` maps the employer industries already recorded in",
+    "sources/companies.json onto a domain, so a posting with a terse title still gets a",
+    "domain from who is hiring. That only works for jobs pulled from a company connector -",
+    "board rows carry a free-text employer name that is not in the registry (65% of Alex's",
+    "rows and 84% of Sam's come from a company; the rest depend on the text alone).",
+    "Deliberately unmapped: swiss-corporate, scale-up, consulting, remote-first. They say",
+    "how big or how remote an employer is, not what field it works in - mapping them would",
+    "make On a software company and SIX a bank by assertion rather than by evidence.",
+    "",
+    "`isco` is the ISCO-08 2-digit groups a profession's work falls in, and `kldb` the few German",
+    "KldB 2010 5-digit codes (code -> label) it maps to. Both are how official salary statistics",
+    "(sources/salaries.json, `app/server/reports/salaries.ts`) join onto this vocabulary; `kldb`",
+    "also decides which occupations the Entgeltatlas is asked about. A rough many-to-many map:",
+    "a profession is a kind of work, an ISCO group is a job family, and neither nests in the other."
+  ],
+  "professions": {
+    "engineering": {
+      "label": "Engineering",
+      "keywords": [
+        "engineer",
+        "engineering",
+        "developer",
+        "development engineer",
+        "architect",
+        "programmer",
+        "sre",
+        "devops",
+        "technician",
+        "architekt*",
+        "entwickler",
+        "softwareentwickler",
+        "ingenieur*",
+        "informatik*",
+        "system engineer",
+        "systems engineer",
+        "security engineer",
+        "security architect",
+        "information security",
+        "it security",
+        "cyber security",
+        "cybersecurity",
+        "security analyst",
+        "penetration test*",
+        "system administrator",
+        "sysadmin"
+      ],
+      "isco": [
+        "21",
+        "25",
+        "31",
+        "35"
+      ],
+      "kldb": {
+        "43104": "Informatik - Experte",
+        "43414": "Softwareentwicklung - Experte"
+      },
+      "description": "Designs, builds and maintains technical systems - software, hardware, machines or infrastructure.",
+      "examples": [
+        "Software Engineer",
+        "DevOps Engineer",
+        "Mechanical Engineer",
+        "Electrical Engineer",
+        "Systems Engineer"
+      ]
+    },
+    "research": {
+      "remote": false,
+      "label": "Research & Development",
+      "keywords": [
+        "scientist",
+        "scientific",
+        "research",
+        "researcher",
+        "r&d",
+        "postdoc",
+        "principal investigator",
+        "group leader",
+        "study director",
+        "preclinical",
+        "translational",
+        "laboratory",
+        "lab head"
+      ],
+      "isco": [
+        "21",
+        "22"
+      ],
+      "kldb": {
+        "41204": "Biologie - Experte",
+        "41304": "Chemie - Experte"
+      },
+      "description": "Creates new knowledge or products through experiments, studies and scientific work, in a lab, a company R&D team or academia.",
+      "examples": [
+        "Research Scientist",
+        "Postdoctoral Researcher",
+        "R&D Engineer",
+        "Preclinical Scientist",
+        "Principal Scientist"
+      ]
+    },
+    "clinical": {
+      "label": "Clinical",
+      "keywords": [
+        "clinical trial",
+        "clinical operations",
+        "clinical research",
+        "clinical affairs",
+        "clinical study",
+        "cra",
+        "medical affairs",
+        "medical writer",
+        "pharmacovigilance",
+        "clinical",
+        "medical manager",
+        "medical advisor",
+        "medical science liaison",
+        "msl"
+      ],
+      "isco": [
+        "22",
+        "32"
+      ],
+      "description": "Runs or supports studies in people - trial design, site management, monitoring and clinical data.",
+      "examples": [
+        "Clinical Research Associate",
+        "Clinical Project Manager",
+        "Clinical Trial Manager",
+        "Study Coordinator",
+        "Clinical Data Manager"
+      ]
+    },
+    "project-management": {
+      "label": "Project & Programme Management",
+      "keywords": [
+        "project manager",
+        "project management",
+        "project lead",
+        "project leader",
+        "programme manager",
+        "program manager",
+        "programme lead",
+        "program lead",
+        "pmo",
+        "work package",
+        "technical project",
+        "portfolio manager"
+      ],
+      "isco": [
+        "12",
+        "13",
+        "24"
+      ],
+      "description": "Plans and delivers projects on time and budget - scope, timelines, risks, budgets and the people involved.",
+      "examples": [
+        "Project Manager",
+        "Programme Manager",
+        "PMO Lead",
+        "R&D Project Leader",
+        "Scrum Master"
+      ]
+    },
+    "product-management": {
+      "label": "Product Management",
+      "keywords": [
+        "product manager",
+        "product management",
+        "product owner",
+        "product lead",
+        "product development",
+        "roadmap",
+        "product marketing"
+      ],
+      "isco": [
+        "12",
+        "24"
+      ],
+      "description": "Decides what a product should be and why - users, market, roadmap - and steers its development.",
+      "examples": [
+        "Product Manager",
+        "Product Owner",
+        "Technical Product Manager",
+        "Product Development Manager",
+        "Head of Product"
+      ]
+    },
+    "management": {
+      "label": "Leadership & Management",
+      "keywords": [
+        "head of",
+        "director",
+        "vp",
+        "vice president",
+        "chief",
+        "cto",
+        "cio",
+        "ceo",
+        "coo",
+        "team lead",
+        "team leader",
+        "line management",
+        "department head",
+        "site head",
+        "managing director"
+      ],
+      "isco": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "kldb": {
+        "71304": "Unternehmensorganisation und -strategie - Experte"
+      },
+      "description": "Leads people, teams or whole organisations - direction, budgets, hiring and results.",
+      "examples": [
+        "Head of R&D",
+        "Engineering Manager",
+        "Director of Operations",
+        "Team Leader",
+        "General Manager"
+      ]
+    },
+    "quality-regulatory": {
+      "label": "Quality & Regulatory",
+      "keywords": [
+        "quality assurance",
+        "quality management",
+        "quality manager",
+        "qms",
+        "regulatory affairs",
+        "regulatory",
+        "compliance",
+        "capa",
+        "audit",
+        "notified body",
+        "iso 13485",
+        "iso 9001",
+        "gmp",
+        "gxp",
+        "validation",
+        "quality",
+        "qualitat*",
+        "qualität*"
+      ],
+      "isco": [
+        "21",
+        "31"
+      ],
+      "description": "Makes sure products and processes meet standards and the law - quality systems, audits, approvals and compliance.",
+      "examples": [
+        "Quality Assurance Manager",
+        "Regulatory Affairs Specialist",
+        "QA Engineer",
+        "Validation Engineer",
+        "Quality Manager"
+      ]
+    },
+    "data-analytics": {
+      "label": "Data & Analytics",
+      "keywords": [
+        "data scientist",
+        "data engineer",
+        "data analyst",
+        "analytics",
+        "machine learning engineer",
+        "bioinformatic",
+        "biostatistic",
+        "statistician",
+        "business intelligence",
+        "data governance",
+        "data management",
+        "data quality",
+        "data privacy",
+        "data steward*",
+        "data platform",
+        "data warehouse",
+        "dwh"
+      ],
+      "isco": [
+        "21",
+        "25"
+      ],
+      "description": "Turns data into answers - analysis, statistics, dashboards, data pipelines and models.",
+      "examples": [
+        "Data Scientist",
+        "Data Analyst",
+        "Data Engineer",
+        "Biostatistician",
+        "BI Developer"
+      ]
+    },
+    "manufacturing-operations": {
+      "remote": false,
+      "label": "Manufacturing & Operations",
+      "keywords": [
+        "manufacturing",
+        "production",
+        "supply chain",
+        "operations manager",
+        "process engineer",
+        "logistics",
+        "warehouse",
+        "procurement",
+        "maintenance",
+        "shop floor",
+        "operations",
+        "technical service",
+        "field service",
+        "service specialist",
+        "service manager"
+      ],
+      "isco": [
+        "13",
+        "31",
+        "72",
+        "81"
+      ],
+      "kldb": {
+        "27304": "Technische Produktionsplanung und -steuerung - Experte"
+      },
+      "description": "Makes and ships things - production, process engineering, supply chain and logistics.",
+      "examples": [
+        "Production Manager",
+        "Process Engineer",
+        "Supply Chain Manager",
+        "Manufacturing Technician",
+        "Operations Manager"
+      ]
+    },
+    "commercial": {
+      "label": "Sales, Marketing & Commercial",
+      "keywords": [
+        "sales",
+        "account manager",
+        "account executive",
+        "business development",
+        "marketing",
+        "customer success",
+        "commercial manager",
+        "key account",
+        "partnerships",
+        "growth manager"
+      ],
+      "isco": [
+        "12",
+        "24",
+        "33",
+        "52"
+      ],
+      "description": "Sells and markets products and services - winning customers, campaigns, key accounts and business development.",
+      "examples": [
+        "Account Manager",
+        "Sales Representative",
+        "Marketing Manager",
+        "Business Development Manager",
+        "Key Account Manager"
+      ]
+    },
+    "support-admin": {
+      "label": "Support & Administration",
+      "keywords": [
+        "customer support",
+        "customer service",
+        "help desk",
+        "helpdesk",
+        "service desk",
+        "office manager",
+        "assistant",
+        "secretariat",
+        "receptionist",
+        "payroll"
+      ],
+      "isco": [
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "description": "Keeps an organisation and its customers running day to day - administration, assistance and service desks.",
+      "examples": [
+        "Office Manager",
+        "Executive Assistant",
+        "Customer Service Representative",
+        "IT Support Specialist",
+        "Receptionist"
+      ]
+    },
+    "hr": {
+      "label": "People & HR",
+      "keywords": [
+        "hr",
+        "human resources",
+        "hr manager",
+        "hr business partner",
+        "hrbp",
+        "people operations",
+        "people partner",
+        "talent acquisition",
+        "recruiter",
+        "recruiting",
+        "personalwesen",
+        "personalberater*",
+        "compensation and benefits",
+        "total rewards",
+        "employer branding"
+      ],
+      "isco": [
+        "12",
+        "24",
+        "33"
+      ],
+      "description": "Finds, develops and looks after people - recruiting, HR business partnering, pay and learning.",
+      "examples": [
+        "HR Business Partner",
+        "Recruiter",
+        "Talent Acquisition Specialist",
+        "Payroll Specialist",
+        "Learning & Development Manager"
+      ]
+    },
+    "legal": {
+      "label": "Legal & Compliance",
+      "keywords": [
+        "counsel",
+        "legal",
+        "attorney",
+        "lawyer",
+        "jurist*",
+        "rechtsanwalt",
+        "paralegal",
+        "contract manager",
+        "contracts manager",
+        "patent",
+        "trademark",
+        "privacy officer",
+        "data protection officer"
+      ],
+      "isco": [
+        "26",
+        "34"
+      ],
+      "kldb": {
+        "73104": "Recht - Experte"
+      },
+      "description": "Handles law and rules - contracts, advice, disputes, compliance and intellectual property.",
+      "examples": [
+        "Legal Counsel",
+        "Lawyer",
+        "Compliance Officer",
+        "Paralegal",
+        "Patent Attorney"
+      ]
+    },
+    "finance-accounting": {
+      "label": "Finance & Accounting",
+      "keywords": [
+        "controller",
+        "controlling",
+        "accountant",
+        "accounting",
+        "bookkeep*",
+        "buchhalt*",
+        "fp&a",
+        "actuar*",
+        "auditor",
+        "finance manager",
+        "finance director",
+        "head of finance",
+        "finance business partner",
+        "financial analyst",
+        "financial controller",
+        "credit analyst",
+        "treasury manager",
+        "tax manager",
+        "tax advisor"
+      ],
+      "isco": [
+        "12",
+        "24",
+        "33",
+        "43"
+      ],
+      "kldb": {
+        "72213": "Buchhaltung - Spezialist"
+      },
+      "description": "Manages money - accounting, controlling, reporting, tax, audit and financial planning.",
+      "examples": [
+        "Accountant",
+        "Financial Controller",
+        "FP&A Analyst",
+        "Auditor",
+        "Tax Specialist"
+      ]
+    },
+    "facilities": {
+      "remote": false,
+      "label": "Facilities & Real Estate",
+      "keywords": [
+        "facility",
+        "facilities",
+        "property manager",
+        "real estate",
+        "construction manager",
+        "building manager",
+        "site services",
+        "caretaker",
+        "hausw*",
+        "cleaning",
+        "janitor",
+        "housekeeping",
+        "security guard",
+        "gebaude*",
+        "gebäude*"
+      ],
+      "isco": [
+        "51",
+        "71",
+        "74",
+        "91"
+      ],
+      "description": "Looks after buildings and workplaces - maintenance, property management and building technology.",
+      "examples": [
+        "Facility Manager",
+        "Property Manager",
+        "Building Technician",
+        "Maintenance Supervisor",
+        "Real Estate Manager"
+      ]
+    },
+    "education": {
+      "remote": false,
+      "label": "Education & Training",
+      "keywords": [
+        "teacher",
+        "lecturer",
+        "professor",
+        "dozent*",
+        "trainer",
+        "training manager",
+        "educator",
+        "education manager",
+        "instructor",
+        "curriculum",
+        "tutor",
+        "learning and development"
+      ],
+      "isco": [
+        "23"
+      ],
+      "description": "Teaches and trains - schools, universities, corporate training and course design.",
+      "examples": [
+        "Teacher",
+        "Lecturer",
+        "Corporate Trainer",
+        "Instructional Designer",
+        "Professor"
+      ]
+    },
+    "medical": {
+      "label": "Medicine & Pharmacy",
+      "remote": false,
+      "keywords": [
+        "physician",
+        "medical doctor",
+        "surgeon",
+        "general practitioner",
+        "arzt",
+        "ärztin",
+        "oberarzt",
+        "oberärztin",
+        "assistenzarzt",
+        "assistenzärztin",
+        "facharzt",
+        "fachärztin",
+        "chefarzt",
+        "chefärztin",
+        "médico",
+        "médica",
+        "lekarz",
+        "radiologist",
+        "anaesthetist",
+        "anesthesiologist",
+        "psychiatrist",
+        "cardiologist",
+        "oncologist",
+        "paediatrician",
+        "pediatrician",
+        "dermatologist",
+        "pharmacist",
+        "apotheker*"
+      ],
+      "isco": [
+        "22",
+        "32"
+      ],
+      "kldb": {
+        "81404": "Humanmedizin - Experte"
+      },
+      "description": "Treats and cares for patients, or advises on medicines - doctors, nurses, pharmacists and medical affairs.",
+      "examples": [
+        "Physician",
+        "Nurse",
+        "Pharmacist",
+        "Medical Science Liaison",
+        "Medical Affairs Manager"
+      ]
+    },
+    "consulting": {
+      "label": "Consulting & Advisory",
+      "keywords": [
+        "consultant",
+        "consulting",
+        "berater*",
+        "advisory",
+        "advisor",
+        "beratung"
+      ],
+      "isco": [
+        "24"
+      ],
+      "kldb": {
+        "71304": "Unternehmensorganisation und -strategie - Experte"
+      },
+      "description": "Advises other organisations as an outside expert - strategy, technology, operations or a specialist field.",
+      "examples": [
+        "Management Consultant",
+        "IT Consultant",
+        "Strategy Consultant",
+        "Business Analyst",
+        "Technical Advisor"
+      ]
+    }
+  },
+  "domains": {
+    "life-science": {
+      "label": "Life science, pharma & medtech",
+      "categories": [
+        "biotech",
+        "pharma",
+        "medtech",
+        "ivd",
+        "biomaterials",
+        "cro",
+        "testing"
+      ],
+      "keywords": [
+        "biolog*",
+        "biotech",
+        "biomedical",
+        "biomaterial",
+        "life science",
+        "pharma",
+        "pharmaceutical",
+        "drug",
+        "medical device",
+        "medtech",
+        "in vitro diagnostic",
+        "ivd",
+        "ivdr",
+        "mdr",
+        "diagnostic",
+        "preclinical",
+        "in vivo",
+        "in vitro",
+        "glp",
+        "gcp",
+        "clinical",
+        "tissue",
+        "cell",
+        "molecular",
+        "assay",
+        "biomarker",
+        "implant*",
+        "regenerative",
+        "scaffold",
+        "toxicolog*",
+        "biocompat*",
+        "iso 10993",
+        "laboratory",
+        "healthcare",
+        "hospital",
+        "patient",
+        "therapeut*",
+        "antibody",
+        "protein",
+        "genomic*",
+        "microbiolog*",
+        "immunolog*",
+        "vascular",
+        "cardio*",
+        "cardiac",
+        "orthopedic",
+        "orthopaedic",
+        "ortho*",
+        "dental",
+        "surgical",
+        "surgery",
+        "oncolog*",
+        "neuro*",
+        "radiolog*",
+        "wound",
+        "catheter",
+        "stent",
+        "prosthe*",
+        "endoscop*",
+        "steril*",
+        "implantable",
+        "biopharma",
+        "vaccine",
+        "clinic",
+        "nursing",
+        "pharmacy",
+        "medicine",
+        "medical technology",
+        "biosciences*",
+        "bioprocess*",
+        "fermentation*",
+        "chromatograph*",
+        "microscop*",
+        "histolog*",
+        "patholog*",
+        "hematolog*",
+        "reagent",
+        "specimen",
+        "gmp manufacturing",
+        "drug delivery",
+        "injection device",
+        "autoinjector",
+        "biotechnolog*",
+        "health"
+      ],
+      "description": "Pharma, biotech, medical devices and diagnostics - organisations that research, make or test medicines and health technology.",
+      "examples": [
+        "Roche",
+        "Novartis",
+        "Straumann",
+        "Lonza",
+        "Hamilton"
+      ]
+    },
+    "software-it": {
+      "label": "Software & IT",
+      "categories": [
+        "big-tech",
+        "ai-native",
+        "enterprise-software",
+        "software",
+        "european-tech"
+      ],
+      "keywords": [
+        "software",
+        "frontend",
+        "front-end",
+        "backend",
+        "back-end",
+        "full stack",
+        "full-stack",
+        "fullstack",
+        "web",
+        "mobile",
+        "app",
+        "cloud",
+        "aws",
+        "azure",
+        "kubernetes",
+        "devops",
+        "sre",
+        "infrastructure",
+        "platform engineering",
+        "developer experience",
+        "api",
+        "microservice",
+        "database",
+        "cybersecurity",
+        "information security",
+        "saas",
+        "artificial intelligence",
+        "machine learning",
+        "llm",
+        "large language model",
+        "genai",
+        "generative ai",
+        "deep learning",
+        "data platform",
+        "react",
+        "typescript",
+        "python",
+        "java",
+        "golang",
+        "information technology",
+        "digital product",
+        "digital platform",
+        "it infrastructure",
+        "sap",
+        "erp",
+        "salesforce",
+        "network engineering",
+        "site reliability",
+        "data engineering",
+        "computer science",
+        "embedded software",
+        "algorithm*",
+        "observability",
+        "ci/cd",
+        "containers",
+        "ai",
+        "ml",
+        "digitali*",
+        "digitalis*",
+        "digitaliz*",
+        "computer vision",
+        "nlp",
+        "data science",
+        "software engineering",
+        "agentic",
+        "rag",
+        "chatbot",
+        "automation platform",
+        "it "
+      ],
+      "description": "Companies whose product is software, data or IT - tech firms, SaaS, IT services and platforms.",
+      "examples": [
+        "Google",
+        "Microsoft",
+        "Swisscom",
+        "Adobe",
+        "Snowflake"
+      ]
+    },
+    "industrial": {
+      "label": "Industrial, engineering & materials",
+      "categories": [
+        "industrial"
+      ],
+      "keywords": [
+        "mechanical",
+        "mechatronic",
+        "electrical engineering",
+        "automation",
+        "plc",
+        "robotics",
+        "machinery",
+        "machine building",
+        "cnc",
+        "tooling",
+        "chemical",
+        "polymer",
+        "coating",
+        "metal",
+        "welding",
+        "aerospace",
+        "automotive",
+        "propulsion",
+        "energy",
+        "power grid",
+        "construction",
+        "civil engineering",
+        "textile",
+        "footwear",
+        "packaging",
+        "hvac",
+        "process engineering",
+        "precision*",
+        "manufacturing technology",
+        "extrusion*",
+        "injection moulding",
+        "injection molding",
+        "assembly line",
+        "quality engineering",
+        "supply engineering",
+        "semiconductor*",
+        "optic*",
+        "laser*",
+        "sensor*",
+        "instrumentation*"
+      ],
+      "description": "Engineering, machinery, energy, materials and manufacturing - companies that build physical things at scale.",
+      "examples": [
+        "ABB",
+        "Siemens",
+        "Bühler",
+        "Schindler",
+        "Sika"
+      ]
+    },
+    "gaming": {
+      "label": "Video games",
+      "categories": [
+        "gaming",
+        "games"
+      ],
+      "keywords": [
+        "video game*",
+        "videogame*",
+        "game studio",
+        "game development",
+        "game developer",
+        "gamedev",
+        "videojuego*",
+        "jeux vidéo",
+        "computerspiel*"
+      ],
+      "description": "Studios and publishers that make video games, and the platforms and tools around them.",
+      "examples": [
+        "Ubisoft",
+        "Nintendo",
+        "Epic Games",
+        "King",
+        "Riot Games"
+      ]
+    },
+    "finance": {
+      "label": "Finance, banking & insurance",
+      "categories": [],
+      "keywords": [
+        "bank",
+        "banking",
+        "insurance",
+        "reinsurance",
+        "fintech",
+        "trading",
+        "asset management",
+        "wealth management",
+        "payments",
+        "capital markets",
+        "financial services",
+        "crypto",
+        "digital asset",
+        "custody",
+        "regtech",
+        "accounting",
+        "controlling",
+        "treasury",
+        "private banking",
+        "retail banking",
+        "investment*",
+        "risk management",
+        "aml",
+        "know your customer",
+        "securities*",
+        "exchange",
+        "clearing*",
+        "settlement",
+        "pension*"
+      ],
+      "description": "Banks, insurers, asset managers, payments and fintech.",
+      "examples": [
+        "UBS",
+        "Swiss Re",
+        "Julius Baer",
+        "Zurich Insurance",
+        "SIX"
+      ]
+    },
+    "academia-public": {
+      "label": "Academia & public sector",
+      "categories": [
+        "academia",
+        "public-sector"
+      ],
+      "keywords": [
+        "university",
+        "universität",
+        "eth zurich",
+        "epfl",
+        "faculty",
+        "professor",
+        "doctoral",
+        "phd position",
+        "institute",
+        "federal office",
+        "kanton",
+        "cantonal",
+        "public administration",
+        "grant",
+        "teaching"
+      ],
+      "description": "Universities, research institutes, government offices and other public bodies.",
+      "examples": [
+        "ETH Zurich",
+        "University of Zurich",
+        "PSI",
+        "Empa",
+        "Federal administration"
+      ]
+    },
+    "health-services": {
+      "label": "Healthcare services",
+      "keywords": [
+        "hospital",
+        "clinic",
+        "kantonsspital",
+        "universitatsspital",
+        "universitätsspital",
+        "patient care",
+        "nursing",
+        "spital"
+      ],
+      "categories": [],
+      "description": "Care for patients - hospitals, clinics, labs and care homes.",
+      "examples": [
+        "University Hospital Zurich",
+        "Kinderspital Zurich",
+        "Inselspital",
+        "Hirslanden",
+        "Viollier"
+      ]
+    },
+    "retail-consumer": {
+      "label": "Retail & consumer",
+      "keywords": [
+        "retail",
+        "e-commerce",
+        "ecommerce",
+        "supermarket",
+        "grocery",
+        "consumer goods",
+        "fmcg",
+        "detailhandel"
+      ],
+      "categories": [],
+      "description": "Shops, consumer brands, food and everyday goods sold to the public.",
+      "examples": [
+        "Migros",
+        "Coop",
+        "Nestlé",
+        "Lindt",
+        "IKEA"
+      ]
+    },
+    "services": {
+      "label": "Professional & business services",
+      "keywords": [
+        "consulting",
+        "consultancy",
+        "beratung",
+        "advisory firm",
+        "staffing",
+        "recruitment agency",
+        "logistics",
+        "freight",
+        "forwarding",
+        "facility services",
+        "outsourcing",
+        "audit firm"
+      ],
+      "categories": [
+        "consulting"
+      ],
+      "description": "Firms that sell expertise to other businesses - consulting, audit, legal, staffing and agencies.",
+      "examples": [
+        "McKinsey",
+        "Deloitte",
+        "PwC",
+        "Accenture",
+        "Adecco"
+      ]
+    }
+  }
+}

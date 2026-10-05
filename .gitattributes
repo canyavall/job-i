@@ -1,0 +1,4 @@
+# Byte-exact: the manifest signs each file's sha256, so every checkout must hold the
+# bytes GitHub serves - LF on every platform.
+data/*.json text eol=lf
+manifest/* text eol=lf
