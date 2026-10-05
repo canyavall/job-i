@@ -1,5 +1,5 @@
 {
-  "version": 48,
+  "version": 49,
   "boards": [
     {
       "id": "alerts:mail",
@@ -56,7 +56,7 @@
         "last_run": null
       },
       "search_url": null,
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "custom:arbeitnow",
@@ -96,7 +96,7 @@
         "open_positions": 250,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "custom:jobicy",
@@ -136,7 +136,7 @@
         "open_positions": 50,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "custom:swissdevjobs",
@@ -190,7 +190,7 @@
         "last_run": "2026-09-21"
       },
       "notes": "Swiss dev/lead board, English-only postings, salary published on every row. The earlier \"Cloudflare wall\" reading was a user-agent block, not a wall: with browser headers the site answers 200 and its JSON endpoint is open. Re-probed 2026-09-02.",
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "custom:workingnomads",
@@ -229,7 +229,7 @@
         "open_positions": 55,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "himalayas:board",
@@ -263,7 +263,7 @@
         "last_run": "2026-09-21"
       },
       "search_url": null,
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "hn:whoishiring",
@@ -299,7 +299,7 @@
         "last_run": null
       },
       "search_url": null,
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "html:coopers",
@@ -334,7 +334,7 @@
         "open_positions": 80,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:rmgroup",
@@ -369,7 +369,7 @@
         "open_positions": 58,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:euraxess-ch",
@@ -406,7 +406,7 @@
         "last_run": "2026-09-21"
       },
       "search_url": null,
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:hays-ch",
@@ -439,7 +439,7 @@
         "open_positions": 30,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:swisslinx",
@@ -475,7 +475,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:ictcareer",
@@ -511,7 +511,7 @@
         "open_positions": 90,
         "last_run": "2026-09-21"
       },
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "html:itjobs-ch",
@@ -547,7 +547,7 @@
         "open_positions": 150,
         "last_run": "2026-09-21"
       },
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "html:michaelpage-ch",
@@ -581,7 +581,7 @@
         "open_positions": 87,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:nordwand",
@@ -614,7 +614,7 @@
         "open_positions": 46,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:startupticker",
@@ -649,7 +649,7 @@
         "open_positions": 40,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "jsonld:jobs-ch-lifesci",
@@ -681,7 +681,7 @@
         "last_run": "2026-09-21"
       },
       "search_url": "https://www.jobs.ch/en/vacancies/?term={term}",
-      "domain": null
+      "field": null
     },
     {
       "id": "jsonld:jobup",
@@ -713,7 +713,7 @@
         "open_positions": 54,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:indeed-ch",
@@ -737,7 +737,7 @@
         "last_run": null
       },
       "notes": "403 to any plain client (probed 2026-09-02); the publisher API is deprecated. Email alerts are the supported route.",
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:jobagent",
@@ -761,7 +761,7 @@
         "last_run": null
       },
       "notes": "Not a broken endpoint and not a captcha: re-probed 2026-09-18 and the 403 is DataDome (x-datadome: protected, 771 bytes, a datadome cookie set on every hit) enforcing their robots.txt, which ends `User-agent: * / Disallow: /`. Named search and AI crawlers - Googlebot, ClaudeBot, GPTBot - are allowed everything but /user/*, /job/redirect/*, /job/apply/redirect/*; a generic client like this one is allowed nothing, so there is no connector to write. robots.txt itself answers 200. The supported route is their alert mail: jobagent.ch is already in the mailbox watch list, derived from this row's jobs_url.",
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:jobscout24",
@@ -785,7 +785,7 @@
       },
       "duplicate_of": "jsonld:jobs-ch-lifesci",
       "notes": "Readable, and redundant: every posting on all four JobCloud skins is a jobs.ch posting. Re-probed 2026-09-23. jobscout24 /en/jobs/ is server-rendered (27 li.job-list-item rows a page, data-job-detail-url=/en/job/<uuid>/) and 8 of 8 uuids sampled open the same posting on jobs.ch; its ?q= is ignored (a nonsense term returns the same 27 rows). alpha.ch, topjobs.ch and jobwinner.ch /en/jobs embed the list as jobsSSR JSON, and every jcJobId on their first page - 10 of 10 on each - opens on jobs.ch/en/vacancies/detail/<uuid>/; their apply buttons link straight to jobs.ch. The 2026-09-02 note that these skins render client-side is no longer true. Not wired: jobs.ch is, so every row would only fold into also_at.",
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:linkedin",
@@ -809,7 +809,7 @@
         "last_run": null
       },
       "notes": "Scraping breaks the ToS and gets accounts restricted, and the account is a live asset in this search. Probed 2026-09-02: the logged-out search page returns a captcha wall and zero JobPosting blocks. Use it by hand, or parse the alert emails.",
-      "domain": null
+      "field": null
     },
     {
       "id": "simplify:board",
@@ -842,7 +842,7 @@
         "last_run": null
       },
       "notes": "Reachable, and empty for Switzerland. Re-probed 2026-09-23: /jobs no longer carries __NEXT_DATA__ (every URL returns the same 70 KB shell), the list comes from Typesense at js-ha.simplify.jobs/collections/jobs/documents/search with a scoped search-only key embedded in the page bundle, and it answers a plain client. 1 805 891 postings: countries:=United States 1 429 753, Germany 37 887, UK 65 225, France 45 446 - and Switzerland 0. A text search on locations finds one Switzerland (Switzerland, SC, USA) and 178 Zurich, all Lake Zurich, IL. So the filter discriminates and the Swiss answer is really zero. Remote (travel_requirements:=Remote) is 154 755 rows but country-locked (Remote in USA 38 158, Remote in UK 3 259...): worldwide/anywhere 0, locations:=[Europe] 672 rows from 242 employers, roughly 96 of them from employers already wired here (name match) - backend, engineering management and AI lead. Those carry remote_scope eu, which neither profile accepts today (score.remote_scopes is [ch, global]). Worth wiring if a profile ticks a country it covers or accepts eu, and then expect many rows to fold into also_at: it re-lists Greenhouse / Lever / Ashby / Workday boards pulled directly here. The key is theirs, rotated at will, and their terms were not read.",
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "manual:stamford",
@@ -866,7 +866,7 @@
         "last_run": null
       },
       "notes": "Unreachable from here on 2026-09-02, and not blocked: www.stamford-consultants.com resolves to 188.165.217.79 and the apex to 195.242.84.115, and all four of http/https x www/apex time out at the TCP connect with no response at all - a different failure from the 403 walls elsewhere in this file. No page was ever retrieved, so nothing about their listings is known either way. Retry before writing them off.",
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:wellfound",
@@ -891,7 +891,7 @@
         "last_run": null
       },
       "notes": "Cloudflare wall on 2026-09-02.",
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "manual:xing",
@@ -915,7 +915,7 @@
         "last_run": null
       },
       "notes": "Search results need an account; the logged-out page carries no postings (probed 2026-09-02).",
-      "domain": null
+      "field": null
     },
     {
       "id": "remoteok:board",
@@ -945,7 +945,7 @@
         "last_run": "2026-09-21"
       },
       "search_url": null,
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "remotive:board",
@@ -978,7 +978,7 @@
         "last_run": "2026-09-21"
       },
       "search_url": null,
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "rss:darwin",
@@ -1010,7 +1010,7 @@
         "open_positions": 10,
         "last_run": "2026-09-21"
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "rss:myscience",
@@ -1042,7 +1042,7 @@
         "open_positions": 40,
         "last_run": "2026-09-21"
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "rss:weworkremotely",
@@ -1074,7 +1074,7 @@
         "open_positions": 83,
         "last_run": "2026-09-21"
       },
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "custom:germantechjobs",
@@ -1120,7 +1120,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "html:berlinstartupjobs",
@@ -1161,7 +1161,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:get-in-it",
@@ -1196,7 +1196,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "html:absolventa",
@@ -1237,7 +1237,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:service-bund",
@@ -1271,7 +1271,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "custom:arbeitsagentur",
@@ -1320,7 +1320,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:stepstone-de",
@@ -1345,7 +1345,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:academics-de",
@@ -1371,7 +1371,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "manual:jobvector",
@@ -1396,7 +1396,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:justjoinit",
@@ -1433,7 +1433,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:rocketjobs",
@@ -1478,7 +1478,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:nofluffjobs",
@@ -1529,7 +1529,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:theprotocol",
@@ -1566,7 +1566,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:bulldogjob",
@@ -1603,7 +1603,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:tecnoempleo",
@@ -1637,7 +1637,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "custom:manfred",
@@ -1681,7 +1681,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:infojobs",
@@ -1704,7 +1704,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null,
+      "field": null,
       "notes": "Spain's largest board. The website answers HTTP 405 (server 'bon', a bot wall) to a plain client. The official API api.infojobs.net/api/9/offer answers 401 {error 102, 'Client credentials not valid'} without credentials: it needs an app registered at developer.infojobs.net (client_id + client_secret, sent as HTTP Basic). Wire it as a custom connector once someone registers an app - the secret must not live in sources/. Probed 2026-09-25."
     },
     {
@@ -1728,7 +1728,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null,
+      "field": null,
       "notes": "Poland's largest general board (offersTotalCount 66857 on 2026-09-25). Technically open: robots.txt allows /praca and the page embeds __NEXT_DATA__ props.pageProps.dehydratedState.queries[0].state.data.groupedOffers (50 a page: jobTitle, companyName, offers[].offerAbsoluteUri, displayWorkplace). Not wired because (1) it is mostly non-specialised work and the category filter ';cc,<code>' silently falls back to the unfiltered list for an unknown code - cc,5008 is finance by content, the other codes are unverified; (2) the terms (grupapracuj.pl/prywatnosc/regulamin) render client-side and were not read. The same group's theprotocol.it is wired for IT."
     },
     {
@@ -1753,7 +1753,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null,
+      "field": null,
       "notes": "Listing is filled client-side from Algolia; the server HTML carries no offers. robots.txt has 'Disallow: /*?' and '*/jobs?query=*', i.e. every filtered listing is off-limits to crawlers, and reading their Algolia index with the page's search key would be going around that. Use by hand. Probed 2026-09-25."
     },
     {
@@ -1778,7 +1778,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null,
+      "field": null,
       "notes": "Barcelona startup/tech board, server-rendered. robots.txt names GPTBot, ChatGPT-User, Claude-User, ClaudeBot, CCBot and Bytespider with Disallow: / - an explicit no to AI-driven agents, and this pipeline is audited by one - so it is not wired. Use by hand. Checked 2026-09-25."
     },
     {
@@ -1816,7 +1816,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:jobfinder-lu",
@@ -1853,7 +1853,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:eu-careers",
@@ -1894,7 +1894,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:ethicaljobs",
@@ -1931,7 +1931,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:jobs-lu",
@@ -1956,7 +1956,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:moovijob",
@@ -1981,7 +1981,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:seek",
@@ -2006,7 +2006,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:jora",
@@ -2031,7 +2031,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:work180",
@@ -2055,7 +2055,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:careerone",
@@ -2079,7 +2079,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:apsjobs",
@@ -2104,7 +2104,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "manual:stellen-li",
@@ -2129,7 +2129,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:euraxess-de",
@@ -2167,7 +2167,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:euraxess-es",
@@ -2205,7 +2205,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:euraxess-pl",
@@ -2243,7 +2243,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:euraxess-lu",
@@ -2281,7 +2281,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:euraxess-au",
@@ -2319,7 +2319,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "custom:efinancialcareers-ch",
@@ -2362,7 +2362,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "finance"
+      "field": "finance"
     },
     {
       "id": "custom:efinancialcareers-de",
@@ -2405,7 +2405,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "finance"
+      "field": "finance"
     },
     {
       "id": "custom:efinancialcareers-lu",
@@ -2448,7 +2448,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "finance"
+      "field": "finance"
     },
     {
       "id": "custom:efinancialcareers-pl",
@@ -2491,7 +2491,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "finance"
+      "field": "finance"
     },
     {
       "id": "custom:efinancialcareers-au",
@@ -2534,7 +2534,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "finance"
+      "field": "finance"
     },
     {
       "id": "custom:lawjobs",
@@ -2579,7 +2579,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:naturecareers",
@@ -2624,7 +2624,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "html:the-unijobs-au",
@@ -2664,7 +2664,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "academia-public"
+      "field": "academia-public"
     },
     {
       "id": "rss:jobrxiv",
@@ -2700,7 +2700,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": "life-science"
+      "field": "life-science"
     },
     {
       "id": "rss:euremotejobs",
@@ -2735,7 +2735,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "html:remoterocketship",
@@ -2775,7 +2775,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:academicpositions",
@@ -2800,7 +2800,7 @@
         "last_run": null
       },
       "notes": "Cloudflare managed challenge ('Just a moment...', HTTP 403) on every page including sitemap.xml, to our UA and to a browser UA alike, 2026-09-25. Its postings partly reach EURAXESS, where 'Academic Positions' appears as the posting organisation.",
-      "domain": "academia-public",
+      "field": "academia-public",
       "forbidden": true
     },
     {
@@ -2826,7 +2826,7 @@
         "last_run": null
       },
       "notes": "HTTP 403 with a CAPTCHA 'Security check' page to a plain client, 2026-09-25.",
-      "domain": "academia-public",
+      "field": "academia-public",
       "forbidden": true
     },
     {
@@ -2852,7 +2852,7 @@
         "last_run": null
       },
       "notes": "FlexJobs property on Akamai: TCP connects, then no response at all within 25 s to any client (our UA and a browser UA) - a bot-manager tarpit, not a dead site. 2026-09-25.",
-      "domain": null,
+      "field": null,
       "forbidden": true
     },
     {
@@ -2878,7 +2878,7 @@
         "last_run": null
       },
       "notes": "GET /api/v1/jobs answers open JSON (50 rows, full requirements, salary bands, city + country_code) - but robots.txt has 'Disallow: /api/', so it is not wired. 35 of 50 rows were Portugal-only on 2026-09-25; the employer is only in the url slug (/at/<company>/...).",
-      "domain": "software-it"
+      "field": "software-it"
     },
     {
       "id": "manual:dynamitejobs",
@@ -2903,7 +2903,7 @@
         "last_run": null
       },
       "notes": "The list is rendered client-side (Vue/Pinia; no job links or JobPosting in the served HTML) and robots.txt disallows /api/. The job sitemaps (sitemap/jobs-of-companies-index.xml) are the only machine-readable list; not wired - mostly non-specialist remote roles.",
-      "domain": null
+      "field": null
     },
     {
       "id": "manual:justremote",
@@ -2928,7 +2928,7 @@
         "last_run": null
       },
       "notes": "The newest ~86 jobs ARE in the served page, as JSON in window.__PRELOADED_STATE__ (title, company_name, href, location_restrictions), but the href is JS-escaped ('remote-developer-jobs\\u002F<slug>') and only the category path opens the posting, so the html adapter would need to unescape \\u002F in the captured url. Mostly US-restricted remote roles; not wired.",
-      "domain": null
+      "field": null
     },
     {
       "id": "custom:4dayweek",
@@ -2977,7 +2977,7 @@
         "open_positions": null,
         "last_run": null
       },
-      "domain": null
+      "field": null
     }
   ]
 }

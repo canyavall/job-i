@@ -1,5 +1,5 @@
 {
-  "version": 31,
+  "version": 32,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -325,7 +325,7 @@
     {
       "id": "fintech",
       "label": "Banking & fintech",
-      "axis": "domains",
+      "axis": "fields",
       "words": [
         "fintech",
         "bank",
@@ -434,7 +434,7 @@
     {
       "id": "medical-device",
       "label": "Medical device / medtech",
-      "axis": "domains",
+      "axis": "fields",
       "words": [
         "medical device",
         "medizinprodukt",
@@ -454,7 +454,7 @@
     {
       "id": "ivd",
       "label": "In vitro diagnostics",
-      "axis": "domains",
+      "axis": "fields",
       "words": [
         "ivd",
         "in vitro diagnostic",

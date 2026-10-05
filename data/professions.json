@@ -1,15 +1,15 @@
 {
-  "version": 12,
+  "version": 13,
   "_readme": [
     "Shared vocabulary for the two labels every job carries: what KIND of work it is",
-    "(profession) and what FIELD it is in (domain). Both are facts about the labour market,",
+    "(profession) and what FIELD it is in. Both are facts about the labour market,",
     "true no matter who is looking, which is why they live in sources/ and not in a profile.",
     "Which of these keys belong to a person is the opinion, and that lives in",
-    "profiles/<name>/profile.json under `professions` and `domains`.",
+    "profiles/<name>/profile.json under `professions` and `fields`.",
     "",
     "The two axes are deliberately independent. Project management happens in a hospital and",
     "at YouTube; a profession label on its own cannot tell those apart, which is exactly the",
-    "leak this file exists to close. 'Related to me' is profession AND domain, never either.",
+    "leak this file exists to close. 'Related to me' is profession AND field, never either.",
     "",
     "`description` and `examples` are what the profession and field cards show - a sentence on what it is and",
     "real job titles (a profession) or employers (a field) that fall in it - in the wizard and the Profile tab. They classify nothing.",
@@ -21,9 +21,9 @@
     "with word boundaries, so 'lead' does not fire on 'leadership' and 'ai' does not fire on",
     "'chain'. A keyword containing a space is matched as a phrase.",
     "",
-    "`domains[].categories` maps the employer industries already recorded in",
-    "sources/companies.json onto a domain, so a posting with a terse title still gets a",
-    "domain from who is hiring. That only works for jobs pulled from a company connector -",
+    "`fields[].categories` maps the employer industries already recorded in",
+    "sources/companies.json onto a field, so a posting with a terse title still gets a",
+    "field from who is hiring. That only works for jobs pulled from a company connector -",
     "board rows carry a free-text employer name that is not in the registry (65% of Alex's",
     "rows and 84% of Sam's come from a company; the rest depend on the text alone).",
     "Deliberately unmapped: swiss-corporate, scale-up, consulting, remote-first. They say",
@@ -654,7 +654,7 @@
       ]
     }
   },
-  "domains": {
+  "fields": {
     "life-science": {
       "label": "Life science, pharma & medtech",
       "categories": [
