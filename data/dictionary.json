@@ -1,5 +1,5 @@
 {
-  "version": 32,
+  "version": 33,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -95,12 +95,7 @@
         "a.i.",
         "artificial intelligence",
         "künstliche intelligenz",
-        "machine learning",
         "ml",
-        "deep learning",
-        "genai",
-        "gen ai",
-        "generative ai",
         "ki-lösung",
         "ki-anwendung",
         "ki-modell",
@@ -244,8 +239,6 @@
         "ui engineer",
         "ui engineering",
         "web ui",
-        "react",
-        "next.js",
         "web frontend",
         "frontend development",
         "frontend-entwicklung",
@@ -265,8 +258,6 @@
         "developer productivity",
         "internal tooling",
         "internal platform",
-        "sre",
-        "site reliability",
         "it-infrastruktur",
         "it infrastructure",
         "infrastructure informatique",
@@ -384,9 +375,7 @@
         "präklinisch",
         "non-clinical",
         "nonclinical",
-        "in vivo",
         "animal study",
-        "animal model",
         "rodent",
         "large animal",
         "glp study"
@@ -400,7 +389,6 @@
         "translational",
         "translational research",
         "bench to bedside",
-        "first-in-human",
         "first in human",
         "proof of concept study",
         "proof-of-concept study"
@@ -417,13 +405,10 @@
       "words": [
         "biomaterial",
         "biomaterials",
-        "scaffold",
-        "tissue engineering",
         "regenerative medicine",
         "regenerative",
         "implantable material",
         "bioresorbable",
-        "hydrogel",
         "biopolymer",
         "biofabrication",
         "bioprinting",
@@ -1866,8 +1851,6 @@
       "axis": "managerial",
       "words": [
         "engineering culture",
-        "developer experience",
-        "devex",
         "cultura de ingeniería",
         "entwicklungskultur"
       ],
@@ -2368,7 +2351,6 @@
         "devops",
         "site reliability",
         "sre",
-        "platform engineering",
         "ingeniería de plataforma",
         "plattform-engineering"
       ]
@@ -4749,10 +4731,6 @@
         "mobile development",
         "mobile app",
         "mobile application",
-        "ios",
-        "android",
-        "react native",
-        "flutter",
         "app development",
         "mobile engineering"
       ],
