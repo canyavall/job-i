@@ -1,0 +1,40 @@
+# This repo is PUBLIC and holds no code. Everything in it is meant to be read by
+# strangers and by every installed copy of Job-I:
+#
+#   data/   the shipped JSON every install seeds and updates from. The source of truth -
+#           edited in job-i-src and pushed here with `bun scripts/data.ts push`.
+#   site/   the website, deployed to canyavall.github.io/job-i by .github/workflows/pages.yml.
+#   manifest/  latest.json + .sig, written by the release and data-release workflows.
+#
+# So the rule here is the opposite of a normal .gitignore: nothing is excluded because it
+# is generated, only because it has no business being public. A stray file in this repo is
+# published, not just committed.
+
+# Editor and Claude Code scratch.
+.idea/
+.vscode/
+.claude/settings.local.json
+.claude/temp/
+
+# OS junk, which is how a folder listing ends up on a download page.
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# No tooling runs here (site/build.ts and the data scripts are plain Bun, no deps), so
+# either of these appearing means something was installed by mistake.
+node_modules/
+bun.lock
+
+# Belt and braces for the one thing that must never land in a public repo: the ed25519
+# private key that signs manifest/latest.json. It lives in the JOBI_SIGNING_KEY secret on
+# job-i-src and in the owner's password manager, and it is never written to a file here.
+# Lose it and no installed copy can ever be updated again; leak it and anyone can ship
+# code to all of them.
+*.pem
+*.key
+*signing-key*
+
+# A real CV or cover letter is never part of the site. The screenshots are webp/png.
+*.docx
+*.pdf
