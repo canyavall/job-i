@@ -35427,22 +35427,23 @@
       "id": "successfactors:coop",
       "name": "Coop Group",
       "url": "https://www.coop.ch",
-      "jobs_url": "https://www.coopjobs.ch/",
+      "jobs_url": "https://jobs.coopjobs.ch/",
       "location": "Basel",
       "categories": [
         "swiss-corporate"
       ],
       "search_url": null,
       "connector": {
-        "type": "successfactors",
+        "type": "prospective",
         "config": {
-          "base": "https://jobs.coop.ch",
-          "location": "",
-          "max": 1300
+          "medium": "1000103",
+          "lang": "de",
+          "company_attr": "70",
+          "max": 3500
         },
         "enabled": true,
-        "verified": "2026-09-02",
-        "notes": "coopjobs.ch is a brochure site; the ATS behind it is jobs.coop.ch, modern SuccessFactors answering /search-jobs?startrow=. 1240 postings on 2026-09-02, Swiss-only, so no location filter. Mostly retail; max is set above the measured total so a run is never a silent partial."
+        "verified": "2026-10-06",
+        "notes": "Moved 2026-10-06 off jobs.coop.ch, which was the wrong board: SuccessFactors there hit max 1300 exactly (capped, so a silent partial) and handed back a title-only list - 1085 of 1300 rows had no posting text, with detail fetch capped at 150 a run. Coop's real board is jobs.coopjobs.ch, a prospective.ch career centre: medium 1000103, 2922 rows on 2026-10-06 (the API pages 1000 at a time), nearly all with sza_tasks + sza_requirements in full. Checked by content: viewkey 52e52840-f47a-4bcb-ad76-3097dab684dd is 'Verkaufsberater:in' at CHRIST; a fake medium answers 400. The group brand (Coop, Interdiscount, Jumbo, Coop Restaurant, Coop City, Fust, ...) is attributes[\"70\"], hence company_attr. No country filter: sza_location.country is missing on ~2820 rows. The id stays successfactors:coop so the ratings/salary/facts every install earned on it stay attached."
       },
       "ratings": {
         "kununu": 3.3,

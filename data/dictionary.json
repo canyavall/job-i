@@ -1,5 +1,5 @@
 {
-  "version": 33,
+  "version": 35,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -34,6 +34,8 @@
     "        A skill class sits in exactly one section. It may be a",
     "        LIST when one meaning widens two vocabularies, which is how a class avoids",
     "        being written twice.",
+    "about   - one plain sentence on what the skill means, shown when hovering it. Only where",
+    "          the label alone is ambiguous (Platform, Governance, Swift); optional.",
     "caution - where the class is known to over-reach. A class with a caution must never be",
     "        expanded outside its axis.",
     "except - phrases that hold one of the class's words and mean something else",
@@ -249,6 +251,7 @@
     {
       "id": "platform",
       "label": "Platform / developer experience",
+      "about": "Building the internal platform and tooling other engineers work on (developer experience, IT infrastructure) - not a product platform.",
       "axis": "knowledge",
       "words": [
         "platform engineering",
@@ -368,6 +371,7 @@
     {
       "id": "preclinical",
       "label": "Preclinical / non-clinical study work",
+      "about": "Study work before human trials: safety, efficacy and toxicology in lab and animal models.",
       "axis": "knowledge",
       "words": [
         "preclinical",
@@ -384,6 +388,7 @@
     {
       "id": "translational",
       "label": "Translational research",
+      "about": "Moving research from the lab into first-in-human and proof-of-concept studies.",
       "axis": "knowledge",
       "words": [
         "translational",
@@ -613,6 +618,7 @@
     {
       "id": "modular-ui",
       "label": "Modular UI architecture",
+      "about": "Splitting a frontend into independent parts: component architecture, micro-frontends.",
       "axis": "knowledge",
       "words": [
         "modular ui",
@@ -715,6 +721,7 @@
     {
       "id": "ai-assisted-development",
       "label": "AI-assisted development",
+      "about": "Coding with an AI assistant at your side: GitHub Copilot, Cursor, AI pair programming.",
       "axis": "technical",
       "words": [
         "ai-assisted development",
@@ -733,6 +740,7 @@
     {
       "id": "agentic-coding",
       "label": "Agentic coding workflows",
+      "about": "Working with autonomous coding agents that write and change code on their own.",
       "axis": "technical",
       "words": [
         "agentic coding workflows",
@@ -750,6 +758,7 @@
     {
       "id": "context-engineering",
       "label": "Context engineering",
+      "about": "Deciding what an LLM sees in its context window: retrieval, prompt context, memory.",
       "axis": "technical",
       "words": [
         "context engineering",
@@ -922,6 +931,7 @@
     {
       "id": "systems-integration",
       "label": "Systems integration",
+      "about": "Connecting enterprise systems through middleware, interfaces and integration platforms (iPaaS).",
       "axis": "knowledge",
       "words": [
         "systems integration",
@@ -1044,6 +1054,7 @@
     {
       "id": "feature-flags",
       "label": "Feature flags (LaunchDarkly / Flagsmith)",
+      "about": "Switching features on and off in production without a deploy.",
       "axis": "tooling",
       "words": [
         "launch darkly",
@@ -1090,6 +1101,7 @@
     {
       "id": "observability",
       "label": "Observability",
+      "about": "Seeing what running software does: logging, metrics, tracing, APM, OpenTelemetry.",
       "axis": "knowledge",
       "words": [
         "observability",
@@ -1143,6 +1155,7 @@
     {
       "id": "identity-access",
       "label": "Authentication and identity",
+      "about": "Login and permissions: IAM, SSO, OAuth / OIDC.",
       "axis": "knowledge",
       "words": [
         "identity and access management",
@@ -1182,6 +1195,7 @@
     {
       "id": "sql",
       "label": "SQL databases",
+      "about": "Relational databases and the SQL language.",
       "axis": "technical",
       "words": [
         "sql",
@@ -1218,6 +1232,7 @@
     {
       "id": "test-automation",
       "label": "Test automation",
+      "about": "Automated tests that run without a human: unit, integration, end-to-end.",
       "axis": "technical",
       "words": [
         "test automation",
@@ -1257,6 +1272,7 @@
     {
       "id": "product-analytics",
       "label": "Product analytics",
+      "about": "Measuring how users use a product: event tracking, funnels.",
       "axis": "technical",
       "words": [
         "product analytics",
@@ -1337,6 +1353,7 @@
     {
       "id": "nx",
       "label": "Nx",
+      "about": "Nx, a build system and toolkit for JavaScript / TypeScript monorepos.",
       "axis": "tooling",
       "words": [
         "nx",
@@ -1400,6 +1417,7 @@
     {
       "id": "erp",
       "label": "ERP systems",
+      "about": "Enterprise resource planning systems that run finance, supply chain and operations.",
       "axis": "tooling",
       "words": [
         "erp systems",
@@ -1429,6 +1447,7 @@
     {
       "id": "crm",
       "label": "CRM systems",
+      "about": "Customer relationship systems such as Salesforce or HubSpot.",
       "axis": "tooling",
       "words": [
         "crm systems",
@@ -1508,6 +1527,7 @@
     {
       "id": "idoc",
       "label": "IDoc",
+      "about": "SAP's IDoc format for exchanging documents between systems.",
       "axis": "tooling",
       "words": [
         "idoc",
@@ -1519,6 +1539,7 @@
     {
       "id": "sap-smart-forms",
       "label": "SAP Smart Forms",
+      "about": "SAP's tool for designing printed forms.",
       "axis": "tooling",
       "words": [
         "sap smart forms",
@@ -1544,6 +1565,7 @@
     {
       "id": "iptv",
       "label": "IPTV set-top platforms",
+      "about": "TV delivered over IP networks and its set-top boxes.",
       "axis": "tooling",
       "words": [
         "iptv set-top platforms",
@@ -1603,6 +1625,7 @@
     {
       "id": "line-management",
       "label": "Line management",
+      "about": "Having direct reports: people leadership, team lead.",
       "axis": "managerial",
       "criticality": 8,
       "words": [
@@ -1676,6 +1699,7 @@
     {
       "id": "platform-strategy",
       "label": "Platform strategy",
+      "about": "Owning a technology strategy and roadmap.",
       "axis": "managerial",
       "words": [
         "technology strategy",
@@ -1702,6 +1726,7 @@
     {
       "id": "engineering-standards",
       "label": "Setting engineering standards",
+      "about": "Setting the coding standards and guidelines a team follows.",
       "axis": "managerial",
       "words": [
         "setting engineering standards",
@@ -1722,6 +1747,7 @@
     {
       "id": "technology-adoption",
       "label": "Driving technology adoption",
+      "about": "Leading change: rolling out new technology, digital transformation, enablement.",
       "axis": "managerial",
       "words": [
         "change management",
@@ -1824,6 +1850,7 @@
     {
       "id": "cross-functional",
       "label": "Cross-functional collaboration",
+      "about": "Working across teams and disciplines.",
       "axis": "personal",
       "words": [
         "cross-functional collaboration",
@@ -1946,6 +1973,7 @@
     {
       "id": "governance",
       "label": "Governance",
+      "about": "Compliance and governance: following rules and regulations, audit readiness, GRC, SOX.",
       "axis": "managerial",
       "words": [
         "compliance",
@@ -2003,6 +2031,7 @@
     {
       "id": "golang",
       "label": "Go",
+      "about": "The Go programming language.",
       "axis": "technical",
       "words": [
         "golang",
@@ -2090,6 +2119,7 @@
     {
       "id": "swift-lang",
       "label": "Swift",
+      "about": "Apple's Swift programming language - not the SWIFT banking network.",
       "axis": "technical",
       "words": [
         "swift programming",
@@ -2214,6 +2244,7 @@
     {
       "id": "web-standards",
       "label": "Web platform",
+      "about": "The browser platform itself: HTML, web components, browser APIs, PWA, WebAssembly.",
       "axis": "technical",
       "words": [
         "html",
@@ -2346,6 +2377,7 @@
     {
       "id": "devops",
       "label": "DevOps / SRE",
+      "about": "Running software in production and the culture around it: DevOps, SRE, platform engineering.",
       "axis": "technical",
       "words": [
         "devops",
@@ -2371,6 +2403,7 @@
     {
       "id": "caching",
       "label": "Caching",
+      "about": "Keeping data in fast storage close to where it is needed, to avoid recomputing or refetching it.",
       "axis": "knowledge",
       "words": [
         "caching",
@@ -2491,6 +2524,7 @@
     {
       "id": "bi-tools",
       "label": "Business intelligence",
+      "about": "Dashboard and reporting tools: Power BI, Tableau, Looker, Qlik.",
       "axis": "tooling",
       "words": [
         "business intelligence",
@@ -2770,6 +2804,7 @@
     {
       "id": "design-tools",
       "label": "Design tools",
+      "about": "UI design tools: Figma, Sketch, Adobe XD.",
       "axis": "tooling",
       "words": [
         "figma",
@@ -2806,6 +2841,7 @@
     {
       "id": "project-tools",
       "label": "Project tracking tools",
+      "about": "Project tracking tools: Jira, Confluence, Asana, MS Project.",
       "axis": "tooling",
       "criticality": 2,
       "words": [
@@ -3110,6 +3146,7 @@
     {
       "id": "design-control",
       "label": "Design control",
+      "about": "The regulated medical-device design process: design history file, verification and validation.",
       "axis": "knowledge",
       "words": [
         "design control",
@@ -3241,6 +3278,7 @@
     {
       "id": "animal-models",
       "label": "In vivo models",
+      "about": "In vivo research with animal (often rodent) models; FELASA training.",
       "axis": "technical",
       "words": [
         "in vivo",
@@ -3273,6 +3311,7 @@
     {
       "id": "immunoassay",
       "label": "Immunoassays",
+      "about": "Antibody-based lab tests: ELISA, Western blot, lateral flow.",
       "axis": "technical",
       "words": [
         "immunoassay",
@@ -3380,6 +3419,7 @@
     {
       "id": "tech-transfer",
       "label": "Technology transfer",
+      "about": "Scaling a process up and transferring it into production (industrialisation) - not university tech licensing.",
       "axis": "knowledge",
       "words": [
         "technology transfer",
@@ -3712,6 +3752,7 @@
     {
       "id": "training-enablement",
       "label": "Training and enablement",
+      "about": "Training people and passing on knowledge.",
       "axis": "managerial",
       "words": [
         "training delivery",
@@ -4018,6 +4059,7 @@
     {
       "id": "reporting",
       "label": "Reporting and KPIs",
+      "about": "Producing management, financial or regulatory reports, dashboards and KPIs.",
       "axis": "managerial",
       "words": [
         "management reporting",
@@ -4055,6 +4097,7 @@
     {
       "id": "networking",
       "label": "Networking",
+      "about": "Computer networks: TCP/IP, DNS, firewalls, VPN, load balancers - not professional networking.",
       "axis": "knowledge",
       "words": [
         "computer networking",
@@ -4124,6 +4167,7 @@
     {
       "id": "process-automation",
       "label": "Process automation",
+      "about": "Automating business workflows: RPA, workflow tools, intelligent automation - not factory automation (see Industrial automation).",
       "axis": "knowledge",
       "words": [
         "business process automation",
@@ -4362,6 +4406,7 @@
     {
       "id": "knowledge-graph",
       "label": "Knowledge graphs",
+      "about": "Modelling knowledge as linked entities and relations, often to ground AI systems.",
       "axis": "knowledge",
       "words": [
         "knowledge graph",
@@ -4378,6 +4423,7 @@
     {
       "id": "quality-assurance",
       "label": "Quality assurance",
+      "about": "Making sure a product or process meets its standard - in software or in regulated manufacturing.",
       "axis": "knowledge",
       "words": [
         "quality assurance",
@@ -4457,6 +4503,7 @@
     {
       "id": "stability-testing",
       "label": "Stability and shelf life",
+      "about": "Testing how long a product stays within spec (shelf life).",
       "axis": "technical",
       "words": [
         "stability testing",
@@ -4472,6 +4519,7 @@
     {
       "id": "human-factors",
       "label": "Human factors and usability",
+      "about": "Usability engineering for medical devices (IEC 62366) and use-related risk.",
       "axis": "knowledge",
       "words": [
         "human factors",
@@ -4501,6 +4549,7 @@
     {
       "id": "post-market",
       "label": "Post-market surveillance",
+      "about": "Watching a device or drug after launch: vigilance reporting, PMCF, clinical evaluation reports.",
       "axis": "knowledge",
       "words": [
         "post-market surveillance",
@@ -4517,6 +4566,7 @@
     {
       "id": "assay-development",
       "label": "Assay development",
+      "about": "Designing and validating a lab test that measures something reliably.",
       "axis": "technical",
       "words": [
         "assay development",
@@ -4632,6 +4682,7 @@
     {
       "id": "stats-software",
       "label": "Statistics software",
+      "about": "Statistics packages: SPSS, SAS, Stata, GraphPad Prism, Minitab.",
       "axis": "tooling",
       "words": [
         "statistical software",
@@ -4739,6 +4790,7 @@
     {
       "id": "event-driven",
       "label": "Event-driven architecture",
+      "about": "Systems that communicate through events and message queues instead of direct calls.",
       "axis": "knowledge",
       "words": [
         "event streaming",
@@ -4880,6 +4932,7 @@
     {
       "id": "full-text-search",
       "label": "Full-text search",
+      "about": "Search over text: indexing, ranking, relevance.",
       "axis": "knowledge",
       "words": [
         "full-text search",
@@ -5084,6 +5137,7 @@
     {
       "id": "responsiveness",
       "label": "Responsive / reacts quickly",
+      "about": "Reacting quickly when something comes in.",
       "axis": "personal",
       "words": [
         "responsiveness",
@@ -5100,6 +5154,7 @@
     {
       "id": "ownership",
       "label": "Ownership / sense of responsibility",
+      "about": "Taking responsibility for an outcome without being told to.",
       "axis": "personal",
       "words": [
         "sense of responsibility",
@@ -5143,6 +5198,7 @@
     {
       "id": "efficiency",
       "label": "Efficient / structured way of working",
+      "about": "A structured, efficient way of working.",
       "axis": "personal",
       "words": [
         "structured way of working",
@@ -5480,6 +5536,7 @@
     {
       "id": "team-advocacy",
       "label": "Team advocacy / psychological safety",
+      "about": "Protecting the team: psychological safety, servant leadership.",
       "axis": "managerial",
       "words": [
         "psychological safety",
@@ -5499,6 +5556,7 @@
     {
       "id": "okrs",
       "label": "OKRs / goal setting",
+      "about": "Setting goals and measuring them with OKRs.",
       "axis": "managerial",
       "words": [
         "okr",
@@ -5575,6 +5633,7 @@
     {
       "id": "delivery-management",
       "label": "Delivery / release management",
+      "about": "Planning and running releases.",
       "axis": "managerial",
       "words": [
         "delivery management",
@@ -5640,6 +5699,7 @@
     {
       "id": "api-contracts",
       "label": "API contracts / contract testing",
+      "about": "Agreeing an API's shape up front and testing against it: contract-first, consumer-driven contracts, Pact.",
       "axis": "knowledge",
       "words": [
         "api contracts",
@@ -5691,6 +5751,7 @@
     {
       "id": "matomo",
       "label": "Matomo",
+      "about": "Matomo, an open-source web analytics tool.",
       "axis": "tooling",
       "words": [
         "matomo",
@@ -5700,6 +5761,7 @@
     {
       "id": "strapi",
       "label": "Strapi",
+      "about": "Strapi, an open-source headless CMS.",
       "axis": "tooling",
       "words": [
         "strapi",
@@ -5710,6 +5772,7 @@
     {
       "id": "contentful",
       "label": "Contentful",
+      "about": "Contentful, a hosted headless CMS.",
       "axis": "tooling",
       "words": [
         "contentful",
@@ -5720,6 +5783,7 @@
     {
       "id": "kong",
       "label": "Kong API gateway",
+      "about": "Kong, an API gateway.",
       "axis": "tooling",
       "words": [
         "kong gateway",
@@ -5744,6 +5808,7 @@
     {
       "id": "vercel",
       "label": "Vercel / Netlify",
+      "about": "Hosting platforms for web frontends: Vercel, Netlify.",
       "axis": "tooling",
       "words": [
         "vercel",
@@ -5930,6 +5995,7 @@
     {
       "id": "consulting",
       "label": "Consulting / advisory",
+      "about": "Advising clients as a consultant (management or IT consulting) - not a consulting firm as employer.",
       "axis": "knowledge",
       "words": [
         "consulting experience",
@@ -6035,6 +6101,7 @@
     {
       "id": "low-code",
       "label": "Low-code platforms",
+      "about": "Building apps with little code: Power Apps, OutSystems, Mendix, Appian, Retool.",
       "axis": "tooling",
       "words": [
         "low-code",
@@ -6073,6 +6140,7 @@
     {
       "id": "data-governance",
       "label": "Data governance / data quality",
+      "about": "Who owns data, its quality rules and how it may be used.",
       "axis": "knowledge",
       "words": [
         "data governance",
@@ -6155,6 +6223,7 @@
     {
       "id": "maintenance",
       "label": "Maintenance / servicing",
+      "about": "Keeping machines and equipment running: preventive and corrective maintenance.",
       "axis": "technical",
       "words": [
         "equipment maintenance",
@@ -6218,6 +6287,7 @@
     {
       "id": "commissioning",
       "label": "Commissioning / qualification",
+      "about": "Bringing equipment into service and qualifying it (IQ/OQ/PQ).",
       "axis": "technical",
       "words": [
         "inbetriebnahme",
@@ -6296,6 +6366,7 @@
     {
       "id": "virtualisation",
       "label": "Virtualisation",
+      "about": "Running virtual machines and desktops: VMware, Hyper-V, Citrix.",
       "axis": "tooling",
       "words": [
         "vmware",
@@ -6315,6 +6386,7 @@
     {
       "id": "microsoft-infrastructure",
       "label": "Microsoft infrastructure (AD, M365 admin)",
+      "about": "Administering Active Directory and Microsoft 365.",
       "axis": "tooling",
       "words": [
         "active directory",
@@ -7081,7 +7153,8 @@
     {
       "id": "software-development",
       "label": "Software development",
-      "axis": "technical",
+      "about": "Writing software in general, whatever the language.",
+      "axis": "knowledge",
       "words": [
         "software development",
         "software engineering",
@@ -7155,6 +7228,7 @@
     {
       "id": "build-tools",
       "label": "JS build tooling",
+      "about": "JavaScript bundlers and compilers: webpack, Vite, esbuild, Babel.",
       "axis": "tooling",
       "words": [
         "webpack",
@@ -7170,6 +7244,7 @@
     {
       "id": "troubleshooting",
       "label": "Troubleshooting / fault diagnosis",
+      "about": "Finding why something broke and fixing it.",
       "axis": "technical",
       "words": [
         "troubleshooting",
@@ -7240,6 +7315,7 @@
     {
       "id": "cmms",
       "label": "CMMS / EAM",
+      "about": "Maintenance management software: IBM Maximo, Infor EAM.",
       "axis": "tooling",
       "words": [
         "cmms",
@@ -7252,6 +7328,7 @@
     {
       "id": "requirements-engineering",
       "label": "Requirements engineering / business analysis",
+      "about": "Finding out and writing down what a system must do; business analysis.",
       "axis": "technical",
       "words": [
         "requirements engineering",
@@ -7299,6 +7376,7 @@
     {
       "id": "secrets-management",
       "label": "Secrets management",
+      "about": "Storing passwords and keys for software safely: Vault and similar.",
       "axis": "tooling",
       "words": [
         "hashicorp vault",
@@ -7397,6 +7475,7 @@
     {
       "id": "metrology",
       "label": "Metrology / dimensional inspection",
+      "about": "Precise measurement and dimensional inspection: CMM, measuring equipment.",
       "axis": "technical",
       "words": [
         "metrology",
@@ -7456,6 +7535,7 @@
     {
       "id": "shift-work",
       "label": "Shift work / on-call",
+      "about": "Willing to work shifts, nights or on-call (Pikett).",
       "axis": "personal",
       "words": [
         "shift work",
@@ -7684,6 +7764,7 @@
     {
       "id": "organisation",
       "label": "Organisational skills",
+      "about": "Being well organised: planning and keeping things in order.",
       "axis": "personal",
       "words": [
         "organisational skills",
@@ -7866,6 +7947,7 @@
     {
       "id": "scheduling",
       "label": "Scheduling / appointments",
+      "about": "Booking and managing appointments and calendars, e.g. in a practice or office.",
       "axis": "technical",
       "words": [
         "appointment scheduling",
@@ -8065,6 +8147,7 @@
     {
       "id": "bd-licensing",
       "label": "Pharma business development & licensing",
+      "about": "Pharma deal-making: in- and out-licensing, search & evaluation, external innovation.",
       "axis": "knowledge",
       "words": [
         "deal flow",
@@ -8099,6 +8182,7 @@
     {
       "id": "lab-management",
       "label": "Lab management / operations",
+      "about": "Running a lab day to day: operations, supplies, organisation.",
       "axis": "technical",
       "words": [
         "lab management",
@@ -8196,6 +8280,7 @@
     {
       "id": "epm-tools",
       "label": "EPM / planning & consolidation software",
+      "about": "Finance planning and consolidation software: Anaplan, OneStream, Hyperion, Tagetik.",
       "axis": "tooling",
       "words": [
         "onestream",
@@ -8212,6 +8297,7 @@
     {
       "id": "internal-controls",
       "label": "Internal controls",
+      "about": "The control framework that keeps finance and operations in check (ICS / IKS, three lines of defence).",
       "axis": "knowledge",
       "words": [
         "internal control",
@@ -8403,6 +8489,7 @@
     {
       "id": "tendering",
       "label": "Quotes & tenders",
+      "about": "Writing quotes and answering tenders (Offerten, Ausschreibungen, bid management).",
       "axis": "technical",
       "words": [
         "bid management",
@@ -8584,6 +8671,7 @@
     {
       "id": "simulation-modelling",
       "label": "Simulation & process modelling",
+      "about": "Numerical simulation of processes and physics: process models, COMSOL.",
       "axis": "technical",
       "words": [
         "process simulation",
@@ -8684,6 +8772,7 @@
     {
       "id": "ml-frameworks",
       "label": "ML frameworks",
+      "about": "Libraries for building ML models: PyTorch, TensorFlow and the like.",
       "axis": "tooling",
       "words": [
         "pytorch",
@@ -8846,6 +8935,7 @@
     {
       "id": "sample-handling",
       "label": "Sample handling",
+      "about": "Collecting, preparing and storing lab or patient samples; blood draws, biobanking.",
       "axis": "technical",
       "words": [
         "sample processing",
@@ -8903,6 +8993,7 @@
     {
       "id": "tech-savvy",
       "label": "Tech-savvy",
+      "about": "Comfortable with technology and digital tools (Technikaffinitaet) - for non-technical roles.",
       "axis": "personal",
       "words": [
         "tech-savvy",
@@ -8996,6 +9087,7 @@
     {
       "id": "medical-affairs",
       "label": "Medical affairs",
+      "about": "The scientific side of a pharma company: medical science liaisons, KOL engagement, medical information.",
       "axis": "knowledge",
       "words": [
         "medical affairs",
@@ -9133,6 +9225,7 @@
     {
       "id": "systems-thinking",
       "label": "Systems thinking",
+      "about": "Seeing how the parts of a system affect each other.",
       "axis": "personal",
       "words": [
         "systems thinking",
@@ -9147,6 +9240,7 @@
     {
       "id": "entrepreneurial",
       "label": "Entrepreneurial thinking / business acumen",
+      "about": "Thinking like an owner of the business: business acumen.",
       "axis": "personal",
       "words": [
         "unternehmerisches denken",
@@ -9171,6 +9265,7 @@
     {
       "id": "confident-presence",
       "label": "Confident presence",
+      "about": "Coming across as confident in front of others (sicheres Auftreten).",
       "axis": "personal",
       "words": [
         "sicheres auftreten",
@@ -9258,6 +9353,7 @@
     {
       "id": "export-control",
       "label": "Export control / classified work",
+      "about": "Rules on exporting controlled goods and classified work: ITAR, dual-use, security clearance.",
       "axis": "knowledge",
       "words": [
         "export control",
@@ -9281,6 +9377,7 @@
     {
       "id": "business-process-management",
       "label": "Business process management",
+      "about": "Analysing and modelling how a business works, e.g. in BPMN.",
       "axis": "knowledge",
       "words": [
         "business process management",
@@ -9309,6 +9406,7 @@
     {
       "id": "saas",
       "label": "SaaS",
+      "about": "Experience with software sold as a subscription service.",
       "axis": "knowledge",
       "words": [
         "saas",
@@ -9342,6 +9440,7 @@
     {
       "id": "core-banking-systems",
       "label": "Core banking systems",
+      "about": "The systems a bank runs on: Avaloq, Temenos, Finnova.",
       "axis": "tooling",
       "words": [
         "avaloq",
@@ -9392,6 +9491,7 @@
     {
       "id": "big-data",
       "label": "Big data / advanced analytics",
+      "about": "Very large datasets and the tools for them: Hadoop, advanced analytics.",
       "axis": "knowledge",
       "words": [
         "big data",
@@ -9422,6 +9522,7 @@
     {
       "id": "functional-programming",
       "label": "Functional programming",
+      "about": "Programming with pure functions and immutable data (Haskell, Elixir, F#, Scala style).",
       "axis": "technical",
       "words": [
         "functional programming",
@@ -9466,6 +9567,7 @@
     {
       "id": "unified-communications",
       "label": "Unified communications / telephony",
+      "about": "Business phone and meeting systems.",
       "axis": "tooling",
       "words": [
         "unified communications",
@@ -9486,6 +9588,7 @@
     {
       "id": "developer-relations",
       "label": "Developer relations",
+      "about": "Being the company's face to outside developers: docs, talks, community.",
       "axis": "knowledge",
       "words": [
         "developer relations",
@@ -9612,6 +9715,7 @@
     {
       "id": "document-control",
       "label": "Document & change control (SOPs)",
+      "about": "Controlled documents in regulated work: SOPs, change control, Veeva Vault.",
       "axis": "knowledge",
       "words": [
         "document control",
@@ -9681,6 +9785,7 @@
     {
       "id": "lifecycle-management",
       "label": "Product lifecycle management",
+      "about": "Managing a product from introduction (NPI) to end of life.",
       "axis": "knowledge",
       "words": [
         "product lifecycle management",
@@ -9705,6 +9810,7 @@
     {
       "id": "spatial-reasoning",
       "label": "Spatial reasoning",
+      "about": "Picturing objects and spaces in your head.",
       "axis": "personal",
       "words": [
         "spatial awareness",
@@ -9742,6 +9848,7 @@
     {
       "id": "data-modelling",
       "label": "Data modelling",
+      "about": "Designing the shape of data: schemas, data models, dimensional modelling.",
       "axis": "technical",
       "words": [
         "data models",
@@ -9781,6 +9888,7 @@
     {
       "id": "network-analysis",
       "label": "Network analysis",
+      "about": "Analysing graphs of connected things (social networks, graph analytics) - not computer networks.",
       "axis": "technical",
       "words": [
         "network analysis",
@@ -9856,6 +9964,7 @@
     {
       "id": "shutdown-planning",
       "label": "Shutdown / turnaround planning",
+      "about": "Planning a plant shutdown or turnaround for maintenance.",
       "axis": "managerial",
       "words": [
         "shutdown planning",
@@ -9889,6 +9998,7 @@
     {
       "id": "revenue-operations",
       "label": "Revenue / sales operations",
+      "about": "Running the machinery behind sales: RevOps, sales operations, commercial excellence.",
       "axis": "knowledge",
       "words": [
         "revenue operations",
@@ -9941,6 +10051,7 @@
     {
       "id": "results-orientation",
       "label": "Results orientation",
+      "about": "Driven by outcomes rather than activity.",
       "axis": "personal",
       "words": [
         "results-driven",
@@ -10246,6 +10357,7 @@
     {
       "id": "hris",
       "label": "HR information systems",
+      "about": "HR software: SuccessFactors, Workday HCM.",
       "axis": "tooling",
       "words": [
         "hris",
@@ -10330,6 +10442,7 @@
     {
       "id": "category-management",
       "label": "Category & trade management",
+      "about": "Retail / FMCG trade: managing a product category with retailers, trade spend, joint business plans.",
       "axis": "knowledge",
       "words": [
         "category management",
@@ -10408,6 +10521,7 @@
     {
       "id": "discretion",
       "label": "Discretion & integrity",
+      "about": "Handling confidential information with integrity.",
       "axis": "personal",
       "words": [
         "discretion",
@@ -10439,6 +10553,7 @@
     {
       "id": "correspondence",
       "label": "Correspondence & minute-taking",
+      "about": "Writing business letters and taking minutes.",
       "axis": "technical",
       "words": [
         "business correspondence",
@@ -10626,6 +10741,7 @@
     {
       "id": "endpoint-management",
       "label": "Endpoint & client OS",
+      "about": "Managing employees' computers and phones: MDM, Jamf, Windows clients.",
       "axis": "tooling",
       "words": [
         "endpoint management",
@@ -10822,6 +10938,7 @@
     {
       "id": "clm-tools",
       "label": "Contract lifecycle management tools",
+      "about": "Contract lifecycle software: Ironclad, Icertis, DocuSign CLM.",
       "axis": "tooling",
       "words": [
         "contract lifecycle management",
@@ -11230,6 +11347,7 @@
     {
       "id": "data-annotation",
       "label": "Data annotation / labelling",
+      "about": "Labelling data so a model can learn from it.",
       "axis": "technical",
       "words": [
         "data annotation",
@@ -11308,6 +11426,7 @@
     {
       "id": "professional-networking",
       "label": "Professional networking",
+      "about": "Building and using a network of professional contacts - not computer networking.",
       "axis": "personal",
       "words": [
         "professional network",
@@ -11549,6 +11668,7 @@
     {
       "id": "r-lang",
       "label": "R (programming language)",
+      "about": "The R language for statistics and data analysis.",
       "axis": "technical",
       "words": [
         "r programming",
@@ -11660,6 +11780,7 @@
     {
       "id": "lims",
       "label": "LIMS / electronic lab notebook",
+      "about": "Lab information systems and electronic lab notebooks.",
       "axis": "tooling",
       "words": [
         "lims",
@@ -11978,6 +12099,7 @@
     {
       "id": "general-management",
       "label": "General management",
+      "about": "Running a whole company or business unit (managing director, Geschaeftsfuehrung).",
       "axis": "managerial",
       "words": [
         "general management",
@@ -12109,6 +12231,7 @@
     {
       "id": "market-access-hta",
       "label": "Market access & HTA",
+      "about": "Getting a drug or device priced and reimbursed: HTA dossiers, pricing & reimbursement.",
       "axis": "knowledge",
       "words": [
         "market access",
