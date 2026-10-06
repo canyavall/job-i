@@ -1,5 +1,5 @@
 {
-  "version": 36,
+  "version": 37,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -3380,7 +3380,9 @@
         "chromatograf*",
         "dünnschichtchromatogra*",
         "nmr",
-        "nmr spectroscopy"
+        "nmr spectroscopy",
+        "ftir",
+        "ft-ir"
       ]
     },
     {
@@ -3609,7 +3611,10 @@
         "vertriebsmanagement",
         "vertriebsstrategie",
         "absatzstrategie",
-        "sales strategy"
+        "sales strategy",
+        "prospecting",
+        "sales funnel",
+        "outbound sales"
       ],
       "caution": "This is what filters.non_eng drops from a title. It is here as a SKILL so a posting that wants it shows a grey chip - not so a sales job reaches an engineer's list."
     },
@@ -3640,7 +3645,9 @@
         "marketing strategy",
         "marketingkampagne*",
         "marketingmassnahmen",
-        "marketingmaßnahmen"
+        "marketingmaßnahmen",
+        "copywriting",
+        "copywriter"
       ],
       "except": [
         "marketing samples",
@@ -3958,7 +3965,8 @@
         "bestandskontrolle",
         "wms (warehouse management system)",
         "wms-system",
-        "wms-systeme"
+        "wms-systeme",
+        "demand plan"
       ],
       "except": [
         "meeting logistics",
@@ -4760,11 +4768,20 @@
         "knowledge of excel",
         "excel knowledge",
         "ms365",
-        "microsoft365"
+        "microsoft365",
+        "excel"
       ],
       "caution": "Bare 'excel' is out. It reads clean on the 400-character snippets and would not on the body, where 'candidates who excel at' is boilerplate - the fetch matches the whole posting, so the snippet is the weaker test.",
       "except": [
-        "vision"
+        "vision",
+        "excel in",
+        "excel at",
+        "excel within",
+        "to excel",
+        "you excel",
+        "we excel",
+        "they excel",
+        "help you excel"
       ]
     },
     {
@@ -6389,7 +6406,11 @@
         "nutanix",
         "azure virtual desktop",
         "windows 365",
-        "cloud pc"
+        "cloud pc",
+        "vmware horizon",
+        "app volumes",
+        "virtual desktop infrastructure",
+        "applikationsvirtualisierung"
       ]
     },
     {
@@ -7317,7 +7338,9 @@
         "bad-actor-programm",
         "reliability-verbesserung",
         "zuverlässigkeitsverbesserung",
-        "reliability improvement"
+        "reliability improvement",
+        "pfmea",
+        "dfmea"
       ],
       "caution": "Not bare 'reliability': site reliability engineering is platform work."
     },
@@ -7431,6 +7454,35 @@
         "mécanique de précision"
       ],
       "caution": "Not 'turning' or 'drehen': ordinary verbs."
+    },
+    {
+      "id": "hydraulics",
+      "label": "Hydraulics and pneumatics",
+      "axis": "technical",
+      "words": [
+        "hydraulics",
+        "hydraulic systems",
+        "hydraulik",
+        "hydraulisch*",
+        "pneumatics",
+        "pneumatik",
+        "pneumatisch*",
+        "oléohydraulique",
+        "hydraulique"
+      ]
+    },
+    {
+      "id": "backup-recovery",
+      "label": "Backup and recovery",
+      "axis": "tooling",
+      "words": [
+        "veeam",
+        "backup and recovery",
+        "backup & recovery",
+        "datensicherung",
+        "backup-technologien",
+        "disaster recovery"
+      ]
     },
     {
       "id": "metalworking",
@@ -7580,7 +7632,8 @@
         "dreischichtbetrieb",
         "zweischichtbetrieb",
         "dreischichtsystem",
-        "hintergrunddienst"
+        "hintergrunddienst",
+        "pikett*"
       ],
       "caution": "Not '24/7': benefits text."
     },
@@ -8073,7 +8126,9 @@
         "akutpflege",
         "akutsomatik",
         "soins aigus",
-        "akutmedizin*"
+        "akutmedizin*",
+        "intermediate care",
+        "imcu"
       ]
     },
     {
@@ -9945,7 +10000,8 @@
         "permis cariste",
         "cariste",
         "carrello elevatore",
-        "carretilla elevadora"
+        "carretilla elevadora",
+        "stapler"
       ],
       "except": []
     },
@@ -10770,7 +10826,11 @@
         "mac os",
         "clientmanagement",
         "client-management",
-        "gestion des postes de travail"
+        "gestion des postes de travail",
+        "manageengine",
+        "endpoint central",
+        "thin client*",
+        "wyse"
       ],
       "except": []
     },
