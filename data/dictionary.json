@@ -1,5 +1,5 @@
 {
-  "version": 35,
+  "version": 36,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -2759,7 +2759,13 @@
         "ux prototyping",
         "interactive prototypes",
         "clickable prototypes",
-        "klickprototyp*"
+        "klickprototyp*",
+        "wireframe*",
+        "information architecture",
+        "user journey*",
+        "journey mapping",
+        "user flows",
+        "design thinking"
       ]
     },
     {
@@ -2811,7 +2817,10 @@
         "sketch",
         "adobe xd",
         "invision",
-        "zeplin"
+        "zeplin",
+        "framer",
+        "axure",
+        "protopie"
       ]
     },
     {

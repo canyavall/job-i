@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 15,
   "_readme": [
     "Shared vocabulary for the two labels every job carries: what KIND of work it is",
     "(profession) and what FIELD it is in. Both are facts about the labour market,",
@@ -204,6 +204,70 @@
         "Technical Product Manager",
         "Product Development Manager",
         "Head of Product"
+      ]
+    },
+    "design": {
+      "label": "Design (UX/UI & Visual)",
+      "keywords": [
+        "ux design*",
+        "ux-design*",
+        "ux research*",
+        "ux writer",
+        "ux lead",
+        "ux engineer",
+        "ux architect",
+        "ux manager",
+        "head of ux",
+        "ux strateg*",
+        "ux content",
+        "ui/ux",
+        "ux/ui",
+        "uxui",
+        "uiux",
+        "ui-ux",
+        "ux-ui",
+        "ui designer",
+        "ui-designer",
+        "ux designer",
+        "user experience design*",
+        "user experience research*",
+        "user experience engineer",
+        "user experience architekt*",
+        "user experience architect",
+        "user interface designer",
+        "design system*",
+        "graphic design*",
+        "product designer",
+        "interaction designer",
+        "visual designer",
+        "service designer",
+        "experience designer",
+        "digital designer",
+        "web designer",
+        "webdesigner*",
+        "grafikdesigner*",
+        "kommunikationsdesigner*",
+        "mediengestalter*",
+        "content designer",
+        "motion designer",
+        "brand design*",
+        "product design lead",
+        "head of design",
+        "design director",
+        "designer ui",
+        "designer ux",
+        "art director"
+      ],
+      "isco": [
+        "21"
+      ],
+      "description": "Shapes how a product looks and works for the people using it - research, flows, interfaces and visual identity.",
+      "examples": [
+        "UX Designer",
+        "Product Designer",
+        "UI/UX Designer",
+        "UX Researcher",
+        "Visual / Graphic Designer"
       ]
     },
     "management": {
