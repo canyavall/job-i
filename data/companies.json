@@ -1,5 +1,6 @@
 {
   "version": 53,
+  "min_app": "0.2.0",
   "companies": [
     {
       "id": "amazon:ch",
