@@ -1,5 +1,5 @@
 {
-  "version": 37,
+  "version": 38,
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -187,7 +187,8 @@
         "transformer model",
         "sprachmodell",
         "transformer architecture",
-        "transformer-based"
+        "transformer-based",
+        "chatgpt"
       ]
     },
     {
@@ -565,6 +566,21 @@
         "sap architekt",
         "it-architektur",
         "idesign"
+      ]
+    },
+    {
+      "id": "enterprise-architecture",
+      "label": "Enterprise architecture",
+      "axis": "knowledge",
+      "words": [
+        "enterprise architecture",
+        "unternehmensarchitektur",
+        "togaf",
+        "archimate",
+        "architecture governance",
+        "architekturmanagement",
+        "architecture board",
+        "leanix"
       ]
     },
     {
@@ -1282,7 +1298,11 @@
         "analítica de producto",
         "analítica de usuario",
         "produktanalyse",
-        "nutzeranalyse"
+        "nutzeranalyse",
+        "a/b testing",
+        "a/b tests",
+        "ab testing",
+        "split testing"
       ]
     },
     {
@@ -1336,7 +1356,23 @@
         "lohnverarbeitung",
         "lohnausweis",
         "swisssalary",
-        "swissdec"
+        "swissdec",
+        "entgeltabrechnung",
+        "cpf contributions",
+        "cpf submission",
+        "cpf submissions",
+        "ir8a",
+        "ir21",
+        "statutory submissions",
+        "statutory payroll",
+        "datev lodas",
+        "lodas",
+        "paisy",
+        "talenox",
+        "payboy",
+        "gestion de la paie",
+        "traitement de la paie",
+        "remuneraciones"
       ]
     },
     {
@@ -1789,7 +1825,15 @@
         "umsetzung von transformationen",
         "driving change",
         "drive change",
-        "catalyst for change"
+        "catalyst for change",
+        "changemanagement",
+        "organisational design",
+        "organizational design",
+        "organisation design",
+        "organization design",
+        "org design",
+        "organisationsgestaltung",
+        "diseño organizacional"
       ],
       "except": [
         "staged rollout",
@@ -1916,7 +1960,14 @@
         "mentored",
         "supervidieren",
         "anleitung von jüngeren",
-        "professional development of your team"
+        "professional development of your team",
+        "nachwuchsförderung",
+        "betreuung von qualifikationsarbeiten",
+        "supervise phd students",
+        "supervise their phd students",
+        "supervise their own phd students",
+        "phd supervision",
+        "supervision of phd students"
       ],
       "except": [
         "community offering mentorship",
@@ -2040,7 +2091,20 @@
         "go-entwickler",
         "production go",
         "go code",
-        "go microservices"
+        "go microservices",
+        "go, python",
+        "python, go",
+        "go, typescript",
+        "typescript, go",
+        "go, rust",
+        "rust, go",
+        "go, java",
+        "java, go",
+        "go and python",
+        "python and go",
+        "go or python",
+        "python or go",
+        "comfortable in go"
       ],
       "caution": "Bare 'go' is left out: word-bounded it still matches 'go to market' in every second posting."
     },
@@ -2342,7 +2406,15 @@
         "google cloud",
         "google cloud platform",
         "bigquery",
-        "gke"
+        "gke",
+        "aws, gcp",
+        "gcp, aws",
+        "azure, gcp",
+        "gcp, azure",
+        "aws or gcp",
+        "aws and gcp",
+        "aws/gcp",
+        "gcp/aws"
       ],
       "caution": "'gcp' is left out on purpose - in a life-science posting it is Good Clinical Practice, and this registry carries both kinds of employer."
     },
@@ -2583,7 +2655,11 @@
         "security incident response",
         "cyber incident response",
         "csirt",
-        "vulnerability assessment"
+        "vulnerability assessment",
+        "network security",
+        "netzwerksicherheit",
+        "sécurité réseau",
+        "zero trust"
       ],
       "except": [
         "data security obligations"
@@ -2804,7 +2880,9 @@
         "social research methods",
         "empirische sozialforschung",
         "qualitative methods",
-        "qualitative methoden"
+        "qualitative methoden",
+        "user testing",
+        "user-testing"
       ]
     },
     {
@@ -2934,6 +3012,19 @@
       ]
     },
     {
+      "id": "feasibility-studies",
+      "label": "Feasibility studies",
+      "axis": "managerial",
+      "words": [
+        "feasibility study",
+        "feasibility studies",
+        "machbarkeitsstudie*",
+        "étude de faisabilité",
+        "études de faisabilité",
+        "estudio de viabilidad"
+      ]
+    },
+    {
       "id": "budget-ownership",
       "label": "Budget ownership",
       "axis": "managerial",
@@ -2984,7 +3075,13 @@
         "managing the budget",
         "monitoring the budget",
         "monitor the budget",
-        "budget allocation"
+        "budget allocation",
+        "suivi budgétaire",
+        "maîtrise des coûts",
+        "budgetvorgaben",
+        "kostenstellenverantwortung",
+        "budget monitoring",
+        "budget status"
       ]
     },
     {
@@ -3033,7 +3130,9 @@
         "moderation von sitzungen",
         "moderation von arbeitsgruppen",
         "management presentations",
-        "client workshops"
+        "client workshops",
+        "vor grossem publikum",
+        "moderationsfähigkeit*"
       ],
       "caution": "English 'moderation' is content moderation (trust & safety), not facilitation."
     },
@@ -3054,7 +3153,15 @@
         "verhandlungskompetenz",
         "négociation",
         "negotiating",
-        "negotiator"
+        "negotiator",
+        "salary negotiation",
+        "salary negotiations",
+        "gehaltsverhandlung",
+        "gehaltsverhandlungen",
+        "lohnverhandlung",
+        "lohnverhandlungen",
+        "négociation salariale",
+        "negociación salarial"
       ],
       "except": [
         "negotiating power"
@@ -3281,7 +3388,9 @@
       ],
       "except": [
         "in-vitro diagnostic",
-        "in vitro diagnostic"
+        "in vitro diagnostic",
+        "in-vitro-diagnost*",
+        "in vitro diagnost*"
       ]
     },
     {
@@ -3515,7 +3624,9 @@
         "journal publications",
         "conference publications",
         "wissenschaftliche veröffentlichung",
-        "journal and conference publications"
+        "journal and conference publications",
+        "journalen publiziert",
+        "quality publishing"
       ]
     },
     {
@@ -3614,7 +3725,15 @@
         "sales strategy",
         "prospecting",
         "sales funnel",
-        "outbound sales"
+        "outbound sales",
+        "client acquisition",
+        "new client acquisition",
+        "acquire new clients",
+        "win new clients",
+        "winning new clients",
+        "kunden gewinnen",
+        "consultative selling",
+        "revenue targets"
       ],
       "caution": "This is what filters.non_eng drops from a title. It is here as a SKILL so a posting that wants it shows a grey chip - not so a sales job reaches an engineer's list."
     },
@@ -3647,7 +3766,11 @@
         "marketingmassnahmen",
         "marketingmaßnahmen",
         "copywriting",
-        "copywriter"
+        "copywriter",
+        "growth marketing",
+        "customer acquisition",
+        "user acquisition",
+        "funnel metrics"
       ],
       "except": [
         "marketing samples",
@@ -3973,7 +4096,10 @@
         "event logistics",
         "travel logistics",
         "meetings and managing logistics",
-        "personal, marketing, finanzen, logistik"
+        "personal, marketing, finanzen, logistik",
+        "interview logistics",
+        "end-to-end logistics for the intern",
+        "logistics for interviews"
       ]
     },
     {
@@ -4074,6 +4200,41 @@
       ]
     },
     {
+      "id": "development-finance",
+      "label": "Development & blended finance",
+      "axis": "knowledge",
+      "words": [
+        "development finance",
+        "blended finance",
+        "structured finance",
+        "innovative finance",
+        "innovative financing",
+        "debt swap",
+        "impact investing"
+      ]
+    },
+    {
+      "id": "fundraising",
+      "label": "Fundraising",
+      "axis": "knowledge",
+      "words": [
+        "fundraising",
+        "donor engagement",
+        "donor relations",
+        "major gifts",
+        "spendengewinnung",
+        "mittelbeschaffung",
+        "levée de fonds",
+        "recaudación de fondos"
+      ],
+      "caution": "A startup's 'fundraising round' is the employer, not a duty.",
+      "except": [
+        "fundraising round",
+        "recent fundraising",
+        "fundraising plans"
+      ]
+    },
+    {
       "id": "reporting",
       "label": "Reporting and KPIs",
       "about": "Producing management, financial or regulatory reports, dashboards and KPIs.",
@@ -4107,7 +4268,9 @@
         "regelmäßiges reporting",
         "transparent reporting",
         "delivery reporting",
-        "berichtswesen"
+        "berichtswesen",
+        "reporting du projet",
+        "reporting projet"
       ],
       "caution": "Bare 'reporting' is out: 'reporting to the Head of X' and 'reporting into Operations' are org-chart sentences on a large share of postings, not a skill."
     },
@@ -4294,8 +4457,40 @@
         "finite-elemente-analyse",
         "génie mécanique",
         "conception mécanique",
-        "konstruktionslösung"
+        "konstruktionslösung",
+        "design for manufacturing",
+        "design for manufacturability",
+        "dfma",
+        "structural analysis",
+        "structural sizing"
       ]
+    },
+    {
+      "id": "aerospace",
+      "label": "Aerospace / aviation",
+      "axis": "knowledge",
+      "words": [
+        "aerospace engineering",
+        "aeronautical engineering",
+        "aerospace background",
+        "aerospace environments",
+        "aerospace standards",
+        "aircraft systems",
+        "aircraft mechanical systems",
+        "flight test",
+        "flight testing",
+        "airworthiness",
+        "continued airworthiness",
+        "easa",
+        "cs-23",
+        "cs-25",
+        "far-23",
+        "far-25",
+        "luftfahrttechnik",
+        "flugzeugbau",
+        "aéronautique"
+      ],
+      "caution": "Not bare 'aircraft' or 'aviation': an airport, an airline's IT or a defence employer's blurb names them without asking for the engineering. 'faa' is left out: FAA also abbreviates fatty acids."
     },
     {
       "id": "cad",
@@ -4809,7 +5004,8 @@
         "mobile app",
         "mobile application",
         "app development",
-        "mobile engineering"
+        "mobile engineering",
+        "on web and on mobile"
       ],
       "caution": "'Mobile' alone also appears in 'mobile workforce' and 'mobility solutions'; the second does not match, the first does. Kept because a mobile-app posting says the bare word more often than any phrase. Bare 'mobile' is mobile phones, mobile robotics, 'mobile-abos' - facilities was 13% of hits."
     },
@@ -5212,7 +5408,9 @@
         "zuverlässigkeit",
         "ownership mentality",
         "sense of accountability",
-        "übernahme von verantwortung"
+        "übernahme von verantwortung",
+        "takes full ownership",
+        "take full ownership"
       ],
       "caution": "Bare 'responsible' is left out - 'you will be responsible for' opens half the duties lists in the corpus.",
       "except": [
@@ -5353,7 +5551,10 @@
         "communicates clearly",
         "mündliche und schriftliche kommunikation",
         "schriftliche und mündliche kommunikation",
-        "kommunizierst gerne"
+        "kommunizierst gerne",
+        "communication capabilities",
+        "fähigkeiten in kommunikation",
+        "capacité de communication"
       ],
       "caution": "Bare 'communication' is left out - communication systems, internal communications and the corporate-comms department ask nothing of a candidate's manner."
     },
@@ -5555,7 +5756,12 @@
         "quantitative skills",
         "denken analytisch",
         "analyse komplexer",
-        "strukturiertes denken"
+        "strukturiertes denken",
+        "analytical capabilities",
+        "analytischen denken",
+        "analytischem denken",
+        "data-driven approach",
+        "data-driven mindset"
       ],
       "caution": "Bare 'analytical' is analytical chemistry and analytical methods in a lab posting."
     },
@@ -5884,7 +6090,20 @@
         "ausdrucksweise in deutsch",
         "sprachkenntnisse in deutsch",
         "kenntnisse in deutsch",
-        "deutsch: muttersprache"
+        "deutsch: muttersprache",
+        "german is a plus",
+        "german is an advantage",
+        "german is a strong plus",
+        "german would be a plus",
+        "german (b2)",
+        "german b2",
+        "fluency in german",
+        "command of german",
+        "skills in german",
+        "working knowledge of german",
+        "maîtrise de la langue allemande",
+        "niveau d'allemand",
+        "connaissances en allemand"
       ],
       "caution": "Never bare 'deutsch' or 'german': every Swiss page carries a language switcher, and 'German-speaking Switzerland' is a region, not a requirement."
     },
@@ -5935,7 +6154,17 @@
         "fluently in english",
         "command of english",
         "english and french",
-        "english and german"
+        "english and german",
+        "fluency in english",
+        "skills in english",
+        "working knowledge of english",
+        "und des englischen",
+        "sowie des englischen",
+        "niveau d'anglais",
+        "connaissance de l'anglais",
+        "connaissances en anglais",
+        "maîtrise de la langue anglaise",
+        "english skills"
       ],
       "caution": "Never bare 'english': half the corpus is written in it. A requirement is a phrase."
     },
@@ -5973,7 +6202,15 @@
         "french (b2)",
         "french b2",
         "fluently in french",
-        "sich auf französisch verständigen"
+        "sich auf französisch verständigen",
+        "fluency in french",
+        "command of french",
+        "skills in french",
+        "working knowledge of french",
+        "maîtrisez le français",
+        "connaissance du français",
+        "maîtrise de la langue française",
+        "french skills"
       ],
       "caution": "Never bare 'français' or 'french': the switcher on every Swiss page."
     },
@@ -5996,7 +6233,9 @@
         "italien courant",
         "conoscenza della lingua italiana",
         "italienisch auf niveau",
-        "kenntnisse in italienisch"
+        "kenntnisse in italienisch",
+        "command of italian",
+        "fluency in italian"
       ],
       "caution": "Never bare 'italiano' or 'italian': the switcher on every Swiss page."
     },
@@ -7172,7 +7411,9 @@
         "vitalzeichen",
         "vitalparameter",
         "patientenüberwachung",
-        "patientenbegleitung"
+        "patientenbegleitung",
+        "pflegediplom",
+        "pflegepraxis"
       ],
       "caution": "The profession 'medical' already names nurses as a job; this is the skill a posting asks for. Not bare 'nursing': 'nursing mothers' is a US benefit.",
       "except": [
@@ -7252,7 +7493,8 @@
         "pull request review",
         "code-review",
         "code-reviews",
-        "revue de code"
+        "revue de code",
+        "code quality"
       ]
     },
     {
@@ -7307,7 +7549,9 @@
         "root cause analyse",
         "root-cause-analysen",
         "ursachenanalysen",
-        "root causes"
+        "root causes",
+        "failure analysis",
+        "schadensanalyse"
       ],
       "caution": "Not 'rca': too many other meanings."
     },
@@ -7849,7 +8093,11 @@
         "organisationskompetenz",
         "koordinationsfähigkeit",
         "organizational capabilities",
-        "organisational capabilities"
+        "organisational capabilities",
+        "organising skills",
+        "organizing skills",
+        "planning and organising",
+        "planning and organizing"
       ]
     },
     {
@@ -7880,7 +8128,13 @@
         "business judgment",
         "decision making",
         "decision-making",
-        "entscheidungsfindung"
+        "entscheidungsfindung",
+        "entscheidungen zu treffen",
+        "entscheidungen treffen",
+        "tragfähige entscheidungen",
+        "sound decisions",
+        "à prendre des décisions",
+        "de prendre des décisions"
       ],
       "except": [
         "improving clinical decision-making",
@@ -7957,11 +8211,57 @@
         "nachbereitung des unterrichts",
         "tutorat",
         "hochschuldidaktik",
-        "hochschuldidaktisch"
+        "hochschuldidaktisch",
+        "studentische lehre",
+        "studentischen lehre"
       ],
       "caution": "Not bare 'teaching' or 'enseignement': institute names.",
       "except": [
         "teaching hospital"
+      ]
+    },
+    {
+      "id": "vocational-education",
+      "label": "Vocational education (VET)",
+      "axis": "knowledge",
+      "words": [
+        "vocational education and training",
+        "vocational education",
+        "berufsbildungssystem*",
+        "schweizerischen berufsbildung*",
+        "berufspädagog*",
+        "berufsreform",
+        "vet research",
+        "vet system"
+      ],
+      "caution": "Not bare 'Berufsbildung' or 'formation professionnelle': a benefits line and a degree type ('formation professionnelle supérieure')."
+    },
+    {
+      "id": "translation",
+      "label": "Translation & interpreting",
+      "axis": "knowledge",
+      "words": [
+        "translation studies",
+        "übersetzungswissenschaft*",
+        "traductologie",
+        "translatologie",
+        "audiovisual translation",
+        "audiovisuelle translation",
+        "traduction audiovisuelle",
+        "übersetzen und dolmetschen",
+        "traduction et interprétation",
+        "translator",
+        "übersetzer",
+        "übersetzerin",
+        "traducteur",
+        "traductrice",
+        "dolmetscher",
+        "dolmetscherin",
+        "interprète de conférence"
+      ],
+      "caution": "Never bare 'translation': translational research, and 'translation of strategy into action' in every manager's posting.",
+      "except": [
+        "technical translator"
       ]
     },
     {
@@ -8758,7 +9058,8 @@
         "numerische simulation",
         "simulation de procédés",
         "simulation numérique",
-        "simulación de procesos"
+        "simulación de procesos",
+        "multiscale simulation*"
       ],
       "caution": "bare 'simulation' left out on purpose: training drills, 'simulation games', sales 'price simulation'",
       "except": []
@@ -9050,7 +9351,10 @@
         "disponibilité à voyager",
         "déplacements fréquents",
         "disponibilidad para viajar",
-        "availability to travel"
+        "availability to travel",
+        "readiness to travel",
+        "need to travel",
+        "required to travel"
       ],
       "except": []
     },
@@ -9224,7 +9528,12 @@
         "service provider management",
         "managing external service providers",
         "facility service providers",
-        "dienstleistungsmanagement"
+        "dienstleistungsmanagement",
+        "external suppliers",
+        "steuerung externer partner",
+        "subcontractors",
+        "subunternehmer",
+        "sous-traitants"
       ],
       "except": []
     },
@@ -9266,7 +9575,9 @@
         "mehrere aufgaben gleichzeitig",
         "prioritize activities",
         "prioritise activities",
-        "multiple deadlines"
+        "multiple deadlines",
+        "priority setting",
+        "plusieurs priorités"
       ],
       "caution": "priorisierung also reads a backlog-prioritisation task (Product Owner), which is the same skill.",
       "except": []
@@ -9282,7 +9593,11 @@
         "strategisches denken",
         "strategische denkweise",
         "pensée stratégique",
-        "pensamiento estratégico"
+        "pensamiento estratégico",
+        "strategische perspektive",
+        "strategische fähigkeiten",
+        "strategischen fähigkeiten",
+        "think strategically"
       ],
       "except": []
     },
@@ -9723,7 +10038,14 @@
         "risikominderungsstrateg*",
         "risiken identifiz*",
         "raid log",
-        "vertragliche risiken"
+        "vertragliche risiken",
+        "mitigation of risks",
+        "risks and mitigations",
+        "risks, and mitigations",
+        "identify risks",
+        "identifying risks",
+        "risk/issue management",
+        "risiken verantworten"
       ],
       "except": []
     },
@@ -9847,6 +10169,25 @@
       "except": []
     },
     {
+      "id": "test-instrumentation",
+      "label": "Test instrumentation / data acquisition",
+      "axis": "technical",
+      "words": [
+        "data acquisition systems",
+        "data acquisition requirements",
+        "data acquisition system",
+        "test instrumentation",
+        "flight test instrumentation",
+        "instrumentation systems",
+        "messdatenerfassung",
+        "pressure transducers",
+        "thermocouples",
+        "strain gauges",
+        "dehnungsmessstreifen"
+      ],
+      "caution": "Not bare 'data acquisition': acquiring datasets (content, market data) is a different job."
+    },
+    {
       "id": "lifecycle-management",
       "label": "Product lifecycle management",
       "about": "Managing a product from introduction (NPI) to end of life.",
@@ -9945,7 +10286,35 @@
         "hr-controlling",
         "personalcontrolling",
         "strategische personalplanung",
-        "analítica de personas"
+        "analítica de personas",
+        "hr metrics",
+        "hr reporting",
+        "hr reports",
+        "hr dashboards",
+        "hr data analysis",
+        "manpower planning",
+        "headcount reporting",
+        "workforce metrics",
+        "hr kpis",
+        "personalbedarfsplanung",
+        "time-to-hire",
+        "time to hire",
+        "time-to-fill",
+        "time to fill",
+        "cost-per-hire",
+        "cost per hire",
+        "quality of hire",
+        "quality-of-hire",
+        "recruitment metrics",
+        "recruiting metrics",
+        "hiring metrics",
+        "recruitment kpis",
+        "recruiting kpis",
+        "rekrutierungs-kpis",
+        "recruitment analytics",
+        "recruiting analytics",
+        "recruitment dashboards",
+        "offer acceptance rate"
       ],
       "except": []
     },
@@ -10022,7 +10391,10 @@
         "mechanische integrität",
         "sécurité des procédés",
         "seguridad de procesos",
-        "process-safety-anforderungen"
+        "process-safety-anforderungen",
+        "hazard identification",
+        "explosive safety",
+        "emergency response planning"
       ],
       "except": []
     },
@@ -10181,7 +10553,21 @@
         "als hr business partner",
         "as an hr business partner",
         "as hr business partner",
-        "hr business partnering"
+        "hr business partnering",
+        "hr strategy",
+        "hr strategies",
+        "people strategy",
+        "strategic hr",
+        "strategic human resources",
+        "personalstrategie",
+        "hr-strategie",
+        "stratégie rh",
+        "estrategia de recursos humanos",
+        "hr best practices",
+        "hr shared services",
+        "hr service delivery",
+        "people operations",
+        "personalsachbearbeitung"
       ],
       "caution": "human resources also names the department a posting is sent to; section dropping removes most contact blocks",
       "except": []
@@ -10214,7 +10600,23 @@
         "amministrazione del personale",
         "arbeitszeugnisse erstellen",
         "arbeitszeugnisse verfassen",
-        "erstellung von arbeitszeugnissen"
+        "erstellung von arbeitszeugnissen",
+        "employee lifecycle",
+        "employee life cycle",
+        "employee lifecycle management",
+        "employee offboarding",
+        "onboarding to offboarding",
+        "hr records",
+        "hr documentation",
+        "employee data management",
+        "hr letters",
+        "time and attendance",
+        "zeitwirtschaft",
+        "personalzeitwirtschaft",
+        "personalstammdaten",
+        "erstellung von arbeitsverträgen",
+        "arbeitsverträge erstellen",
+        "altas y bajas de personal"
       ],
       "except": []
     },
@@ -10242,7 +10644,30 @@
         "relations de travail",
         "partenaires sociaux",
         "relaciones laborales",
-        "relazioni sindacali"
+        "relazioni sindacali",
+        "disciplinary cases",
+        "disciplinary action",
+        "disciplinary actions",
+        "disciplinary matters",
+        "disciplinary process",
+        "disciplinary procedures",
+        "disciplinary proceedings",
+        "disciplinary issues",
+        "disciplinary hearings",
+        "grievance",
+        "grievance handling",
+        "misconduct cases",
+        "engagement survey",
+        "engagement surveys",
+        "employee survey",
+        "employee surveys",
+        "pulse survey",
+        "mitarbeiterbefragung",
+        "mitarbeiterbefragungen",
+        "abmahnung",
+        "abmahnungen",
+        "procédures disciplinaires",
+        "procedimientos disciplinarios"
       ],
       "except": []
     },
@@ -10265,7 +10690,31 @@
         "diritto del lavoro",
         "flsa",
         "fmla",
-        "swiss employment"
+        "swiss employment",
+        "employment act",
+        "singapore employment act",
+        "employment laws",
+        "labour laws",
+        "labor laws",
+        "labour legislation",
+        "labor legislation",
+        "employment regulations",
+        "tafep",
+        "tripartite guidelines",
+        "tripartite standards",
+        "tripartite fair employment",
+        "fair employment practices",
+        "fair consideration framework",
+        "workplace fairness act",
+        "workplace fairness legislation",
+        "mom regulations",
+        "mom guidelines",
+        "ministry of manpower",
+        "betriebsverfassungsgesetz",
+        "betrverfg",
+        "code du travail",
+        "droit social",
+        "legislación laboral"
       ],
       "except": []
     },
@@ -10292,14 +10741,8 @@
         "full cycle recruiting",
         "recruitment strategy",
         "recruitment campaign",
-        "active sourcing",
-        "candidate sourcing",
-        "sourcing candidates",
         "candidate screening",
         "screening candidates",
-        "headhunting",
-        "executive search",
-        "employer branding",
         "personalrekrutierung",
         "personalgewinnung",
         "personalbeschaffung",
@@ -10319,7 +10762,6 @@
         "expérience en recrutement",
         "recrutement et sélection",
         "gestion du recrutement",
-        "sourcing de candidats",
         "selección de personal",
         "reclutamiento y selección",
         "selezione del personale",
@@ -10344,7 +10786,30 @@
         "stellenausschreibungen verfassen",
         "erstellung von stellenausschreibungen",
         "scheduling interviews",
-        "scheduled interviews"
+        "scheduled interviews",
+        "rekrutierungsaktivitäten",
+        "recruitment process outsourcing",
+        "high-volume recruiting",
+        "high-volume recruitment",
+        "volume recruitment",
+        "volume hiring",
+        "mass hiring",
+        "campus recruitment",
+        "campus recruiting",
+        "graduate recruitment",
+        "early careers recruitment",
+        "early talent recruitment",
+        "manage the recruitment process",
+        "managing the recruitment process",
+        "manage the full recruitment",
+        "recruitment lifecycle",
+        "recruiting lifecycle",
+        "intake meetings",
+        "intake meeting",
+        "experience as a recruiter",
+        "bewerberselektion",
+        "bewerbungsmanagement",
+        "kandidatenmanagement"
       ],
       "except": [
         "our many years of recruitment experience"
@@ -10415,7 +10880,38 @@
         "manage employee benefits",
         "managing employee benefits",
         "administered benefits",
-        "administer benefits"
+        "administer benefits",
+        "salary review",
+        "annual salary review",
+        "compensation review",
+        "compensation reviews",
+        "compensation cycle",
+        "merit cycle",
+        "merit increase",
+        "merit increases",
+        "bonus process",
+        "bonus cycle",
+        "internal equity",
+        "salary survey",
+        "salary surveys",
+        "compensation survey",
+        "compensation surveys",
+        "market pricing",
+        "pay review",
+        "pay reviews",
+        "long-term incentive",
+        "long-term incentives",
+        "equity compensation",
+        "incentive compensation",
+        "share plan administration",
+        "equity administration",
+        "lohnrunde",
+        "lohnrunden",
+        "salärrunde",
+        "gehaltsrunde",
+        "gehaltsbänder",
+        "vergütungsstrukturen",
+        "compensaciones"
       ],
       "except": []
     },
@@ -10433,20 +10929,28 @@
         "hr systems",
         "hr-systeme",
         "hr-system",
-        "successfactors",
-        "sap successfactors",
-        "workday hcm",
-        "workday hr",
         "personio",
         "bamboohr",
         "oracle hcm",
         "cornerstone ondemand",
-        "applicant tracking system",
-        "applicant tracking systems",
-        "bewerbermanagementsystem",
-        "bewerbermanagement-system",
         "personalinformationssystem",
-        "sirh"
+        "sirh",
+        "hr technology",
+        "people systems",
+        "hcm platform",
+        "oracle hcm cloud",
+        "adp workforce now",
+        "adp workforce",
+        "ukg",
+        "dayforce",
+        "ceridian",
+        "hibob",
+        "rippling",
+        "darwinbox",
+        "peoplesoft",
+        "zoho people",
+        "sage hr",
+        "horoquartz"
       ],
       "except": []
     },
@@ -10472,7 +10976,10 @@
         "politiques rh",
         "politiques et procédures",
         "procédures internes",
-        "políticas de recursos humanos"
+        "políticas de recursos humanos",
+        "hr processes",
+        "employee handbook",
+        "mitarbeiterhandbuch"
       ],
       "except": []
     },
@@ -10825,7 +11332,6 @@
         "macos",
         "mac os",
         "clientmanagement",
-        "client-management",
         "gestion des postes de travail",
         "manageengine",
         "endpoint central",
@@ -11457,6 +11963,26 @@
       "except": []
     },
     {
+      "id": "agriculture",
+      "label": "Agriculture & agronomy",
+      "axis": "knowledge",
+      "words": [
+        "agriculture",
+        "agricultural",
+        "agrarwirtschaft",
+        "agrarpolitik",
+        "agrarmärkte",
+        "agronomie",
+        "agronomy",
+        "pflanzenbau",
+        "pflanzliche produktion",
+        "crop science",
+        "crop protection",
+        "landwirtschaftlich*",
+        "agronomía"
+      ]
+    },
+    {
       "id": "video-production",
       "label": "Video production",
       "axis": "technical",
@@ -11693,7 +12219,8 @@
         "gmp-inspektion",
         "inspektionsbereitschaft",
         "authority inspection",
-        "regulatory inspection"
+        "regulatory inspection",
+        "auditierung"
       ],
       "caution": "Quality/compliance audits and authority inspections. Financial audit stays in auditing.",
       "except": []
@@ -12111,7 +12638,9 @@
         "molekulare modellierung",
         "cp2k",
         "chimie computationnelle",
-        "química computacional"
+        "química computacional",
+        "electronic structure",
+        "electronic-structure theory"
       ],
       "caution": "ORCA and Gaussian left out: a whale and a statistics term more often than the codes",
       "except": []
@@ -12487,6 +13016,551 @@
       ],
       "caution": "Also a degree field; the matcher blanks 'degree/Studium in ...' lists. 'Material Science Engineering' in an employer blurb (Oerlikon) sits under an employer heading.",
       "except": []
+    },
+    {
+      "id": "composites",
+      "label": "Composite structures",
+      "axis": "technical",
+      "words": [
+        "composite structures",
+        "composites technology",
+        "composite materials",
+        "carbon fibre",
+        "carbon fiber",
+        "cfrp",
+        "faserverbund*",
+        "verbundwerkstoff*"
+      ]
+    },
+    {
+      "id": "workday",
+      "label": "Workday",
+      "about": "Workday's HR and finance cloud (HCM, Payroll, Financials): configuration, business processes, reports.",
+      "axis": "tooling",
+      "words": [
+        "workday",
+        "workday hcm",
+        "workday hr",
+        "workday core hcm",
+        "workday studio",
+        "workday report writer",
+        "workday reporting",
+        "workday integrations",
+        "workday business processes",
+        "workday security",
+        "workday advanced compensation",
+        "workday absence",
+        "workday payroll",
+        "workday financials",
+        "workday prism",
+        "workday extend",
+        "workday pro"
+      ],
+      "caution": "Bare 'workday' is also an ordinary noun ('a typical workday', '5 workdays per week' in Singapore shift postings); the except list blanks those. 'workday hcm' and 'workday hr' moved here from hris.",
+      "except": [
+        "workdays",
+        "typical workday",
+        "your workday",
+        "a workday",
+        "per workday",
+        "each workday",
+        "normal workday",
+        "long workday",
+        "flexible workday",
+        "shorter workday",
+        "hour workday",
+        "during the workday",
+        "end of the workday",
+        "start of the workday",
+        "part of the workday"
+      ]
+    },
+    {
+      "id": "successfactors",
+      "label": "SAP SuccessFactors",
+      "about": "SAP's cloud HR suite (Employee Central, Compensation, Learning...), not the on-premise SAP HCM.",
+      "axis": "tooling",
+      "words": [
+        "sap successfactors",
+        "successfactors",
+        "successfactors employee central",
+        "sf employee central",
+        "sap sf",
+        "successfactors compensation",
+        "successfactors learning",
+        "successfactors recruiting"
+      ],
+      "caution": "'successfactors' and 'sap successfactors' moved here from hris. Not bare 'employee central': a generic phrase elsewhere. The old career5.successfactors.eu careers portals put the vendor name in apply links, so a body that kept its URLs fires this."
+    },
+    {
+      "id": "learning-development",
+      "label": "Learning & development",
+      "about": "Running a company's learning offer: needs analysis, programmes, providers, budget.",
+      "axis": "knowledge",
+      "words": [
+        "learning and development",
+        "learning & development",
+        "l&d",
+        "training needs analysis",
+        "training needs assessment",
+        "training needs analyses",
+        "learning needs analysis",
+        "learning strategy",
+        "learning programmes",
+        "learning programs",
+        "learning initiatives",
+        "learning interventions",
+        "learning journeys",
+        "training administration",
+        "training calendar",
+        "training effectiveness",
+        "kirkpatrick",
+        "skillsfuture",
+        "schulungsbedarf",
+        "schulungsbedarfe",
+        "weiterbildungsbedarf",
+        "bildungsbedarfsanalyse",
+        "lernmaßnahmen",
+        "weiterbildungsmanagement",
+        "bildungsmanagement",
+        "plan de formation",
+        "besoins en formation",
+        "développement des compétences",
+        "plan de formación",
+        "detección de necesidades formativas",
+        "necesidades de formación"
+      ],
+      "caution": "'learning and development' is also a benefit ('continuous learning and development', 'L&D budget'); offer sections are dropped and the except list takes the rest. 'personalentwicklung' is the German for this but sits in succession-planning - left there to keep one spelling one class. Not bare 'formation' (French for a degree) or 'learning' (machine learning).",
+      "except": [
+        "continuous learning and development",
+        "learning and development opportunities",
+        "learning & development opportunities",
+        "learning and development budget",
+        "learning & development budget",
+        "comprehensive learning and development",
+        "learning and development programs",
+        "learning and development programmes",
+        "l&d budget"
+      ]
+    },
+    {
+      "id": "work-permits",
+      "label": "Work passes & immigration",
+      "about": "Getting foreign hires the right to work: work pass / permit and visa applications and renewals.",
+      "axis": "knowledge",
+      "words": [
+        "work permit administration",
+        "work pass administration",
+        "work pass applications",
+        "work pass application",
+        "work pass matters",
+        "work pass renewals",
+        "work permit applications",
+        "work permit holders",
+        "employment pass applications",
+        "employment pass administration",
+        "employment pass related",
+        "foreign worker management",
+        "foreign workers management",
+        "immigration processes",
+        "immigration process",
+        "immigration matters",
+        "immigration compliance",
+        "immigration law",
+        "immigration knowledge",
+        "visa applications",
+        "visa processing",
+        "visa and immigration",
+        "arbeitsbewilligungen beantragen",
+        "beantragung von arbeitsbewilligungen",
+        "einholen von arbeitsbewilligungen",
+        "aufenthaltsbewilligungen",
+        "gestion des permis de travail",
+        "demandes de permis de travail",
+        "permisos de trabajo",
+        "employment pass",
+        "employment passes",
+        "s pass holders",
+        "s pass holder",
+        "s pass applications",
+        "ep/s pass",
+        "work pass",
+        "work passes"
+      ],
+      "caution": "Not bare 'work permit', 'Arbeitsbewilligung', 'visa' or 'work authorization': those are what the CANDIDATE must hold ('valid Swiss work permit required', 'visa sponsorship available') on thousands of postings. Only the phrases that describe administering them. 'global mobility' stays in compensation-benefits."
+    },
+    {
+      "id": "diversity-inclusion",
+      "label": "Diversity & inclusion",
+      "about": "Designing and running DEI programmes, not an employer's equal-opportunity statement.",
+      "axis": "knowledge",
+      "words": [
+        "diversity management",
+        "diversity and inclusion initiatives",
+        "diversity & inclusion initiatives",
+        "dei initiatives",
+        "d&i initiatives",
+        "dei programs",
+        "dei programmes",
+        "dei strategy",
+        "inclusion strategy",
+        "diversity, equity and inclusion programs",
+        "champion diversity and inclusion",
+        "embedding inclusion",
+        "inclusion initiatives",
+        "diversity and inclusion programs",
+        "diversity and inclusion programmes",
+        "diversity and inclusion strategy",
+        "diversitätsmanagement",
+        "diversity-management",
+        "gestion de la diversité",
+        "gestión de la diversidad"
+      ],
+      "caution": "Bare 'diversity and inclusion' is left out: it is the employer's own EEO line ('Commitment to Diversity and Inclusion') on every SumUp and Adyen posting, recruiter ones included. Only phrases that make it the job."
+    },
+    {
+      "id": "hr-certification",
+      "label": "HR certification",
+      "about": "A professional HR credential: CIPD, SHRM-CP/SCP, SPHR, IHRP.",
+      "axis": "knowledge",
+      "words": [
+        "hr certification",
+        "cipd",
+        "shrm-cp",
+        "shrm-scp",
+        "shrm certified",
+        "shrm certification",
+        "sphr",
+        "ihrp",
+        "ihrp-cp",
+        "ihrp-sp",
+        "hrci certification",
+        "hr-fachausweis",
+        "eidg. fachausweis hr"
+      ],
+      "caution": "Not bare 'phr' or 'hrci' (three/four letters, too short to trust). Swiss 'HR-Fachfrau/-mann mit eidg. Fachausweis' is already in hr-management as hr-fachfrau/hr-fachmann - only the Fachausweis spellings are here."
+    },
+    {
+      "id": "talent-sourcing",
+      "label": "Talent sourcing",
+      "about": "Finding and approaching candidates who did not apply: Boolean / X-ray search, talent mapping, direct outreach to passive talent.",
+      "axis": "technical",
+      "words": [
+        "talent sourcing",
+        "active sourcing",
+        "candidate sourcing",
+        "sourcing candidates",
+        "passive candidates",
+        "passive candidate",
+        "passive talent",
+        "passive talents",
+        "boolean search",
+        "boolean searches",
+        "boolean strings",
+        "boolean string",
+        "x-ray search",
+        "x-ray searches",
+        "talent mapping",
+        "candidate mapping",
+        "talent pipelines",
+        "talent pipeline",
+        "candidate pipeline",
+        "candidate pipelines",
+        "pipelines of candidates",
+        "pipeline of candidates",
+        "candidate outreach",
+        "talent outreach",
+        "sourcing campaigns",
+        "sourcing channels",
+        "aktives sourcing",
+        "talent-sourcing",
+        "direktansprache",
+        "direktansprachen",
+        "kandidatenansprache",
+        "kandidatensuche",
+        "talent-pipelines",
+        "sourcing de candidats",
+        "approche directe",
+        "búsqueda de candidatos",
+        "sourcing de talento",
+        "source candidates",
+        "source talent",
+        "sourcing talent",
+        "source and engage"
+      ],
+      "caution": "Bare 'sourcing', 'sourcing strategy' and 'sourcing experience' left out: they are procurement words ('strategic sourcing', 'sourcing manager') and fired on all three procurement controls. 'talent pool' left out: 'join our talent pool' is applicant boilerplate. 'sourcer' left out: procurement and fashion have sourcers too.",
+      "except": [
+        "join our talent pipeline",
+        "join our talent pipelines"
+      ]
+    },
+    {
+      "id": "sourcing-tools",
+      "label": "Sourcing tools (LinkedIn Recruiter)",
+      "about": "Paid candidate-search products a sourcer logs into.",
+      "axis": "tooling",
+      "words": [
+        "linkedin recruiter",
+        "linkedin recruiter lite",
+        "linkedin talent solutions",
+        "linkedin talent insights",
+        "linkedin recruiting tools",
+        "seekout",
+        "hiretual",
+        "entelo",
+        "contactout",
+        "amazing hiring",
+        "xing talentmanager",
+        "xing talent manager",
+        "xing recruiter"
+      ],
+      "caution": "Bare 'linkedin' left out: it is where every posting tells you to follow the company. 'Gem' (a sourcing CRM) left out: 'hidden gem'."
+    },
+    {
+      "id": "applicant-tracking",
+      "label": "Applicant tracking systems (ATS)",
+      "about": "The recruiting system candidates and requisitions live in: Greenhouse, Workday Recruiting, SmartRecruiters, Bullhorn...",
+      "axis": "tooling",
+      "words": [
+        "applicant tracking system",
+        "applicant tracking systems",
+        "ats system",
+        "ats systems",
+        "ats tools",
+        "ats platform",
+        "ats platforms",
+        "ats hygiene",
+        "ats data",
+        "recruiting software",
+        "recruitment software",
+        "recruiting tools and platforms",
+        "greenhouse ats",
+        "greenhouse recruiting",
+        "lever ats",
+        "smartrecruiters",
+        "bullhorn",
+        "icims",
+        "taleo",
+        "oracle taleo",
+        "jobvite",
+        "teamtailor",
+        "recruitee",
+        "avature",
+        "jobadder",
+        "vincere",
+        "manatal",
+        "zoho recruit",
+        "recruitcrm",
+        "jobdiva",
+        "ceipal",
+        "rexx systems",
+        "softgarden",
+        "d.vinci",
+        "dvinci",
+        "umantis",
+        "haufe umantis",
+        "prescreen",
+        "coveto",
+        "bewerbermanagementsystem",
+        "bewerbermanagement-system",
+        "bewerbermanagement-tool",
+        "bewerbermanagementsoftware",
+        "logiciel de recrutement",
+        "sistema de seguimiento de candidatos",
+        "our ats",
+        "crm/ats"
+      ],
+      "caution": "Bare 'ats' left out (automatic transfer switch in electrical postings, ATS = air traffic services); bare 'greenhouse' (horticulture, 'greenhouse gas'), 'lever' ('levers'), 'workable' and 'ashby' left out. Workday Recruiting and SuccessFactors Recruiting are caught by the workday / successfactors classes in hr-proposal.json. A posting served through one of these ATS can carry its name in an apply link: check URLs are stripped before relying on a vendor name."
+    },
+    {
+      "id": "executive-search",
+      "label": "Executive search / headhunting",
+      "about": "Retained search for senior hires, typically at a search firm.",
+      "axis": "knowledge",
+      "words": [
+        "executive search",
+        "headhunting",
+        "headhunter",
+        "head-hunter",
+        "head hunter",
+        "retained search",
+        "retained executive search",
+        "executive search firm",
+        "board search",
+        "search assignments",
+        "search mandates",
+        "search mandate",
+        "c-suite search",
+        "kadervermittlung",
+        "kaderselektion",
+        "direktsuche",
+        "chasse de têtes",
+        "chasseur de têtes",
+        "chasseuse de têtes",
+        "recrutement de cadres dirigeants",
+        "búsqueda de ejecutivos",
+        "búsqueda de directivos"
+      ],
+      "caution": "A search firm describing itself ('we are a leading executive search firm') on a posting for some other job fires this; the employer-name blanking only removes the firm's exact name. None of the 26 + 60 controls did, but agency-posted boards are where to look first."
+    },
+    {
+      "id": "agency-recruitment",
+      "label": "Agency recruitment (360 / full-desk)",
+      "about": "Recruiting as an agency consultant: winning client mandates and filling them, billed on placement fees.",
+      "axis": "knowledge",
+      "words": [
+        "agency recruitment",
+        "agency recruiting",
+        "recruitment agency experience",
+        "360 recruitment",
+        "360-recruitment",
+        "360-degree recruitment",
+        "360 degree recruitment",
+        "360 recruiter",
+        "360 recruitment consultant",
+        "full-desk recruitment",
+        "full desk recruitment",
+        "full-desk recruiter",
+        "recruitment consultancy experience",
+        "experience as a recruitment consultant",
+        "placement targets",
+        "placement fees",
+        "billing targets",
+        "billings targets",
+        "fee targets",
+        "staffing agency experience",
+        "erfahrung in der personalberatung",
+        "erfahrung in der personalvermittlung",
+        "erfahrung als personalberater",
+        "erfahrung als personalberaterin",
+        "personalvermittlung von grund auf",
+        "temporärvermittlung",
+        "temporär- und festanstellungen",
+        "festvermittlung",
+        "festvermittlungen",
+        "expérience en cabinet de recrutement",
+        "experiencia en consultoría de selección"
+      ],
+      "caution": "Bare 'personalvermittlung', 'personalberatung' and 'staffing' left out: every agency-posted ad describes the agency with them. Singapore's 'EA Licence No / EA Reg No / EA Personnel No' line is on 20 of 26 controls and must never be a word here (see ea-licensing). Client acquisition itself is the `sales` class, which already fires on 28 of 75 recruiter postings. 'agency environment' and 'experience in an agency' left out: marketing and advertising postings ask for them. 'contract / temporary staffing' left out: staffing firms describe themselves with it."
+    },
+    {
+      "id": "candidate-experience",
+      "label": "Candidate experience",
+      "about": "How candidates are treated through the hiring process: communication, speed, feedback.",
+      "axis": "knowledge",
+      "words": [
+        "candidate experience",
+        "candidate journey",
+        "candidate care",
+        "candidate engagement",
+        "interview experience",
+        "applicant experience",
+        "bewerbererlebnis",
+        "kandidatenerlebnis",
+        "bewerbererfahrung",
+        "expérience candidat",
+        "parcours candidat",
+        "experiencia del candidato"
+      ],
+      "caution": "'interview experience' also reads as 'prior interview experience' in a few postings; kept because it never fired on a control."
+    },
+    {
+      "id": "employer-branding",
+      "label": "Employer branding",
+      "about": "Making the company attractive as an employer: EVP, careers content, recruitment marketing.",
+      "axis": "knowledge",
+      "words": [
+        "employer branding",
+        "employer brand",
+        "employer value proposition",
+        "recruitment marketing",
+        "recruiting marketing",
+        "talent attraction",
+        "arbeitgebermarke",
+        "arbeitgebermarken",
+        "arbeitgebermarkenaufbau",
+        "arbeitgebermarketing",
+        "personalmarketing",
+        "employer-branding",
+        "marque employeur",
+        "marca empleadora",
+        "marca de empleador",
+        "atracción de talento"
+      ],
+      "caution": "Bare 'evp' left out (Executive Vice President). Employers praise their own 'strong employer brand' in boilerplate; section dropping removes most of it."
+    },
+    {
+      "id": "interviewing",
+      "label": "Interviewing & candidate assessment",
+      "about": "Running structured, competency-based or telephone interviews and assessments to judge candidates.",
+      "axis": "technical",
+      "words": [
+        "competency-based interviewing",
+        "competency-based interview",
+        "competency based interviews",
+        "structured interviews",
+        "structured interview",
+        "behavioural interviewing",
+        "behavioral interviewing",
+        "behavioural interviews",
+        "behavioral interviews",
+        "phone screening",
+        "phone screens",
+        "telephone screening",
+        "candidate assessment",
+        "candidate assessments",
+        "candidate evaluation",
+        "assessment centers",
+        "assessment centres",
+        "psychometric assessment",
+        "psychometric assessments",
+        "psychometric testing",
+        "psychometric tests",
+        "interview techniques",
+        "interviewing techniques",
+        "interviewer training",
+        "training interview teams",
+        "strukturierte interviews",
+        "strukturierten interviews",
+        "kompetenzbasierte interviews",
+        "kompetenzbasierten interviews",
+        "telefoninterviews",
+        "kandidatenbewertung",
+        "eignungsdiagnostik",
+        "durchführung von interviews",
+        "durchführung von vorstellungsgesprächen",
+        "entretiens de recrutement",
+        "entretiens structurés",
+        "entrevistas de selección",
+        "entrevistas por competencias",
+        "evaluación de candidatos",
+        "structured assessments",
+        "interviewer enablement",
+        "interview frameworks"
+      ],
+      "caution": "Bare 'interviewing' and 'conduct interviews' left out: 'Interviewing at Datadog AI Guidelines' is footer boilerplate on every Datadog posting, and hiring managers 'conduct interviews' (that is technical-hiring, managerial). Postings for psychologists use psychometric testing clinically. Singular 'assessment center', 'Telefoninterview' and 'phone interviews' left out: postings describe their own selection process with them ('ein Telefoninterview, ein Assessment Center und ein finales Interview' - Bosch trainee control)."
+    },
+    {
+      "id": "ea-licensing",
+      "label": "Recruitment licensing (CEI / EA registration)",
+      "about": "Singapore's Certificate in Employment Intermediaries and MOM registration as EA personnel, required to recruit for an agency there; Swiss Fachausweis Personalberatung.",
+      "axis": "knowledge",
+      "words": [
+        "certificate in employment intermediaries",
+        "certificate of employment intermediaries",
+        "cei certification",
+        "cei certificate",
+        "cei certified",
+        "cei-certified",
+        "valid cei",
+        "registered ea personnel",
+        "registered as ea personnel",
+        "fachausweis personalberatung",
+        "personalberater mit eidg. fachausweis",
+        "personalberaterin mit eidg. fachausweis",
+        "eidg. fachausweis personalberater"
+      ],
+      "caution": "The 'EA Licence No / EA Reg No / EA Personnel No / Registration No' line closes every Singapore agency-posted ad (20 of 26 controls), whatever the job: none of its spellings may go in here, and 'ea registration' / 'ea personnel registration' are left out for that reason ('EA Personnel Registration No: R...' fired on a preschool-teacher control). Bare 'cei' left out: French CEI is the IEC in engineering postings."
     }
   ]
 }

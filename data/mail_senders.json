@@ -1,8 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
   "_note": "What `code/mailbox.py --file` watches for, minus everything the registry already knows. The watched set is DERIVED at runtime: company hosts from sources/companies.json (`url`, www stripped) go in the replies bucket, board hosts from sources/boards.json go in the alerts bucket, and an ATS relay is watched only when its connector `type` actually appears among enabled connectors - we watch the ATS we apply through, not every ATS that exists. A company added to the registry tomorrow is watched with no edit here. This file holds only the three things that cannot be derived. `via` is the same honesty rule as `domain_via` and `glassdoor_via`: `confirmed` = seen in a real mailbox here, `memory` = written from memory and never observed; a `memory` entry that matches nothing is not a bug.",
 
-  "_alerts_extra_note": "Alert senders that are not the board's own host - Indeed and LinkedIn both send from a different domain than the one in boards.json.",
+  "_alerts_extra_note": "Alert senders that are not the board's own host - Indeed and LinkedIn both send from a different domain than the one in boards.json - and every platform whose alert mail is read by its links. `posting` (version 3) is a regex over host+path of ONE posting on that platform, subdomains allowed: a sender with it has every link in its mail unwrapped from click tracking, kept when it matches, and the posting page read for its schema.org JobPosting (mailbox/alerts.ts generic()). A new platform is one row here. `sender` is an address or a host; a host covers every address at it and its subdomains.",
   "alerts_extra": [
     { "sender": "jobalert.indeed.com", "via": "confirmed", "note": "15 messages in this mailbox on 2026-09-06" },
     { "sender": "indeedemail.com", "via": "memory" },
@@ -10,7 +10,31 @@
     { "sender": "jobalerts-noreply@linkedin.com", "via": "memory", "note": "unverified - this account has no LinkedIn mail at all" },
     { "sender": "jobs-listings@linkedin.com", "via": "memory", "note": "unverified - no LinkedIn mail here" },
     { "sender": "jobs-noreply@linkedin.com", "via": "memory", "note": "unverified - no LinkedIn mail here" },
-    { "sender": "noreply@jobs.ch", "via": "memory", "note": "jobs.ch is already a board host; this is the exact address, harmless duplication" }
+    { "sender": "noreply@jobs.ch", "via": "memory", "note": "jobs.ch is already a board host; this is the exact address, harmless duplication" },
+    { "sender": "jobs.ch", "via": "memory", "posting": "jobs\\.ch/[a-z]{2}/(?:vacancies|stellenangebote|offres-emplois|offerte-lavoro)/detail/[\\w-]+", "note": "CH. jobs.ch is a board host; the row is here for its posting pattern." },
+    { "sender": "jobup.ch", "via": "memory", "posting": "jobup\\.ch/[a-z]{2}/(?:emplois|jobs)/detail/[\\w-]+", "note": "CH, JobCloud's French-speaking twin of jobs.ch" },
+    { "sender": "michaelpage.ch", "via": "memory", "posting": "michaelpage\\.[a-z.]+/job-detail/[\\w-]+", "note": "CH; the same pattern reads every Michael Page country site" },
+    { "sender": "michaelpage.com", "via": "memory", "posting": "michaelpage\\.[a-z.]+/job-detail/[\\w-]+" },
+    { "sender": "stepstone.de", "via": "memory", "posting": "stepstone\\.de/stellenangebote--[^/]+-\\d+-inline\\.html", "note": "DE" },
+    { "sender": "mail.xing.com", "via": "memory", "posting": "xing\\.com/jobs/[\\w-]+-\\d+", "note": "DE; xing.com itself is excluded (network mail), only its mail host is watched" },
+    { "sender": "arbeitsagentur.de", "via": "memory", "posting": "arbeitsagentur\\.de/jobsuche/jobdetail/[\\w-]+", "note": "DE, Bundesagentur Jobsuche" },
+    { "sender": "welcometothejungle.com", "via": "memory", "posting": "welcometothejungle\\.com/[a-z]{2}/companies/[\\w-]+/jobs/[\\w-]+", "note": "FR/ES/DE" },
+    { "sender": "infojobs.net", "via": "memory", "posting": "infojobs\\.net/[\\w-]+/[\\w-]+/of-i[0-9a-f]+", "note": "ES" },
+    { "sender": "pracuj.pl", "via": "memory", "posting": "pracuj\\.pl/praca/[^/]+,oferta,\\d+", "note": "PL" },
+    { "sender": "justjoin.it", "via": "memory", "posting": "justjoin\\.it/job-offer/[\\w-]+", "note": "PL" },
+    { "sender": "nofluffjobs.com", "via": "memory", "posting": "nofluffjobs\\.com/(?:[a-z]{2}/)?job/[\\w-]+", "note": "PL" },
+    { "sender": "seek.com.au", "via": "memory", "posting": "seek\\.com\\.au/job/\\d+", "note": "AU" },
+    { "sender": "jora.com", "via": "memory", "posting": "jora\\.com/job/[\\w-]+", "note": "AU" },
+    { "sender": "jobs.lu", "via": "memory", "posting": "jobs\\.lu/(?:[a-z]{2}/)?job/[\\w-]+", "note": "LU" },
+    { "sender": "moovijob.com", "via": "memory", "posting": "moovijob\\.com/(?:[a-z]{2}/)?(?:job|offres?)[\\w/-]*\\d+", "note": "LU" },
+    { "sender": "jobstreet.com", "via": "memory", "posting": "jobstreet\\.com(?:\\.sg|\\.my)?/(?:[a-z]{2}/)?job/\\d+", "note": "SG/MY; JobStreet runs on SEEK's platform since 2024, so the path is SEEK's" },
+    { "sender": "glints.com", "via": "memory", "posting": "glints\\.com/(?:[a-z]{2}/)?opportunities/jobs/[\\w-]+/[\\w-]+", "note": "SG/ID" },
+    { "sender": "fastjobs.sg", "via": "memory", "posting": "fastjobs\\.sg/singapore-job-ad/\\d+", "note": "SG" },
+    { "sender": "jobscentral.com.sg", "via": "memory", "posting": "jobscentral\\.com\\.sg/job[\\w/-]*\\d+", "note": "SG" },
+    { "sender": "mycareersfuture.gov.sg", "via": "memory", "posting": "mycareersfuture\\.gov\\.sg/job/[\\w-]+/[\\w-]+", "note": "SG, the government board" },
+    { "sender": "foundit.sg", "via": "memory", "posting": "foundit\\.(?:sg|in|my)/job/[\\w-]+", "note": "SG; ex-Monster APAC" },
+    { "sender": "nodeflair.com", "via": "memory", "posting": "nodeflair\\.com/jobs/[\\w-]+", "note": "SG, tech" },
+    { "sender": "efinancialcareers.com", "via": "memory", "posting": "efinancialcareers\\.[a-z.]+/jobs-[^?]*\\.id\\d+", "note": "finance, every country site" }
   ],
 
   "_ats_relays_note": "connector type -> the domain that ATS sends mail from. All `memory`: none of these has been observed in this mailbox yet, because nothing has been applied to through them. A type not present among enabled connectors is not watched at all.",

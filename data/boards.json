@@ -1,5 +1,5 @@
 {
-  "version": 50,
+  "version": 51,
   "boards": [
     {
       "id": "alerts:mail",
@@ -15,7 +15,7 @@
         "config": {},
         "enabled": true,
         "verified": "2026-09-27",
-        "notes": "The LinkedIn and Indeed job-alert mail each profile's mailbox receives, parsed by `job-i mailbox --alerts` into profiles/<name>/alerts.json. Runs for everybody whenever wired; a profile with no mailbox adds nothing. No posting body, so fit_score stays null unless dedupe() finds the employer's own copy."
+        "notes": "Job-alert mail each profile's mailbox receives, parsed by `job-i mailbox --alerts` into profiles/<name>/alerts.json: LinkedIn and Indeed by their own parsers, any other platform by one row in mail_senders.json alerts_extra (sender + posting URL pattern). Runs for everybody whenever wired; a profile with no mailbox adds nothing. LinkedIn/Indeed rows have no body, so fit_score stays null unless dedupe() finds the employer's own copy; other platforms' links are opened once for the page's schema.org JobPosting (robots.txt respected), and fall back to the mail's title and company."
       },
       "stats": {
         "open_positions": null,
@@ -2515,7 +2515,8 @@
             "https://4dayweek.io/api/v2/jobs?limit=100&country=Germany",
             "https://4dayweek.io/api/v2/jobs?limit=100&country=Spain",
             "https://4dayweek.io/api/v2/jobs?limit=100&country=Poland",
-            "https://4dayweek.io/api/v2/jobs?limit=100&country=Australia"
+            "https://4dayweek.io/api/v2/jobs?limit=100&country=Australia",
+            "https://4dayweek.io/api/v2/jobs?limit=100&country=Singapore"
           ],
           "list_key": "data",
           "map": {
@@ -2533,6 +2534,484 @@
         "verified": "2026-09-25",
         "notes": "Public v2 API (robots.txt Allows /api/v2, disallows the unversioned /api/). 25 428 jobs in total, limit capped at 100, full descriptions (~6000 chars). country= means 'in that country OR location-free remote': a made-up country returns only the 121 location-free ones, so a row with an empty locations[] is remote-anywhere, never this country. salary_min/max are in CENTS (10058400 = 100 584 USD) and are deliberately not mapped. 'locations/country' reads a list of objects, which dig() walks. One row, one query per country (CH, DE, ES, PL, AU): country= means 'in that country OR remote-anywhere', so the five answers overlap heavily and share URLs, which dedupe merges. Probed 2026-09-25 through custom with the list-walking dig(): 100 rows per country, employers such as CERN, Merck, Celonis, Sanofi, Tanium."
       },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "custom:mycareersfuture",
+      "name": "MyCareersFuture",
+      "url": "https://www.mycareersfuture.gov.sg",
+      "jobs_url": "https://www.mycareersfuture.gov.sg/search",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "public-sector"
+      ],
+      "search_url": "https://www.mycareersfuture.gov.sg/search?search={term}",
+      "connector": {
+        "type": "custom",
+        "config": {
+          "url_template": "https://api.mycareersfuture.gov.sg/v2/jobs?search={term}&limit=100&page=0&sortBy=new_posting_date",
+          "list_key": "results",
+          "detail": false,
+          "map": {
+            "url": "metadata/jobDetailsUrl",
+            "title": "title",
+            "company": "postedCompany/name",
+            "location": "{address/districts/0/region}, Singapore",
+            "description": "description",
+            "posted_at": "metadata/newPostingDate",
+            "salary_raw": "SGD {salary/minimum}-{salary/maximum} {salary/type/salaryType}"
+          }
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Singapore's national job bank (Workforce Singapore). Employers sponsoring an Employment Pass must advertise here first (Fair Consideration Framework), so it carries nearly every SG employer, agencies included - 95 139 open postings on 2026-10-07. That is why it is SEARCHED with the profile's terms (url_template) and never paged whole. GET api.mycareersfuture.gov.sg/v2/jobs?search=&limit=100&sortBy=new_posting_date, no key, answers the honest Job-I user agent; www robots.txt is an empty 'Disallow:', the api host has none. The SPA's own call is POST /v2/search with a JSON body, which custom cannot template per term - GET /v2/jobs takes search= in the query and filters by content: search=zzqqxxfake -> total 0, 'data scientist' -> 132 (Workato, Micron, Flintex), 'nurse' -> 1849. Only page 0 (100 newest) is read per term. Every row carries the full HTML description (median ~3300 chars), so detail:false - the jobDetailsUrl page is an 8KB JS shell anyway. 0 of 500 sampled rows had address.isOverseas, so '<region>, Singapore' is the posting's own location (Central / East / Islandwide...). Salary is published on almost every row but MONTHLY SGD: salary_min/max are deliberately not mapped (the floor reads annual figures); salary_raw keeps 'SGD 6000-8500 Monthly' for the card. status is Open or Re-open only. postedCompany is the advertiser: agencies (Recruit Express, PERSOL) post under their own name."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "custom:efinancialcareers-sg",
+      "name": "eFinancialCareers Singapore",
+      "url": null,
+      "jobs_url": "https://www.efinancialcareers.com/jobs-Singapore",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "finance"
+      ],
+      "search_url": "https://www.efinancialcareers.com/jobs-Singapore?q={term}",
+      "connector": {
+        "type": "custom",
+        "config": {
+          "url": "https://job-search-api.efinancialcareers.com/v1/efc/jobs/search?countryCode2=SG&page=1&pageSize=200&sortBy=date",
+          "list_key": "data",
+          "map": {
+            "url": "https://www.efinancialcareers.com{detailsPageUrl}",
+            "title": "title",
+            "company": "companyName",
+            "location": "jobLocation/displayName",
+            "description": "description",
+            "posted_at": "postedDate",
+            "salary_raw": "salary"
+          },
+          "detail": false
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Same API as the CH/DE/LU/PL/AU rows. countryCode2=SG filters by content: 200 of 200 rows had jobLocation Singapore on 2026-10-07 (GIC, Temasek, ICE, PERSOL), while the control ZZ fell back to the global list (107 Germany, 20 Switzerland...) and HK returned 200 of 200 Hong Kong. Full description on every row (median ~3300 chars), so detail:false. Agencies post here too and are named as the company."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "finance"
+    },
+    {
+      "id": "custom:techinasia-sg",
+      "name": "Tech in Asia Jobs (Singapore)",
+      "url": "https://www.techinasia.com",
+      "jobs_url": "https://www.techinasia.com/jobs/search?country_name[]=Singapore",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "startup"
+      ],
+      "search_url": null,
+      "connector": {
+        "type": "custom",
+        "config": {
+          "url": "https://219WX3MPV4-dsn.algolia.net/1/indexes/job_postings/query",
+          "headers": {
+            "X-Algolia-Application-Id": "219WX3MPV4",
+            "X-Algolia-API-Key": "b528008a75dc1c4402bfe0d8db8b3f8e"
+          },
+          "post": {
+            "params": "hitsPerPage=200&facetFilters=%5B%22city.country_name%3ASingapore%22%5D"
+          },
+          "list_key": "hits",
+          "map": {
+            "url": "https://www.techinasia.com/jobs/{id}",
+            "title": "title",
+            "company": "company/name",
+            "location": "{city/name}, {city/country_name}",
+            "location_type_hint": "work_arrangement",
+            "description": "description",
+            "posted_at": "published_at"
+          },
+          "detail": false
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "SEA startup board. robots.txt allows /jobs to every agent. The page is an SPA whose search is Algolia - app 219WX3MPV4, index job_postings, search-only key b528008a75dc1c4402bfe0d8db8b3f8e, all three published in the site's app bundle (static.techinasia.com/assets/v5/app.*.js, config.algolia): a public constant, not a credential, and when they rotate it the connector fails loudly. The REST /api/2.0/job-postings?country_name[]= IGNORES its filter (Singapore and Atlantis return the same Indonesian list), so Algolia facetFilters city.country_name:Singapore is the door: 9 hits on 2026-10-07 (Mekari, Propseller, Kenzap, Tech in Asia itself), control Atlantis -> 0. The whole index is only 279 postings, 250 Indonesian - a small yield, wired because it costs one request. Full description in every hit (median ~4100 chars), so detail:false - /jobs/<id> answers 403 to the Job-I user agent (AWS ELB) and 200 to a browser, which is what the url is for. salary_min/max not mapped: monthly, in the job's own currency (IDR rows read 8 000 000)."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "html:careers-gov-sg",
+      "name": "Careers@Gov (Singapore Public Service)",
+      "url": "https://www.careers.gov.sg",
+      "jobs_url": "https://jobs.careers.gov.sg/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "public-sector"
+      ],
+      "search_url": null,
+      "connector": {
+        "type": "html",
+        "config": {
+          "url": "https://jobs.careers.gov.sg/",
+          "base": "https://jobs.careers.gov.sg",
+          "url_format": "/jobs/hrp/{url}",
+          "location": "Singapore",
+          "row": "\\\\\"id\\\\\":\\\\\"(?P<url>[^\"\\\\]+)\\\\\",\\\\\"name\\\\\":\\\\\"(?P<title>(?:[^\"\\\\]|\\\\[^\"]){3,200}?)\\\\\",\\\\\"agency\\\\\":\\\\\"(?P<company>(?:[^\"\\\\]|\\\\[^\"]){0,120}?)\\\\\"[^{}]{0,600}?\\\\\"jobSource\\\\\":\\\\\"hrp\\\\\"",
+          "detail": false
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "The Singapore Public Service's job portal (ministries and statutory boards: JTC, MINDEF, CSA, ITE...). jobs.careers.gov.sg/ embeds EVERY open posting in its Next.js RSC payload (2.6MB, ~1970 rows on 2026-10-07), so one request is the whole list; the row regex reads the escaped JSON (id, name, agency ... jobSource). robots.txt: 'Allow: /', 'Disallow: /api/' - the SPA's list endpoint is under /api/, the page is not. Two sources share the page with different URL shapes: this row takes jobSource hrp (Workday 'HRP', 1907 rows, url /jobs/hrp/<id>); html:careers-gov-sg-workable takes the 62 Workable ones - url_format holds one prefix, hence two rows over one page. detail:false NOT by choice: posting pages carry a schema.org JobPosting, but the AWS ELB answers the Job-I user agent 403 on /jobs/* while serving it the list page (a browser UA gets 200 on both) - a deliberate bot rule, not worked around. So these rows carry title + agency only and fit_score is null. curl on Windows (schannel) fails the TLS renegotiation this host requests; Bun's fetch does not. The Workday tenant behind HRP (sggovterp.wd102, site PublicServiceCareers, named in the bundle) does not resolve on this machine's DNS. Location 'Singapore' is set in config: it is the portal of the Singapore public service."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "academia-public"
+    },
+    {
+      "id": "html:careers-gov-sg-workable",
+      "name": "Careers@Gov (Workable postings)",
+      "url": "https://www.careers.gov.sg",
+      "jobs_url": "https://jobs.careers.gov.sg/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "public-sector"
+      ],
+      "search_url": null,
+      "connector": {
+        "type": "html",
+        "config": {
+          "url": "https://jobs.careers.gov.sg/",
+          "base": "https://jobs.careers.gov.sg",
+          "url_format": "/jobs/workable/{url}",
+          "location": "Singapore",
+          "row": "\\\\\"id\\\\\":\\\\\"(?P<url>[^\"\\\\]+)\\\\\",\\\\\"name\\\\\":\\\\\"(?P<title>(?:[^\"\\\\]|\\\\[^\"]){3,200}?)\\\\\",\\\\\"agency\\\\\":\\\\\"(?P<company>(?:[^\"\\\\]|\\\\[^\"]){0,120}?)\\\\\"[^{}]{0,600}?\\\\\"jobSource\\\\\":\\\\\"workable\\\\\"",
+          "detail": false
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Second half of html:careers-gov-sg - the same page, the 62 postings whose jobSource is workable (MDDI, CSA: mostly digital / cyber roles), url /jobs/workable/<account>/<shortcode>; /jobs/hrp/<that id> answers 500. Every note on html:careers-gov-sg applies, including detail:false because /jobs/* is 403 to the Job-I user agent."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "academia-public"
+    },
+    {
+      "id": "html:michaelpage-sg",
+      "name": "Michael Page Singapore",
+      "url": "https://www.michaelpage.com.sg",
+      "jobs_url": "https://www.michaelpage.com.sg/jobs",
+      "location": "Singapore",
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "recruitment-agency"
+      ],
+      "search_url": "https://www.michaelpage.com.sg/jobs?search={term}",
+      "connector": {
+        "type": "html",
+        "config": {
+          "url": "https://www.michaelpage.com.sg/jobs?page={page}",
+          "base": "https://www.michaelpage.com.sg",
+          "pages": 10,
+          "row": "<h3><a href=\"(?P<url>/job-detail/[^\"]+)\"[^>]*>(?P<title>[^<]{3,140})</a></h3>.{0,300}?<div class=\"job-location\">.{0,120}?</i>\\s*(?P<location>[^<]{0,60}?)\\s*</div>(?:.{0,600}?job_advert__job-summary-text\">(?P<description>.{0,900}?)</div>)?",
+          "detail": false
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Same Drupal build as html:michaelpage-ch; the CH row regex matches unchanged: 30 rows a page, ?page= 0-based, ~15 pages (~440 postings) on 2026-10-07. pages:10, not 15, because a page past the end answers HTTP 404 (page 20 did), which would fail the connector - so it reads the newest ~300. The list carries a real summary paragraph, so detail:false as in CH. Their own data is occasionally crossed: /job-detail/scrum-master/... is titled 'Security Manager' on the list - the site renders it that way, the regex is not misaligned. robots.txt disallows only the apply paths. AGENCY: the client is never named."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "html:hays-sg",
+      "name": "Hays Singapore",
+      "url": "https://www.hays.com.sg",
+      "jobs_url": "https://www.hays.com.sg/job-search",
+      "location": "Singapore",
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "recruitment-agency"
+      ],
+      "search_url": "https://www.hays.com.sg/job-search?q={term}",
+      "connector": {
+        "type": "html",
+        "config": {
+          "url_template": "https://www.hays.com.sg/job-search?q={term}",
+          "base": "https://www.hays.com.sg",
+          "row": "id=\"gtm_job_redirecttodetail\" href=\"(?P<url>https://www.hays.com.sg/job-detail/[^\"?]+)[^\"]*\"[^>]*>(?P<title>[^<]{3,200})</a>.{0,400}?</h3><p[^>]*>(?P<description>[^<]{0,600})</p>.{0,600}?class=\"location\">.{0,200}?<span[^>]*>(?P<location>[^<]{0,80})</span>",
+          "detail": true
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Angular SSR over Google Cloud Talent Solution - NOT the Liferay build html:hays-ch reads (/en/jobsearch/job-offers is a 404 here). /job-search?q=<term> is server-rendered, 10 rows, and filters by content: q=engineer -> Project Engineer, Algorithm Engineer, Forward Deployed AI Engineer; q=zzqqxxfake -> 0 rows. Only the first 10 per term are read, hence url_template. robots.txt disallows /job-search/* and /jobs-search/: the bare /job-search?q= path is outside both patterns, but it is the edge of what is allowed. The url group stops at '?': the list link carries a tracking query (applyId, jobName=projects/.../jobs/<n>) and the bare /job-detail/<slug>_<id> page is the same posting, which keeps job_id stable. Detail pages carry a schema.org JobPosting (~2300-2500 chars), so detail stays on. AGENCY: the client is never named."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "html:randstad-sg",
+      "name": "Randstad Singapore",
+      "url": "https://www.randstad.com.sg",
+      "jobs_url": "https://www.randstad.com.sg/jobs/",
+      "location": "Singapore",
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "recruitment-agency"
+      ],
+      "search_url": null,
+      "connector": {
+        "type": "html",
+        "config": {
+          "url": "https://www.randstad.com.sg/jobs/page-{page}/",
+          "first_page": 1,
+          "pages": 25,
+          "base": "https://www.randstad.com.sg",
+          "row": "\"job_title\":\"(?P<title>[^\"]{3,200})\".{0,1500}?\"city\":\"(?P<location>[^\"]{0,80})\".{0,1200}?\"url\":\"(?P<url>/jobs/[^\"]+)\",\"launch_date\":\"(?P<posted>[0-9-]{10})\"",
+          "detail": true
+        },
+        "enabled": true,
+        "verified": "2026-10-07",
+        "notes": "Server-rendered list, 30 a page at /jobs/page-<n>/ (1-based), 665 postings on 2026-10-07. Rows are read out of the page's own GTM dataLayer impressions (job_title, city, url, launch_date) rather than the card markup: one flat JSON object per posting, naming the city. A page past the end answers 200 with no rows (page-40 checked), so pages:25 is safe as the inventory moves. robots.txt disallows only /jobs/*,*/. The dataLayer also has minimum_/maximum_salary (annual SGD) - not captured, html has no salary_min group. The detail page has NO JSON-LD: the description falls back to the whole page text (~11-12k chars, navigation included), the known limitation of a detail:true html row. AGENCY: Randstad is the company."
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:jobstreet-sg",
+      "name": "JobStreet Singapore",
+      "url": "https://sg.jobstreet.com",
+      "jobs_url": "https://sg.jobstreet.com/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": "https://sg.jobstreet.com/{term}-jobs",
+      "connector": null,
+      "forbidden": true,
+      "notes": "SEEK-owned: the same platform and terms as manual:seek. robots.txt (2026-10-07): 'Disallow: *?' (only ?keywords and ?advertiserid allowed), Disallow /graphql and /api/jobsearch/, and anthropic-ai / GPTBot are barred from */job/. Cloudflare answers 403 'Just a moment...' to a browser user agent on /software-engineer-jobs. SEEK's terms forbid automated collection. Use by hand or through its alert mail. JobsDB Singapore was folded into JobStreet; jobsdb.com today serves HK/TH and sits behind the same Cloudflare challenge.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:indeed-sg",
+      "name": "Indeed Singapore",
+      "url": null,
+      "jobs_url": "https://sg.indeed.com/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": "https://sg.indeed.com/jobs?q={term}&l=Singapore",
+      "connector": null,
+      "forbidden": true,
+      "notes": "Cloudflare 'Security Check - Indeed.com' 403 to a browser user agent (2026-10-07); robots.txt disallows /job/ and the API paths. Same verdict as manual:indeed-ch: the publisher API is gone, email alerts are the supported route.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:linkedin-sg",
+      "name": "LinkedIn Jobs (Singapore)",
+      "url": null,
+      "jobs_url": "https://www.linkedin.com/jobs/search?keywords=&location=Singapore",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": "https://www.linkedin.com/jobs/search?keywords={term}&location=Singapore",
+      "connector": null,
+      "forbidden": true,
+      "notes": "Same as manual:linkedin: scraping breaks the ToS and puts the account at risk; robots.txt disallows /jobs-guest/ and /jobs?runSearch*. Use by hand or parse the alert mail.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:glints-sg",
+      "name": "Glints Singapore",
+      "url": "https://glints.com",
+      "jobs_url": "https://glints.com/sg/opportunities/jobs/explore",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "startup"
+      ],
+      "search_url": null,
+      "connector": null,
+      "forbidden": true,
+      "notes": "Technically open, forbidden by its own rules. The list page redirects to /sg/opportunities/jobs/explore?country=SG..., and robots.txt disallows '*/opportunities/jobs/explore?*'. The SPA's GraphQL (POST glints.com/api/v2/graphql?op=searchJobs, data.CountryCode=SG) answers anonymously and is not in robots.txt, but glints.com/sg/about/terms: users 'are prohibited in using screen scraping, data mining, robots or similar data gathering and extraction tools on the Site' without prior written consent. Little is lost: searchJobs totalJobs was 10 for SG on 2026-10-07 (7 of them one employer, Noak) - Glints is an Indonesia / Vietnam / Taiwan board. Detail pages do carry a JobPosting JSON-LD if permission is ever given.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:nodeflair",
+      "name": "NodeFlair",
+      "url": "https://nodeflair.com",
+      "jobs_url": "https://nodeflair.com/jobs",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "software"
+      ],
+      "search_url": null,
+      "connector": null,
+      "forbidden": true,
+      "notes": "SG tech board with salaries. /jobs is a Rails shell with no JobPosting and no rows in the HTML (155KB, 2026-10-07); the list is fetched client-side, and robots.txt is exactly 'User-Agent: * / Disallow: /api/v2'. A filtered /jobs?countries[]=Singapore answered 502. No list a client is allowed to read, so not wired.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "software-it"
+    },
+    {
+      "id": "manual:foundit-sg",
+      "name": "foundit Singapore (ex-Monster)",
+      "url": "https://www.foundit.sg",
+      "jobs_url": "https://www.foundit.sg/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": "https://www.foundit.sg/srp/results?query={term}&locations=Singapore",
+      "connector": null,
+      "forbidden": true,
+      "notes": "/srp/results answers 200 (title '20431 Results Found for Engineer Jobs in Singapore') but carries no rows and no JSON-LD: cards are rendered client-side from /middleware/..., which robots.txt disallows for every agent. robots.txt also names ClaudeBot / GPTBot / CCBot and disallows /jobs/ and /search/ for them. Not wired.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:fastjobs-sg",
+      "name": "FastJobs",
+      "url": "https://www.fastjobs.sg",
+      "jobs_url": "https://www.fastjobs.sg/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": null,
+      "connector": null,
+      "notes": "Blue-collar / hourly board. robots.txt allows everything but /cdn-cgi/, but Cloudflare answers 403 'Just a moment...' on every path tried (home, /singapore-jobs/, /terms-of-use/) to a browser user agent, 2026-10-07. Not probed with headless Chrome; the terms could not be read either.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:jobscentral-sg",
+      "name": "JobsCentral",
+      "url": null,
+      "jobs_url": "http://www.jobscentral.com.sg/",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board"
+      ],
+      "search_url": null,
+      "connector": null,
+      "notes": "Cloudflare 'Attention Required!' 403 to a browser user agent on 2026-10-07 (robots.txt itself 301s). No page was retrieved, so nothing is known about its listings.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:robertwalters-sg",
+      "name": "Robert Walters Singapore",
+      "url": "https://www.robertwalters.com.sg",
+      "jobs_url": "https://www.robertwalters.com.sg/jobs.html",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "recruitment-agency"
+      ],
+      "search_url": null,
+      "connector": null,
+      "notes": "PerimeterX wall: every path, the home page included, answers 403 'Access to this page has been denied ... px-captcha' to the Job-I user agent and to a browser one alike (2026-10-07). robots.txt is readable and permissive. Not probed with headless Chrome.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": null
+    },
+    {
+      "id": "manual:morganmckinley-sg",
+      "name": "Morgan McKinley Singapore",
+      "url": "https://www.morganmckinley.com",
+      "jobs_url": "https://www.morganmckinley.com/sg/jobs",
+      "location": null,
+      "country": "Singapore",
+      "categories": [
+        "job-board",
+        "recruitment-agency"
+      ],
+      "search_url": null,
+      "connector": null,
+      "notes": "Next.js app router. /sg/jobs and /sg/jobs/discipline/<x> answer 200 to the Job-I user agent but carry no job rows, no /sg/job/ links and no JSON-LD in the server HTML, and the initial chunks name no search API - the list comes from a lazily-loaded chunk not yet found. robots.txt disallows /search/ only. Not cracked: worth a rendered probe (probe-ats --render) before writing it off.",
       "stats": {
         "open_positions": null,
         "last_run": null
