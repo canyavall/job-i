@@ -1,27 +1,27 @@
 {
   "app": {
-    "version": "0.2.1",
-    "notes": "https://github.com/canyavall/job-i/releases/tag/v0.2.1",
+    "version": "0.2.2",
+    "notes": "https://github.com/canyavall/job-i/releases/tag/v0.2.2",
     "min_supported": "0.0.0",
     "binaries": {
       "windows-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.1/job-i-windows-x64.exe",
-        "sha256": "514893d9b9922fc4f98aea65a1affc0eb3808b231503bc0eadc7401682a57ebc",
-        "size": 129479680
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.2/job-i-windows-x64.exe",
+        "sha256": "19c2d78b0ee1cc38688af1decf24849eaf11e3088d9a854d6b3944a0b947ac99",
+        "size": 129485824
       },
       "linux-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.1/job-i-linux-x64",
-        "sha256": "526060f21a1471d640aef069cf88dbd528965f93b10bbacb3ac4784f397d4c4c",
-        "size": 118341336
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.2/job-i-linux-x64",
+        "sha256": "4cfa08116e2f12b7a0cf6181562cdc547ea4ba19e654e1d7666ff143d55e8b04",
+        "size": 118347536
       },
       "darwin-arm64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.1/job-i-darwin-arm64",
-        "sha256": "3a655b6d7fa2878c156f70c55e1ae938f5cb68387b946f3124f4db602f58f1d8",
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.2/job-i-darwin-arm64",
+        "sha256": "20507f7aa9247adaeffd0d8708d4e5d4357e331e4a2df350f6aa7958363975d4",
         "size": 74050688
       },
       "darwin-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.1/job-i-darwin-x64",
-        "sha256": "f53b6c4d34b2e05826892e5749f75f78af51bcde85b29685db59c52af37d3126",
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.2/job-i-darwin-x64",
+        "sha256": "fe01d3549c0e5efe5a1937c4e5a7a4190b23cf27ac6572a2fe43c3f5f41a243a",
         "size": 80186944
       }
     }
@@ -88,5 +88,5 @@
       "min_app": "0.0.0"
     }
   },
-  "issued": "2026-10-06T20:38:33Z"
+  "issued": "2026-10-07T07:51:01Z"
 }
