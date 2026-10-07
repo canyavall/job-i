@@ -1,5 +1,5 @@
 {
-  "version": 56,
+  "version": 57,
   "min_app": "0.2.0",
   "companies": [
     {
@@ -28939,6 +28939,22 @@
       "field": "software-it"
     },
     {
+      "id": "manual:netstream",
+      "name": "Netstream",
+      "url": "https://netstream.ch",
+      "jobs_url": "https://netstream.ch/jobs/",
+      "location": "Wallisellen",
+      "country": "Switzerland",
+      "categories": [],
+      "field": "software-it",
+      "connector": null,
+      "notes": "Connectivity, cloud, streaming, voice and hosting provider, founded 1998, ~90 staff, Wallisellen/Dübendorf. Jobs page is a WordPress page with no ATS: probe-ats --careers --render 2026-10-07 found no marker, slug sweep found no board. On 2026-10-07 it read \"Zurzeit haben wir leider keine offenen Stellen\", so there was no posting to fit an html row regex to - wire one when it lists jobs.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      }
+    },
+    {
       "id": "manual:neurimmune",
       "name": "Neurimmune",
       "url": "https://neurimmune.com",
@@ -29994,6 +30010,22 @@
       "notes": "Re-read 2026-09-24: /about-us/careers/ still has no vacancy, no ATS marker and no 'no openings' sentence - only 'Nothing matches exactly? ... Contact us'. Previous reasoning stands: no sentinel for empty_when, so a connector would raise every run. Re-check when a vacancy appears.",
       "country": "Switzerland",
       "field": "life-science"
+    },
+    {
+      "id": "manual:pnn",
+      "name": "PNN pharma nation network",
+      "url": "https://www.pnn.ch",
+      "jobs_url": null,
+      "location": "Zürich",
+      "country": "Switzerland",
+      "categories": [],
+      "field": "software-it",
+      "connector": null,
+      "notes": "ETH Zurich spin-off (1999), Kirchgasse 42 Zürich: e-learning and accredited continuing medical education platform for pharma and healthcare. The site has no careers page; probe-ats --render and the slug sweep 2026-10-07 found nothing.",
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      }
     },
     {
       "id": "manual:podimo",
