@@ -1,28 +1,28 @@
 {
   "app": {
-    "version": "0.2.3",
-    "notes": "https://github.com/canyavall/job-i/releases/tag/v0.2.3",
+    "version": "0.2.4",
+    "notes": "https://github.com/canyavall/job-i/releases/tag/v0.2.4",
     "min_supported": "0.0.0",
     "binaries": {
       "windows-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.3/job-i-windows-x64.exe",
-        "sha256": "0f18260a2038804ac1f33970012e44a6584550d62057b11ba66bdbd0b0acc653",
-        "size": 129967616
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.4/job-i-windows-x64.exe",
+        "sha256": "0de5e1bf90ded8789f2c8be544fe44df8894e6e7be0a4daf1c3fb0b113f2cac1",
+        "size": 130189824
       },
       "linux-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.3/job-i-linux-x64",
-        "sha256": "da3ed825e6c8ef79a24dd44e5df4682da0e289a342dc0dbf48acb8ea4fceee22",
-        "size": 118829764
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.4/job-i-linux-x64",
+        "sha256": "1bc6992ec55995d3635e56bdc1266b2b989fe3236100e9e277c8be2fd58aa915",
+        "size": 119051551
       },
       "darwin-arm64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.3/job-i-darwin-arm64",
-        "sha256": "609d6b23a39f96b5628893d64676919b959cf9e9510276845b8ee94fb43e057f",
-        "size": 74546048
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.4/job-i-darwin-arm64",
+        "sha256": "f6d2ce8dba812d669ebc6403868607d8752d22f2c4ba0b40c1eeb81f60f015a9",
+        "size": 74760704
       },
       "darwin-x64": {
-        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.3/job-i-darwin-x64",
-        "sha256": "8a172c43408539ed430caa35f2c861ad72f1be1ef356901f9c713751b63d4e1b",
-        "size": 80682304
+        "url": "https://github.com/canyavall/job-i/releases/download/v0.2.4/job-i-darwin-x64",
+        "sha256": "57ebd9b42d135db4227fba4f877d8e27ac6bacfad5b577d3a28a1722fb740e4b",
+        "size": 80896960
       }
     }
   },
@@ -88,5 +88,5 @@
       "min_app": "0.0.0"
     }
   },
-  "issued": "2026-10-07T12:34:56Z"
+  "issued": "2026-10-07T13:14:15Z"
 }
