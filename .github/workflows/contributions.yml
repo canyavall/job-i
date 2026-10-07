@@ -1,0 +1,105 @@
+# What the app's "Share with Job-I" and "Report this problem" buttons send, handled here.
+#
+# The issue body is untrusted text from anyone with a GitHub account. It only ever travels
+# through an environment variable into a file - never into a `run:` line - and the checker
+# reads it as JSON. The checker is the latest released job-i binary (`job-i contribute`):
+# the dashboard editor's field whitelist, public web addresses only, and the connector
+# called by content - real postings back, none for a fake token.
+#
+#   company / fix   passes  -> a pull request on contribution/<issue>, labelled `checked`
+#                   fails   -> the reasons as a comment, labelled `needs-info`
+#   broken          rerun here -> `reproduced` or `not-reproduced`; a second report of the
+#                   same connector is folded into the first open issue
+#
+# Nothing merges on its own: a merged connector is a URL every install will call. After a
+# merge, data-release (in the private repo) bumps the version, signs and ships it.
+
+name: contributions
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: contribution-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: >-
+      github.event.issue.state == 'open' && (
+      contains(github.event.issue.labels.*.name, 'contribution') ||
+      contains(github.event.issue.labels.*.name, 'broken-connector'))
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+      TITLE: ${{ github.event.issue.title }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: the latest Job-I
+        run: |
+          gh release download --repo "$GITHUB_REPOSITORY" --pattern job-i-linux-x64 --dir "$RUNNER_TEMP/jobi"
+          chmod +x "$RUNNER_TEMP/jobi/job-i-linux-x64"
+      # The only step that touches the payload, and it holds no token.
+      - name: check by content
+        env:
+          BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ""
+        run: |
+          printf '%s' "$BODY" > "$RUNNER_TEMP/body.md"
+          "$RUNNER_TEMP/jobi/job-i-linux-x64" contribute "$RUNNER_TEMP/body.md" --data data --write --out "$RUNNER_TEMP/verdict.json"
+          cat "$RUNNER_TEMP/verdict.json"
+      - name: answer
+        run: |
+          v="$RUNNER_TEMP/verdict.json"
+          kind=$(jq -r '.kind // "unknown"' "$v")
+          result=$(jq -r .result "$v")
+          name=$(jq -r '.name // .id // "?"' "$v")
+          jq -r '"Checked by the contributions workflow: **" + .result + "**\n"
+                 + (.problems | map("\n- problem: " + .) | join(""))
+                 + (.notes | map("\n- " + .) | join(""))' "$v" > "$RUNNER_TEMP/report.md"
+
+          if [ "$kind" = "broken" ]; then
+            gh issue edit "$ISSUE" --add-label "$result"
+            first=$(gh issue list --label broken-connector --state open --limit 200 --json number,title \
+              --jq 'map(select(.title == env.TITLE and .number < (env.ISSUE | tonumber))) | min_by(.number) | .number // empty')
+            if [ -n "$first" ]; then
+              { echo "Reported again in #$ISSUE."; echo; cat "$RUNNER_TEMP/report.md"; } | gh issue comment "$first" --body-file -
+              gh issue close "$ISSUE" --reason "not planned" --comment "Thanks - folded into #$first, where this connector is already tracked."
+            else
+              gh issue comment "$ISSUE" --body-file "$RUNNER_TEMP/report.md"
+            fi
+            exit 0
+          fi
+
+          if [ "$result" != "ok" ]; then
+            gh issue edit "$ISSUE" --add-label needs-info
+            { cat "$RUNNER_TEMP/report.md"; echo; echo "Nothing was changed. Fix the row in Job-I and send it again, or reply here."; } \
+              | gh issue comment "$ISSUE" --body-file -
+            exit 0
+          fi
+
+          branch="contribution/$ISSUE"
+          if [ "$kind" = "company" ]; then subject="feat(data): add $name"; else subject="fix(data): $name"; fi
+          git config user.name "job-i contributions"
+          git config user.email "job-i-contributions@users.noreply.github.com"
+          git checkout -q -b "$branch"
+          git add data
+          git commit -q -m "$subject" -m "From #$ISSUE, checked by content by the contributions workflow."
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$branch"
+          pr=$(gh pr list --head "$branch" --state open --json url --jq '.[0].url // empty')
+          if [ -z "$pr" ]; then
+            { echo "Closes #$ISSUE"; echo; cat "$RUNNER_TEMP/report.md"; } > "$RUNNER_TEMP/pr.md"
+            pr=$(gh pr create --head "$branch" --title "$subject" --body-file "$RUNNER_TEMP/pr.md")
+          fi
+          gh issue edit "$ISSUE" --add-label checked --remove-label needs-info 2>/dev/null || gh issue edit "$ISSUE" --add-label checked
+          { cat "$RUNNER_TEMP/report.md"; echo; echo "Thanks! It is waiting for review in $pr. Once merged, every install gets it with the next daily data update."; } \
+            | gh issue comment "$ISSUE" --body-file -

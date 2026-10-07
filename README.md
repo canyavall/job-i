@@ -65,6 +65,10 @@ It connects to:
   only when you click *Install*.
 - **your own mailbox**, only if you set it up.
 - **public company sources**, only when you add a company or refresh its facts.
+- **GitHub**, only when you press *Share with Job-I* or *Report this problem* on a
+  company. That opens an issue in your own browser holding the company's public details
+  or the error your Sync got, plus the app version - never your profile, CV or anything
+  about you. You read it and press *Create*; nothing is sent without that click.
 
 ## What is in this repo
 
@@ -83,3 +87,10 @@ missing employer, a broken connector, or a skill the dictionary cannot recognise
 worth an [issue](https://github.com/canyavall/job-i/issues). Pull requests against
 `data/` are welcome too. Once merged, the daily data release bumps the file's `version`
 and every install picks it up.
+
+The quickest way is from the app: open a company you added or edited, or one whose Sync
+failed, and press **Share with Job-I** or **Report this problem**. It opens a prefilled
+issue (a free GitHub account is needed). A check then runs on its own: a shared company has
+to return real job postings, and a fake token in its place has to return none. If it
+passes, a pull request is opened for review. A reported connector is run again here, so a
+broken one can be told apart from a problem on one machine.
