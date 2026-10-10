@@ -40,8 +40,8 @@
       "min_app": "0.0.0"
     },
     "sources/companies.json": {
-      "version": 56,
-      "sha256": "b9a851dcd1475997fc3fc4d4411b2fe364488b2b311d04951c43464039e1ed01",
+      "version": 57,
+      "sha256": "47dd5f2f75232fba6f52f8f4384384554955dc6140b7e19c8891bf01d7a3cc70",
       "url": "https://raw.githubusercontent.com/canyavall/job-i/main/data/companies.json",
       "min_app": "0.2.0"
     },
@@ -55,6 +55,12 @@
       "version": 38,
       "sha256": "9bd8334fa2fd47ca1144496067ebdc6fd619706cf6e0c1589b9df18654dfb271",
       "url": "https://raw.githubusercontent.com/canyavall/job-i/main/data/dictionary.json",
+      "min_app": "0.0.0"
+    },
+    "sources/logos.json": {
+      "version": 2,
+      "sha256": "5f5a82ad766878771c127b0ec30750ab50dbf35e334e4aab7eb3c57a60611129",
+      "url": "https://raw.githubusercontent.com/canyavall/job-i/main/data/logos.json",
       "min_app": "0.0.0"
     },
     "sources/mail_senders.json": {
@@ -88,5 +94,5 @@
       "min_app": "0.0.0"
     }
   },
-  "issued": "2026-10-07T13:14:15Z"
+  "issued": "2026-10-10T09:50:37Z"
 }
