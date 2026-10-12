@@ -28,13 +28,7 @@
     "rows and 84% of Sam's come from a company; the rest depend on the text alone).",
     "Deliberately unmapped: swiss-corporate, scale-up, consulting, remote-first. They say",
     "how big or how remote an employer is, not what field it works in - mapping them would",
-    "make On a software company and SIX a bank by assertion rather than by evidence.",
-    "",
-    "`isco` is the ISCO-08 2-digit groups a profession's work falls in, and `kldb` the few German",
-    "KldB 2010 5-digit codes (code -> label) it maps to. Both are how official salary statistics",
-    "(sources/salaries.json, `app/server/reports/salaries.ts`) join onto this vocabulary; `kldb`",
-    "also decides which occupations the Entgeltatlas is asked about. A rough many-to-many map:",
-    "a profession is a kind of work, an ISCO group is a job family, and neither nests in the other."
+    "make On a software company and SIX a bank by assertion rather than by evidence."
   ],
   "professions": {
     "engineering": {
@@ -67,16 +61,6 @@
         "system administrator",
         "sysadmin"
       ],
-      "isco": [
-        "21",
-        "25",
-        "31",
-        "35"
-      ],
-      "kldb": {
-        "43104": "Informatik - Experte",
-        "43414": "Softwareentwicklung - Experte"
-      },
       "description": "Designs, builds and maintains technical systems - software, hardware, machines or infrastructure.",
       "examples": [
         "Software Engineer",
@@ -104,14 +88,6 @@
         "laboratory",
         "lab head"
       ],
-      "isco": [
-        "21",
-        "22"
-      ],
-      "kldb": {
-        "41204": "Biologie - Experte",
-        "41304": "Chemie - Experte"
-      },
       "description": "Creates new knowledge or products through experiments, studies and scientific work, in a lab, a company R&D team or academia.",
       "examples": [
         "Research Scientist",
@@ -139,10 +115,6 @@
         "medical science liaison",
         "msl"
       ],
-      "isco": [
-        "22",
-        "32"
-      ],
       "description": "Runs or supports studies in people - trial design, site management, monitoring and clinical data.",
       "examples": [
         "Clinical Research Associate",
@@ -168,11 +140,6 @@
         "technical project",
         "portfolio manager"
       ],
-      "isco": [
-        "12",
-        "13",
-        "24"
-      ],
       "description": "Plans and delivers projects on time and budget - scope, timelines, risks, budgets and the people involved.",
       "examples": [
         "Project Manager",
@@ -192,10 +159,6 @@
         "product development",
         "roadmap",
         "product marketing"
-      ],
-      "isco": [
-        "12",
-        "24"
       ],
       "description": "Decides what a product should be and why - users, market, roadmap - and steers its development.",
       "examples": [
@@ -258,9 +221,6 @@
         "designer ux",
         "art director"
       ],
-      "isco": [
-        "21"
-      ],
       "description": "Shapes how a product looks and works for the people using it - research, flows, interfaces and visual identity.",
       "examples": [
         "UX Designer",
@@ -289,15 +249,6 @@
         "site head",
         "managing director"
       ],
-      "isco": [
-        "11",
-        "12",
-        "13",
-        "14"
-      ],
-      "kldb": {
-        "71304": "Unternehmensorganisation und -strategie - Experte"
-      },
       "description": "Leads people, teams or whole organisations - direction, budgets, hiring and results.",
       "examples": [
         "Head of R&D",
@@ -329,10 +280,6 @@
         "qualitat*",
         "qualität*"
       ],
-      "isco": [
-        "21",
-        "31"
-      ],
       "description": "Makes sure products and processes meet standards and the law - quality systems, audits, approvals and compliance.",
       "examples": [
         "Quality Assurance Manager",
@@ -363,10 +310,6 @@
         "data warehouse",
         "dwh"
       ],
-      "isco": [
-        "21",
-        "25"
-      ],
       "description": "Turns data into answers - analysis, statistics, dashboards, data pipelines and models.",
       "examples": [
         "Data Scientist",
@@ -396,15 +339,6 @@
         "service specialist",
         "service manager"
       ],
-      "isco": [
-        "13",
-        "31",
-        "72",
-        "81"
-      ],
-      "kldb": {
-        "27304": "Technische Produktionsplanung und -steuerung - Experte"
-      },
       "description": "Makes and ships things - production, process engineering, supply chain and logistics.",
       "examples": [
         "Production Manager",
@@ -428,12 +362,6 @@
         "partnerships",
         "growth manager"
       ],
-      "isco": [
-        "12",
-        "24",
-        "33",
-        "52"
-      ],
       "description": "Sells and markets products and services - winning customers, campaigns, key accounts and business development.",
       "examples": [
         "Account Manager",
@@ -455,12 +383,6 @@
         "assistant",
         "secretariat",
         "receptionist"
-      ],
-      "isco": [
-        "41",
-        "42",
-        "43",
-        "44"
       ],
       "description": "Keeps an organisation and its customers running day to day - administration, assistance and service desks.",
       "examples": [
@@ -564,11 +486,6 @@
         "técnico de selección",
         "técnica de selección"
       ],
-      "isco": [
-        "12",
-        "24",
-        "33"
-      ],
       "description": "Finds, hires and looks after people - in-house talent acquisition and agency recruitment, HR business partnering, HR operations, pay and benefits, payroll, learning and employee relations.",
       "examples": [
         "HR Business Partner",
@@ -596,13 +513,6 @@
         "privacy officer",
         "data protection officer"
       ],
-      "isco": [
-        "26",
-        "34"
-      ],
-      "kldb": {
-        "73104": "Recht - Experte"
-      },
       "description": "Handles law and rules - contracts, advice, disputes, compliance and intellectual property.",
       "examples": [
         "Legal Counsel",
@@ -635,15 +545,6 @@
         "tax manager",
         "tax advisor"
       ],
-      "isco": [
-        "12",
-        "24",
-        "33",
-        "43"
-      ],
-      "kldb": {
-        "72213": "Buchhaltung - Spezialist"
-      },
       "description": "Manages money - accounting, controlling, reporting, tax, audit and financial planning.",
       "examples": [
         "Accountant",
@@ -673,12 +574,6 @@
         "gebaude*",
         "gebäude*"
       ],
-      "isco": [
-        "51",
-        "71",
-        "74",
-        "91"
-      ],
       "description": "Looks after buildings and workplaces - maintenance, property management and building technology.",
       "examples": [
         "Facility Manager",
@@ -703,9 +598,6 @@
         "instructor",
         "curriculum",
         "tutor"
-      ],
-      "isco": [
-        "23"
       ],
       "description": "Teaches and trains - schools, universities, corporate training and course design.",
       "examples": [
@@ -749,13 +641,6 @@
         "pharmacist",
         "apotheker*"
       ],
-      "isco": [
-        "22",
-        "32"
-      ],
-      "kldb": {
-        "81404": "Humanmedizin - Experte"
-      },
       "description": "Treats and cares for patients, or advises on medicines - doctors, nurses, pharmacists and medical affairs.",
       "examples": [
         "Physician",
@@ -775,12 +660,6 @@
         "advisor",
         "beratung"
       ],
-      "isco": [
-        "24"
-      ],
-      "kldb": {
-        "71304": "Unternehmensorganisation und -strategie - Experte"
-      },
       "description": "Advises other organisations as an outside expert - strategy, technology, operations or a specialist field.",
       "examples": [
         "Management Consultant",

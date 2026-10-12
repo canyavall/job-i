@@ -139,12 +139,7 @@
             "company": "company",
             "location": "{actualCity}, Switzerland",
             "location_type_hint": "workplace",
-            "salary_min": "annualSalaryFrom",
-            "salary_max": "annualSalaryTo",
             "posted_at": "activeFrom"
-          },
-          "const": {
-            "salary_currency": "CHF"
           },
           "detail_json": {
             "url": "https://swissdevjobs.ch/api/job/{_id}",
@@ -934,12 +929,7 @@
             "company": "company",
             "location": "actualCity",
             "location_type_hint": "workplace",
-            "salary_min": "annualSalaryFrom",
-            "salary_max": "annualSalaryTo",
             "posted_at": "activeFrom"
-          },
-          "const": {
-            "salary_currency": "EUR"
           }
         },
         "enabled": true,
@@ -1109,12 +1099,7 @@
             "title": "stellenangebotsTitel",
             "company": "firma",
             "location": "stellenlokationen/0/adresse/ort",
-            "posted_at": "datumErsteVeroeffentlichung",
-            "salary_min": "gehaltsspanneVon",
-            "salary_max": "gehaltsspanneBis"
-          },
-          "const": {
-            "salary_currency": "EUR"
+            "posted_at": "datumErsteVeroeffentlichung"
           }
         },
         "enabled": true,
@@ -1420,12 +1405,7 @@
             "title": "position",
             "company": "company/name",
             "location": "locations",
-            "salary_min": "salaryFrom",
-            "salary_max": "salaryTo",
             "posted_at": "updatedAt"
-          },
-          "const": {
-            "salary_currency": "EUR"
           }
         },
         "enabled": true,
@@ -1994,8 +1974,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },
@@ -2032,8 +2011,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },
@@ -2070,8 +2048,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },
@@ -2108,8 +2085,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },
@@ -2146,8 +2122,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },
@@ -2183,8 +2158,7 @@
             "title": "title",
             "company": "company/name",
             "location": "{jobCity}, {jobCountry}",
-            "posted_at": "dateActive",
-            "salary_raw": "salary"
+            "posted_at": "dateActive"
           },
           "headers": {
             "Accept": "application/json"
@@ -2564,8 +2538,7 @@
             "company": "postedCompany/name",
             "location": "{address/districts/0/region}, Singapore",
             "description": "description",
-            "posted_at": "metadata/newPostingDate",
-            "salary_raw": "SGD {salary/minimum}-{salary/maximum} {salary/type/salaryType}"
+            "posted_at": "metadata/newPostingDate"
           }
         },
         "enabled": true,
@@ -2601,8 +2574,7 @@
             "company": "companyName",
             "location": "jobLocation/displayName",
             "description": "description",
-            "posted_at": "postedDate",
-            "salary_raw": "salary"
+            "posted_at": "postedDate"
           },
           "detail": false
         },

@@ -1,5 +1,5 @@
 {
-  "version": 57,
+  "version": 64,
   "min_app": "0.2.0",
   "companies": [
     {
@@ -142,16 +142,6 @@
       "stats": {
         "open_positions": 19,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 60900,
-        "high": 159200,
-        "median": 73100,
-        "roles": 5,
-        "reports": 15,
-        "source": "https://www.kununu.com/ch/apple-switzerland1/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -5033,9 +5023,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 4,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Kuros-Biosciences-Reviews-E3964946.htm",
-        "note": "Smart, passionate colleagues and strong science; reviews cite little growth and weak upper management no salary figure found; Glassdoor lists 4 salaries but no value in snippet. Comp/benefits rated 3.4/5",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Kuros-Biosciences-Reviews-E3964946.htm"
       },
       "stats": {
         "open_positions": 6,
@@ -5250,8 +5238,6 @@
         "glassdoor_reviews": 17,
         "scope": "global",
         "source": "https://www.glassdoor.co.uk/Reviews/Spineart-Reviews-E643464.htm",
-        "note": "Weak career opportunities (2.3/5); only 41% would recommend; Geneva HQ no figure found; comp/benefits 3.0/5, 11 salaries on Glassdoor Geneva page but no value in snippet",
-        "salary_level": null,
         "kununu_reviews": 4,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/de/spineart",
@@ -5504,16 +5490,6 @@
         "open_positions": 28,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 65800,
-        "high": 180300,
-        "median": 85600,
-        "roles": 20,
-        "reports": 225,
-        "source": "https://www.kununu.com/ch/helsana-versicherungen/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "helsana.ch",
@@ -5592,16 +5568,6 @@
       "stats": {
         "open_positions": 169,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 74300,
-        "high": 129700,
-        "median": 91400,
-        "roles": 19,
-        "reports": 272,
-        "source": "https://www.kununu.com/ch/helvetia/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -5957,16 +5923,6 @@
         "open_positions": 187,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 73100,
-        "high": 180200,
-        "median": 115000,
-        "roles": 20,
-        "reports": 59,
-        "source": "https://www.kununu.com/ch/bank-julius-baer1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "juliusbaer.com",
@@ -6145,16 +6101,6 @@
         "open_positions": 47,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 74400,
-        "high": 142100,
-        "median": 99800,
-        "roles": 20,
-        "reports": 139,
-        "source": "https://www.kununu.com/ch/novartis2/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "novartis.com",
@@ -6319,16 +6265,6 @@
         "open_positions": 165,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 67900,
-        "high": 130500,
-        "median": 88400,
-        "roles": 20,
-        "reports": 487,
-        "source": "https://www.kununu.com/ch/raiffeisen-schweiz/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "raiffeisen.ch",
@@ -6408,16 +6344,6 @@
       "stats": {
         "open_positions": 24,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 65200,
-        "high": 156000,
-        "median": 79650,
-        "roles": 20,
-        "reports": 110,
-        "source": "https://www.kununu.com/ch/sanitas1/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -6501,16 +6427,6 @@
         "open_positions": 147,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 65900,
-        "high": 156300,
-        "median": 78350,
-        "roles": 20,
-        "reports": 606,
-        "source": "https://www.kununu.com/ch/sbbcffffs/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "sbb.ch",
@@ -6585,16 +6501,6 @@
       "stats": {
         "open_positions": 29,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 80000,
-        "high": 223200,
-        "median": 128600,
-        "roles": 20,
-        "reports": 93,
-        "source": "https://www.kununu.com/ch/six-group/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -6946,16 +6852,6 @@
       "stats": {
         "open_positions": null,
         "last_run": null
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 70500,
-        "high": 151800,
-        "median": 104700,
-        "roles": 20,
-        "reports": 483,
-        "source": "https://www.kununu.com/ch/ubs/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -11417,7 +11313,6 @@
         "scope": null,
         "source": "https://www.glassdoor.com/Reviews/Numab-Therapeutics-Reviews-E3044340.htm",
         "note": null,
-        "salary_level": null,
         "glassdoor_via": "bing-snippet",
         "kununu_reviews": 1,
         "kununu_recommend": null,
@@ -11444,16 +11339,6 @@
       "stats": {
         "open_positions": 1,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 85700,
-        "high": 85700,
-        "median": 85700,
-        "roles": 1,
-        "reports": 2,
-        "source": "https://www.kununu.com/ch/numab-innovation/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "field": "life-science"
@@ -14472,16 +14357,6 @@
         "open_positions": 14,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 71700,
-        "high": 79800,
-        "median": 79300,
-        "roles": 4,
-        "reports": 9,
-        "source": "https://www.kununu.com/ch/alpiq17/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "alpiq.com",
@@ -14855,16 +14730,6 @@
         "open_positions": 54,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 105000,
-        "high": 105000,
-        "median": 105000,
-        "roles": 1,
-        "reports": 3,
-        "source": "https://www.kununu.com/ch/cern/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "cern.ch"
@@ -15016,16 +14881,6 @@
         "open_positions": 42,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 61700,
-        "high": 164100,
-        "median": 70300,
-        "roles": 20,
-        "reports": 179,
-        "source": "https://www.kununu.com/ch/css/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "css.ch",
@@ -15167,16 +15022,6 @@
         "open_positions": 10,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 86000,
-        "high": 120200,
-        "median": 86000,
-        "roles": 2,
-        "reports": 5,
-        "source": "https://www.kununu.com/ch/eawag/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "eawag.ch",
@@ -15226,8 +15071,6 @@
         "glassdoor_reviews": 121,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Empa-Switzerland-Reviews-EI_IE138258.0,4_IL.5,16_IN226.htm",
-        "note": "Good work-life balance, excellent equipment and colleagues; short one-year contracts a recurring complaint Scientist average CHF 98,000 in Switzerland (Glassdoor, 69 salaries); postdoc fellow ~CHF 117k reported on same source (conflicting estimate also shown)",
-        "salary_level": "mid",
         "kununu_reviews": 74,
         "kununu_recommend": 75,
         "kununu_url": "https://www.kununu.com/ch/empa-swiss",
@@ -15255,16 +15098,6 @@
       "stats": {
         "open_positions": 22,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 80200,
-        "high": 160200,
-        "median": 132700,
-        "roles": 6,
-        "reports": 15,
-        "source": "https://www.kununu.com/ch/empa-swiss/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -15316,8 +15149,6 @@
         "glassdoor_reviews": 2585,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/ETH-Zurich-Reviews-E119151.htm",
-        "note": "Very highly rated employer; academic fixed-rate salary scales, English-speaking research environment Postdoc band only: median CHF 80.3k CH / CHF 86.4k Greater Zurich (levels.fyi); Glassdoor average CHF 89,000. Senior-scientist band not found",
-        "salary_level": "low",
         "kununu_reviews": 363,
         "kununu_recommend": 70,
         "kununu_url": "https://www.kununu.com/ch/eth-zurich",
@@ -15345,16 +15176,6 @@
       "stats": {
         "open_positions": 110,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 81300,
-        "high": 130800,
-        "median": 95700,
-        "roles": 20,
-        "reports": 73,
-        "source": "https://www.kununu.com/ch/eth-zurich/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -15405,8 +15226,6 @@
         "glassdoor_reviews": 116,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/FHNW-Reviews-E1063718.htm",
-        "note": "64% would recommend; comp 3.4/5; only 37% see a positive business outlook no figure found; Glassdoor has only 2 salaries. Comp/benefits rated 3.4/5",
-        "salary_level": null,
         "kununu_reviews": 164,
         "kununu_recommend": 61,
         "kununu_url": "https://www.kununu.com/ch/fachhochschule-nordwestschweiz-fhnw",
@@ -15434,16 +15253,6 @@
       "stats": {
         "open_positions": 16,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 74300,
-        "high": 167800,
-        "median": 97700,
-        "roles": 10,
-        "reports": 60,
-        "source": "https://www.kununu.com/ch/fachhochschule-nordwestschweiz-fhnw/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "fhnw.ch",
@@ -15520,16 +15329,6 @@
       "stats": {
         "open_positions": 168,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 64000,
-        "high": 144200,
-        "median": 88100,
-        "roles": 20,
-        "reports": 68,
-        "source": "https://www.kununu.com/ch/geberit/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -15718,16 +15517,6 @@
       "stats": {
         "open_positions": 64,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 56900,
-        "high": 202700,
-        "median": 97000,
-        "roles": 20,
-        "reports": 116,
-        "source": "https://www.kununu.com/ch/kanton-luzern/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "lu.ch",
@@ -15987,16 +15776,6 @@
         "open_positions": 1248,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 55500,
-        "high": 165300,
-        "median": 111400,
-        "roles": 20,
-        "reports": 112,
-        "source": "https://www.kununu.com/ch/migros-genossenschafts-bund-mgb-zentrale-migros/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "jobs.migros.ch"
@@ -16056,16 +15835,6 @@
       "stats": {
         "open_positions": 68,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 70700,
-        "high": 149600,
-        "median": 108200,
-        "roles": 19,
-        "reports": 194,
-        "source": "https://www.kununu.com/ch/schweizerische-mobiliar-versicherungsgesellschaft/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -16202,8 +15971,6 @@
         "glassdoor_reviews": 189,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Paul-Scherrer-Institut-Reviews-E341747.htm",
-        "note": "Strong research environment; site remote from Zurich; postdoc and PhD ratings notably high Research Scientist average CHF 109,500 (range CHF 92k-121.5k); Senior Scientist CHF 104,500; Beamline Scientist CHF 122,893 (Glassdoor, 2025)",
-        "salary_level": "mid",
         "kununu_reviews": 96,
         "kununu_recommend": 88,
         "kununu_url": "https://www.kununu.com/ch/paul-scherrer-institut1",
@@ -16231,16 +15998,6 @@
       "stats": {
         "open_positions": 34,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 80200,
-        "high": 137000,
-        "median": 117200,
-        "roles": 7,
-        "reports": 17,
-        "source": "https://www.kununu.com/ch/paul-scherrer-institut1/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -16317,16 +16074,6 @@
       "stats": {
         "open_positions": 97,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 67900,
-        "high": 144200,
-        "median": 102300,
-        "roles": 20,
-        "reports": 223,
-        "source": "https://www.kununu.com/ch/ruag/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -16482,16 +16229,6 @@
         "open_positions": 31,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 61500,
-        "high": 172200,
-        "median": 99400,
-        "roles": 4,
-        "reports": 8,
-        "source": "https://www.kununu.com/ch/srg-ssr/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "srgssr.ch",
@@ -16598,16 +16335,6 @@
         "open_positions": 32,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 70400,
-        "high": 86700,
-        "median": 78550,
-        "roles": 2,
-        "reports": 4,
-        "source": "https://www.kununu.com/ch/staar-surgical1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "staar.com",
@@ -16686,16 +16413,6 @@
       "stats": {
         "open_positions": 42,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 64300,
-        "high": 127600,
-        "median": 88000,
-        "roles": 20,
-        "reports": 335,
-        "source": "https://www.kununu.com/ch/stadler-rail/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "stadlerrail.com",
@@ -16877,16 +16594,6 @@
         "open_positions": 35,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 70600,
-        "high": 187800,
-        "median": 79400,
-        "roles": 20,
-        "reports": 131,
-        "source": "https://www.kununu.com/ch/suva/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "suva.ch",
@@ -16962,16 +16669,6 @@
       "stats": {
         "open_positions": 33,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 62800,
-        "high": 170000,
-        "median": 72600,
-        "roles": 20,
-        "reports": 141,
-        "source": "https://www.kununu.com/ch/swica-gesundheitsorganisation/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -17049,16 +16746,6 @@
       "stats": {
         "open_positions": 317,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 61900,
-        "high": 120600,
-        "median": 72700,
-        "roles": 20,
-        "reports": 759,
-        "source": "https://www.kununu.com/ch/die-schweizerische-post/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -17171,16 +16858,6 @@
         "open_positions": 14,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 71200,
-        "high": 150200,
-        "median": 113400,
-        "roles": 12,
-        "reports": 31,
-        "source": "https://www.kununu.com/ch/ubs-card-center/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "cardcenter.ch"
       },
@@ -17217,9 +16894,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 29,
         "scope": "ch",
-        "source": "https://www.glassdoor.com/Overview/Working-at-Insel-Gruppe-EI_IE3177308.11,23.htm",
-        "note": "65% would recommend at Insel Gruppe; pay rated 3.1/5 no figure found; comp/benefits rated 3.1/5. Rating is parent Insel Gruppe; the Inselspital page has 43 reviews but no score in snippet",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Overview/Working-at-Insel-Gruppe-EI_IE3177308.11,23.htm"
       },
       "stats": {
         "open_positions": 130,
@@ -17277,7 +16952,6 @@
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Sensirion-Reviews-E823993.htm",
         "note": "91% recommend, the highest here; career opportunities weaker at 3.8",
-        "salary_level": null,
         "kununu_reviews": 225,
         "kununu_recommend": 91,
         "kununu_url": "https://www.kununu.com/ch/sensirion",
@@ -17307,16 +16981,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "UMANTIS - recruitingapp-2625. Content-verified 2026-09-02 via the html/Umantis config: real Sensirion titles (Key Account Manager Medical; Schichtleiter Halbleiterfertigung in Reinraum; Firmware Engineer Budapest). Worth knowing: the marker is NOT on sensirion.com/career - jobs.sensirion.com is a prospective.ch-hosted front-end (ohws.prospective.ch) whose posting pages carry the Umantis application link, which is where the tenant id came from.",
-      "salary": {
-        "currency": "CHF",
-        "low": 62700,
-        "high": 141100,
-        "median": 109300,
-        "roles": 19,
-        "reports": 62,
-        "source": "https://www.kununu.com/ch/sensirion/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "sensirion.com",
         "wikidata": "Q78145891",
@@ -17368,7 +17032,6 @@
         "scope": "ch",
         "source": "https://www.glassdoor.com/Overview/Working-at-Viollier-EI_IE1064971.11,19.htm",
         "note": "Rated Viollier only, the first-named, Allschwil; 59% would recommend",
-        "salary_level": null,
         "kununu_reviews": 74,
         "kununu_recommend": 18,
         "kununu_url": "https://www.kununu.com/ch/unilabs-schweiz",
@@ -17398,16 +17061,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "Viollier is UMANTIS - recruitingapp-2634, marker on /en/vacancies. The html/Umantis config returns 5 rows with real Viollier titles (Kandidat Spezialist fuer Labormedizin FAMH; Facharzt FMH fuer Pneumologie; Medizinischer Praxisassistent), content-verified 2026-09-02. Synlab and Unilabs are separate employers sharing this row and were NOT checked - split the row before wiring.",
-      "salary": {
-        "currency": "CHF",
-        "low": 62400,
-        "high": 88700,
-        "median": 66700,
-        "roles": 5,
-        "reports": 17,
-        "source": "https://www.kununu.com/ch/unilabs-schweiz/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "unilabs.ch"
@@ -17577,16 +17230,6 @@
       "stats": {
         "open_positions": 53,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 70300,
-        "high": 145500,
-        "median": 93900,
-        "roles": 19,
-        "reports": 173,
-        "source": "https://www.kununu.com/ch/zkb-zuercher-kantonalbank/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -17789,16 +17432,6 @@
         "open_positions": 18,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 60000,
-        "high": 119100,
-        "median": 98700,
-        "roles": 20,
-        "reports": 140,
-        "source": "https://www.kununu.com/ch/hamilton-gruppe/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "jobs.hamilton.ch"
       },
@@ -17985,16 +17618,6 @@
       "stats": {
         "open_positions": 16,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 61900,
-        "high": 61900,
-        "median": 61900,
-        "roles": 1,
-        "reports": 2,
-        "source": "https://www.kununu.com/ch/anybotics/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -19785,7 +19408,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/AO-Foundation-Reviews-E226879.htm",
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 32,
         "kununu_recommend": 57,
         "kununu_url": "https://www.kununu.com/ch/ao-foundation1",
@@ -19815,16 +19437,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "SuccessFactors. careers.aofoundation.org/search/?startrow=0 returns 9 postings - Head of Medical Scientific Affairs (ID2121), IT Supporter 80-100% (ID 2120), PhD Student Infection Biology - content-verified 2026-09-02. Note the repo's a_successfactors uses /search-jobs?locationsearch= and gets 0 here; this tenant answers the /search/?startrow= shape only, and has no jobTitle-link class, so titles need the /job/ anchor regex.",
-      "salary": {
-        "currency": "CHF",
-        "low": 110700,
-        "high": 135300,
-        "median": 113200,
-        "roles": 3,
-        "reports": 9,
-        "source": "https://www.kununu.com/ch/ao-foundation1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "aofoundation.org",
@@ -19891,7 +19503,6 @@
         "scope": null,
         "source": "https://www.glassdoor.com/Reviews/ArisGlobal-Reviews-E114069.htm",
         "note": null,
-        "salary_level": null,
         "glassdoor_via": "bing-snippet"
       },
       "stats": {
@@ -20424,8 +20035,6 @@
         "glassdoor_reviews": 27,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/B%C3%BChler-Group-Uzwil-Reviews-EI_IE416974.0,12_IL.13,18_IC3296061.htm",
-        "note": "Work-life balance 3.7/5, comp 3.4/5 at Uzwil; global rating (4.4) higher than the Swiss site Uzwil site: Glassdoor shows USD 85.7k (mechanical designer) to USD 111.9k (project manager) across 282 salaries; Switzerland-wide range quoted as CHF 73k-90k",
-        "salary_level": "mid",
         "kununu_reviews": 586,
         "kununu_recommend": 76,
         "kununu_url": "https://www.kununu.com/ch/buehlergroup",
@@ -20502,8 +20111,6 @@
         "glassdoor_reviews": 148,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Bachem-Reviews-E244492.htm",
-        "note": "Work-life balance 2.6/5, culture 2.9/5; only 43% recommend; management repeatedly criticised Chemist average CHF 124,024 in Switzerland; Project Chemist CHF 92k-105k total, base CHF 98k (Glassdoor)",
-        "salary_level": "mid",
         "kununu_reviews": 226,
         "kununu_recommend": 51,
         "kununu_url": "https://www.kununu.com/ch/bachem1",
@@ -20533,16 +20140,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "The careers page links to the OLD SuccessFactors portal, career5.successfactors.eu/careers?company=Bachem, which does not answer the /search/?startrow= pattern the successfactors adapter uses - the same wall CLAUDE.md already records for Zimmer Biomet. Confirmed 2026-09-02.",
-      "salary": {
-        "currency": "CHF",
-        "low": 72100,
-        "high": 158600,
-        "median": 89100,
-        "roles": 20,
-        "reports": 167,
-        "source": "https://www.kununu.com/ch/bachem1/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "bachem.com",
         "wikidata": "Q4838851",
@@ -20648,8 +20245,6 @@
         "glassdoor_reviews": 16,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Universit%C3%A4tsklinik-Balgrist-Reviews-E319323.htm",
-        "note": "91% recommend; good work-life balance and benefits; weak career development no figure found; comp/benefits rated 3.1/5",
-        "salary_level": null,
         "kununu_reviews": 58,
         "kununu_recommend": 55,
         "kununu_url": "https://www.kununu.com/ch/universitaetsklinik-balgrist",
@@ -21241,9 +20836,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 41,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Bien-Air-Dental-SA-Reviews-E1063384.htm",
-        "note": "59% recommend; pros are culture and benefits, cons are workplace and management no figure found; comp/benefits rated 3.1/5",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Bien-Air-Dental-SA-Reviews-E1063384.htm"
       },
       "stats": {
         "open_positions": 4,
@@ -22315,9 +21908,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 2394,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Charles-River-Laboratories-Reviews-E9837.htm",
-        "note": "Glassdoor has dedicated review clusters for low pay and high turnover no Swiss figure found; the Zurich salary hits were Charles River Associates, a different company",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Charles-River-Laboratories-Reviews-E9837.htm"
       },
       "stats": {
         "open_positions": 0,
@@ -22721,8 +22312,6 @@
         "glassdoor_reviews": 66,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Coltene-Reviews-E703178.htm",
-        "note": "Work-life balance 3.8/5 but pay 2.7/5; 61% would recommend no figure found; comp/benefits rated 2.7/5, the weakest category",
-        "salary_level": null,
         "kununu_reviews": 57,
         "kununu_recommend": 27,
         "kununu_url": "https://www.kununu.com/ch/coltene",
@@ -22752,16 +22341,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "Both www.coltene.com and jobs.coltene.com answer 403 with a Cloudflare \"Just a moment...\" challenge page to any non-browser client. That is a block, not a dead site - the ATS is undetermined, not absent. Checked 2026-09-02.",
-      "salary": {
-        "currency": "CHF",
-        "low": 79000,
-        "high": 79000,
-        "median": 79000,
-        "roles": 1,
-        "reports": 5,
-        "source": "https://www.kununu.com/ch/coltene/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "coltene.com",
         "wikidata": "Q1112107",
@@ -23244,7 +22823,6 @@
         "scope": null,
         "source": null,
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 1,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/ch/cutiss",
@@ -25968,8 +25546,6 @@
         "glassdoor_reviews": 23,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Helbling-Group-Reviews-E577594.htm",
-        "note": "Culture and values 4.4/5; broad, fast-paced exposure to many industries; comp 3.7/5 Embedded Software Engineer average CHF 110,000 in Switzerland; Development Engineer Bern CHF 88,231 (Glassdoor)",
-        "salary_level": "mid",
         "kununu_reviews": 91,
         "kununu_recommend": 56,
         "kununu_url": "https://www.kununu.com/ch/helbling-technik4",
@@ -25999,16 +25575,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "No ATS vendor named anywhere, but the list is server-rendered: 9 anchors of the shape /en/career/jobs/<id>-<slug> (1133-projektleiterin-projektleiter, 1161-industrial-automation-engineer, 1163-business-solution-architect) on 2026-09-02. The generic html adapter covers it. helbling.ch/en/careers is a 404; the path is /en/career/jobs.",
-      "salary": {
-        "currency": "CHF",
-        "low": 94900,
-        "high": 127300,
-        "median": 108900,
-        "roles": 4,
-        "reports": 20,
-        "source": "https://www.kununu.com/ch/helbling-technik4/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "helbling.ch",
@@ -26047,7 +25613,6 @@
         "scope": null,
         "source": null,
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 1,
         "kununu_recommend": 100,
         "kununu_url": "https://www.kununu.com/ch/hemotune",
@@ -26298,8 +25863,6 @@
         "glassdoor_reviews": 17,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Hocoma-Reviews-E697508.htm",
-        "note": "High turnover (~2 year tenure), limited advancement, pay 2.6/5; flexible R&D team praised no figure found; comp/benefits rated 2.6/5. Rating is Hocoma, first-named; DIH Technologies has 6 reviews and no score in snippet",
-        "salary_level": null,
         "kununu_reviews": 39,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/ch/hocoma",
@@ -27047,8 +26610,7 @@
         "glassdoor_reviews": 8,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/InSphero-Reviews-E1879320.htm",
-        "note": "Flexible hours, strong team, cutting-edge tech; SME with thin resources and few promotion paths",
-        "salary_level": null
+        "note": "Flexible hours, strong team, cutting-edge tech; SME with thin resources and few promotion paths"
       },
       "stats": {
         "open_positions": 0,
@@ -27189,8 +26751,7 @@
         "glassdoor_reviews": 2514,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Intertek-Reviews-E15251.htm",
-        "note": null,
-        "salary_level": null
+        "note": null
       },
       "stats": {
         "open_positions": 0,
@@ -27447,8 +27008,6 @@
         "glassdoor_reviews": 16,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Kinderspital-Z%C3%BCrich-Reviews-E785060.htm",
-        "note": "72% recommend; culture 4.0 but career opportunities only 2.4; jobs.ch reviews cite chronic understaffing no salary figure found; Glassdoor comp-and-benefits satisfaction sub-rating 2.9/5 (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 131,
         "kununu_recommend": 53,
         "kununu_url": "https://www.kununu.com/ch/kinderspital-zuerich",
@@ -27478,16 +27037,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "prospective.ch - the marker is on kispi.uzh.ch/jobs/offene-stellen (verified 2026-09-02). kispi-jobs.ch itself does not answer at all from here (connect timeout on both 80 and 443), which matches the wall CLAUDE.md records for it. Same vendor as UZH, ZHAW, USZ and Buehler; no prospective adapter exists.",
-      "salary": {
-        "currency": "CHF",
-        "low": 66000,
-        "high": 153500,
-        "median": 88700,
-        "roles": 19,
-        "reports": 74,
-        "source": "https://www.kununu.com/ch/kinderspital-zuerich/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "kispi-jobs.ch"
@@ -28149,8 +27698,6 @@
         "glassdoor_reviews": 9,
         "scope": null,
         "source": "https://www.glassdoor.com/Reviews/Mathys-Switzerland-Reviews-EI_IE883046.0,6_IL.7,18_IN226.htm",
-        "note": "Reviews praise work-life balance and pay; cite remote Bettlach location, conservative management, low diversity",
-        "salary_level": null,
         "kununu_reviews": 80,
         "kununu_recommend": 17,
         "kununu_url": "https://www.kununu.com/ch/mathys",
@@ -28181,16 +27728,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "mathysmedical.com now redirects to enovis-surgical.com (Mathys is part of Enovis), which serves only a bot-check page (/en/check.html) to a plain client, and enovis.com/careers is an 847-byte JS shell naming no ATS. No ATS determined 2026-09-02 - and whether to track Enovis instead of Mathys is a human call.",
-      "salary": {
-        "currency": "CHF",
-        "low": 80200,
-        "high": 118800,
-        "median": 104100,
-        "roles": 5,
-        "reports": 12,
-        "source": "https://www.kununu.com/ch/mathys/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "mathysmedical.com",
         "wikidata": "Q1262943",
@@ -28279,8 +27816,6 @@
         "glassdoor_reviews": 83,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Medartis-Reviews-E1064261.htm",
-        "note": "Only 53% recommend; culture 2.9 and career opportunities 2.7 are the weak spots no salary figure found; Glassdoor comp-and-benefits satisfaction sub-rating 3.4/5 (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 34,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/ch/medartis",
@@ -28310,16 +27845,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "SOLIQUE (Swiss ATS, no adapter). The careers page embeds live.solique.ch/Medartis/en/ in an iframe - that page is server-rendered and lists 25 postings as jobs/<Title>--<id> links (CAPA and NC Manager 100%; Clinical Research Manager; Group Manager Regulatory Affairs 100%), content-verified 2026-09-02. One html-adapter config away. Medartis also reaches Sam's list through the jobs.ch jsonld connector.",
-      "salary": {
-        "currency": "CHF",
-        "low": 65200,
-        "high": 133700,
-        "median": 87900,
-        "roles": 3,
-        "reports": 6,
-        "source": "https://www.kununu.com/ch/medartis/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "field": "life-science"
     },
@@ -28550,7 +28075,6 @@
         "scope": "ch",
         "source": "https://greatplacetowork.ch/en/employer/molecular-partners-ag/",
         "note": "Great Place to Work CH certified: 87% call it a great place to work vs 67% Swiss benchmark",
-        "salary_level": null,
         "kununu_reviews": 6,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/ch/molecular-partners1",
@@ -28579,16 +28103,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "TALENTSOFT / Cegid (no adapter). The list page is server-rendered - on 2026-09-02 it carried exactly 1 posting (/job/job-senior-accounting-manager_179.aspx). The site also advertises /job/all-rss-feeds.aspx, but that URL serves an HTML index of feeds, not a feed. Molecular Partners already reaches the list through the jobs.ch jsonld connector.",
-      "salary": {
-        "currency": "CHF",
-        "low": 85200,
-        "high": 85200,
-        "median": 85200,
-        "roles": 1,
-        "reports": 2,
-        "source": "https://www.kununu.com/ch/molecular-partners1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "molecularpartners.com",
@@ -28981,9 +28495,7 @@
         "checked": null,
         "glassdoor_reviews": null,
         "scope": "ch",
-        "source": "https://www.jobs.ch/en/companies/17885-neurimmune-ag/reviews/",
-        "note": "jobs.ch review: good peer atmosphere, poor management communication, no training or promotion path no figure; a jobs.ch review states salaries are poor versus comparable companies (opinion, not data)",
-        "salary_level": null
+        "source": "https://www.jobs.ch/en/companies/17885-neurimmune-ag/reviews/"
       },
       "stats": {
         "open_positions": 0,
@@ -30000,8 +29512,7 @@
         "glassdoor_reviews": null,
         "scope": null,
         "source": null,
-        "note": null,
-        "salary_level": null
+        "note": null
       },
       "stats": {
         "open_positions": null,
@@ -31064,7 +30575,6 @@
         "scope": null,
         "source": null,
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 12,
         "kununu_recommend": 100,
         "kununu_url": "https://www.kununu.com/de/rms",
@@ -31483,7 +30993,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Sandoz-Reviews-E35211.htm",
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 8,
         "kununu_recommend": 100,
         "kununu_url": "https://www.kununu.com/ch/sandoz-pharmaceuticals2",
@@ -31752,7 +31261,6 @@
         "scope": "ch",
         "source": "https://www.jobs.ch/en/companies/40610-schulthess-klinik/reviews/",
         "note": "jobs.ch reviews: good benefits, creative freedom, strong team spirit; some criticism of communication",
-        "salary_level": null,
         "kununu_reviews": 99,
         "kununu_recommend": 67,
         "kununu_url": "https://www.kununu.com/ch/schulthess-klinik",
@@ -31783,16 +31291,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "SuccessFactors, but through a non-standard host and path: the careers page links to job.schulthess-klinik.ch/successfactors/EMEA_ROT/SchulthessK/de/apply?id=<n> - one deep link per posting, no list page. job.schulthess-klinik.ch/ itself is a 3.4KB stub with no job links and the /search/?startrow= probe returns nothing. Verified 2026-09-02 - not wireable with the successfactors adapter as it stands.",
-      "salary": {
-        "currency": "CHF",
-        "low": 58300,
-        "high": 102700,
-        "median": 81950,
-        "roles": 11,
-        "reports": 42,
-        "source": "https://www.kununu.com/ch/schulthess-klinik/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "schulthess-klinik.ch"
@@ -32091,8 +31589,6 @@
         "glassdoor_reviews": 90,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/SHL-Medical-AG-Reviews-E5083892.htm",
-        "note": "70% recommend; work-life 3.8, culture 3.5, career 3.3; HQ Zug but workforce largely Asia no salary figure; Glassdoor comp-and-benefits satisfaction 3.2/5 (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 24,
         "kununu_recommend": 38,
         "kununu_url": "https://www.kununu.com/ch/shl-medical",
@@ -32122,16 +31618,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "No ATS vendor named, but /careers/jobs is server-rendered with 12 per-posting links of the shape /careers/jobs/<slug> (design-engineer-1, manufacturing-lead, advmat-biocompatibility-materials-engineer) on 2026-09-02. The generic html adapter covers it.",
-      "salary": {
-        "currency": "CHF",
-        "low": 100700,
-        "high": 160000,
-        "median": 111200,
-        "roles": 5,
-        "reports": 14,
-        "source": "https://www.kununu.com/ch/shl-medical/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "shl-medical.com",
@@ -32760,8 +32246,6 @@
         "glassdoor_reviews": 42,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Solvias-Reviews-E1064676.htm",
-        "note": "Work-life 3.7 but culture 3.1 and career 2.7; pay dissatisfaction is the dominant theme no figure; Glassdoor comp-and-benefits satisfaction 2.6/5, lowest in this set (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 77,
         "kununu_recommend": 40,
         "kununu_url": "https://www.kununu.com/ch/solvias",
@@ -32791,16 +32275,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "ORACLE RECRUITING CLOUD (no adapter in this repo yet). Tenant host iabxas.fa.ocs.oraclecloud.com, siteNumber CX_1: GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1 returns TotalJobsCount 18 with real Solvias titles and locations (Technician Sample Logistics 100% - Switzerland; Senior Procurement Specialist - Switzerland; Team Lead Microbiology - United States), content-verified 2026-09-02. solvias.com/careers and /career are 404s; the human page is /about-us/join-our-team/.",
-      "salary": {
-        "currency": "CHF",
-        "low": 66800,
-        "high": 127800,
-        "median": 73900,
-        "roles": 7,
-        "reports": 37,
-        "source": "https://www.kununu.com/ch/solvias/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "solvias.com"
       },
@@ -33156,8 +32630,6 @@
         "glassdoor_reviews": 42,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Swiss-TPH-Reviews-E1064826.htm",
-        "note": "89% recommend; culture 4.2 and work-life 4.0 strong, career opportunities weak at 3.3 no figure; Glassdoor comp-and-benefits satisfaction 3.1/5 (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 36,
         "kununu_recommend": 86,
         "kununu_url": "https://www.kununu.com/ch/swiss-tph",
@@ -33187,16 +32659,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "UMANTIS on a custom host - jobs.swisstph.ch serves the Umantis JS bundles and the /Jobs/All page is server-rendered with the usual /Vacancies/<n>/Description/<n> + aria-label rows. The html adapter covers it with url/base pointed at jobs.swisstph.ch instead of recruitingapp-<id>.umantis.com. 1 vacancy on 2026-09-02 (Unterassistent:in 100%) - genuinely small, not a broken regex.",
-      "salary": {
-        "currency": "CHF",
-        "low": 74900,
-        "high": 78600,
-        "median": 78600,
-        "roles": 2,
-        "reports": 6,
-        "source": "https://www.kununu.com/ch/swiss-tph/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "swisstph.ch",
@@ -33247,8 +32709,7 @@
         "glassdoor_reviews": 15,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Overview/Working-at-Swissmedic-EI_IE1064831.11,21.htm",
-        "note": "68% recommend; small sample; federal agency in Bern/Zollikofen",
-        "salary_level": null
+        "note": "68% recommend; small sample; federal agency in Bern/Zollikofen"
       },
       "stats": {
         "open_positions": null,
@@ -33431,9 +32892,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 812,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/T%C3%9CV-S%C3%9CD-Reviews-E351825.htm",
-        "note": "65% recommend; work-life 3.9 good, career opportunities 3.4 and pay the weak points no figure; Glassdoor comp-and-benefits satisfaction 3.3/5 (not a salary)",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/T%C3%9CV-S%C3%9CD-Reviews-E351825.htm"
       },
       "stats": {
         "open_positions": null,
@@ -34614,9 +34073,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 703,
         "scope": "ch",
-        "source": "https://www.glassdoor.com/Reviews/Universit%C3%A4t-Z%C3%BCrich-Reviews-E142691.htm",
-        "note": "UZH 4.2, 83% recommend. USZ is a separate weaker profile: 3.5 on 160 reviews, 50% recommend no figure; Glassdoor comp satisfaction 3.3/5 for UZH and 3.0/5 for USZ (not salaries)",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Universit%C3%A4t-Z%C3%BCrich-Reviews-E142691.htm"
       },
       "stats": {
         "open_positions": 127,
@@ -35122,8 +34579,6 @@
         "glassdoor_reviews": 19,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Overview/Working-at-Weidmann-Medical-Technology-EI_IE3219288.11,38.htm",
-        "note": "Indeed CH 3.0/5 on only 3 reviews: pay 4.0 but work-life 1.0 and management 1.0 no figure; Indeed CH pay-and-benefits sub-rating 4.0/5 on 3 reviews (not a salary)",
-        "salary_level": null,
         "kununu_reviews": 53,
         "kununu_recommend": 78,
         "kununu_url": "https://www.kununu.com/ch/weidmann-electrical-technology1",
@@ -35152,16 +34607,6 @@
         "last_run": null
       },
       "notes": "weidmann-group.com/open-positions is WordPress: its 'careers' post type answers on /wp-json/wp/v2/careers (31 postings on 2026-09-24, the 10-item /open-positions/feed/ RSS is the same list truncated). Group-wide - Rapperswil plus St. Johnsbury VT, Urbana OH, China, Bosnia - and the API carries NO location field (only in title/body), so location is left null rather than invented; expect the geography gate to decide. Verified 2026-09-24.",
-      "salary": {
-        "currency": "CHF",
-        "low": 66100,
-        "high": 94400,
-        "median": 77000,
-        "roles": 5,
-        "reports": 15,
-        "source": "https://www.kununu.com/ch/weidmann-electrical-technology1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "field": "life-science"
     },
@@ -35580,7 +35025,6 @@
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Ypsomed-Reviews-E1065044.htm",
         "note": "70% would recommend; Burgdorf-based; no strong positive or negative theme in sources",
-        "salary_level": null,
         "kununu_reviews": 140,
         "kununu_recommend": 66,
         "kununu_url": "https://www.kununu.com/ch/ypsomed2",
@@ -35610,16 +35054,6 @@
         "last_run": null
       },
       "notes": "The offene-stellen page iframes careers.ypsomed.com/ypsomed/de/professional, an Angular microsite whose app.js loads the relative 'api/v1/data/'; under /ypsomed/en/search/ that answers JSON with every posting (32 on 2026-09-24: Burgdorf, Solothurn, Schwerin), /professional only the 14 Swiss professional ones. Posting URLs checked to resolve. No description in the list, so fit_score will be null.",
-      "salary": {
-        "currency": "CHF",
-        "low": 64600,
-        "high": 127000,
-        "median": 90000,
-        "roles": 20,
-        "reports": 72,
-        "source": "https://www.kununu.com/ch/ypsomed2/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "ypsomed.com",
@@ -35852,8 +35286,6 @@
         "glassdoor_reviews": 55,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/ZHAW-Reviews-E316578.htm",
-        "note": "Crowd-sourced estimates (deinlohn.ch, small samples): Wissenschaftlicher Mitarbeiter ~CHF 108k/yr, Dozent ~CHF 112k/yr - both close to the CH scientific-employee average of ~CHF 103k. Figures are for ZHAW generally, not confirmed Wadenswil-specific.",
-        "salary_level": "mid",
         "kununu_reviews": 250,
         "kununu_recommend": 86,
         "kununu_url": "https://www.kununu.com/ch/zhaw-zuercher-hochschule-fuer-angewandte-wissenschaften1",
@@ -35883,16 +35315,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "prospective.ch - marker on the vacant-positions page, verified 2026-09-02. Same vendor as UZH, USZ, Kinderspital and Buehler; no prospective adapter exists, and CLAUDE.md records prospective.ch as Cloudflare-walled to plain clients.",
-      "salary": {
-        "currency": "CHF",
-        "low": 75100,
-        "high": 144500,
-        "median": 103600,
-        "roles": 20,
-        "reports": 87,
-        "source": "https://www.kununu.com/ch/zhaw-zuercher-hochschule-fuer-angewandte-wissenschaften1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "zhaw.ch",
@@ -37862,8 +37284,6 @@
         "glassdoor_reviews": 7638,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/GE-HealthCare-Reviews-E4112.htm",
-        "note": "83% would recommend to a friend; work-life balance, culture/values and career opportunities all ~4.0-4.1/5 (global figures, not CH-isolated). No clean Switzerland-only figure isolated. Glassdoor shows a dedicated Zurich salary page but snippets returned only a Software Engineer median total pay of ~$107k mixed with US/global levels.fyi data ($99k-$210k range) - not reliable enough to call a CH number.",
-        "salary_level": null,
         "kununu_reviews": 158,
         "kununu_recommend": 56,
         "kununu_url": "https://www.kununu.com/de/ge-healthcare",
@@ -37966,9 +37386,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 36,
         "scope": "ch",
-        "source": "https://www.glassdoor.com/Reviews/Givaudan-Switzerland-Reviews-EI_IE10735.0,8_IL.9,20_IN226.htm",
-        "note": "77% would recommend company-wide; Switzerland-based employees rate it 3.9/5 (36 reviews), above the 3.4/5 seen in New York. No Givaudan-specific engineer figure isolated. General CH engineer market runs ~CHF 90k-120k (CHF 106k avg per Glassdoor CH-wide, not Givaudan-specific); Givaudan's own CH salary range spans $49.8k-$196.7k across 249 reports covering many role types.",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Givaudan-Switzerland-Reviews-EI_IE10735.0,8_IL.9,20_IN226.htm"
       },
       "stats": {
         "open_positions": 26,
@@ -38171,8 +37589,6 @@
         "glassdoor_reviews": 40,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/MSD-Suiza-Reviews-EI_IE550581.0,3_IL.4,9_IN226.htm",
-        "note": "CH employees rate compensation/benefits 4.1/5, diversity/inclusion 4.4/5, work-life balance 4.0/5; Zurich site scores even higher at 4.5/5 (16 reviews). Director-level in Lucerne ~CHF 210k/yr (3 samples, Glassdoor). CH-wide (222 salaries, Glassdoor, figures shown in USD - likely CHF-equivalent conversions) range from ~$88.5k to ~$297k, Teacher/entry to Director band.",
-        "salary_level": "high",
         "kununu_reviews": 814,
         "kununu_recommend": 86,
         "kununu_url": "https://www.kununu.com/de/msd-sharp-dohme",
@@ -38456,9 +37872,7 @@
         "industry": "Medizin/Pharma",
         "industry_avg": 3.6,
         "pay_satisfaction": 84,
-        "scope": "ch",
-        "note": "92% of Swiss employees recommend vs 83% globally; comp satisfaction 4.3/5, unusually high levels.fyi global median total comp USD 111,581 all roles (global, not CH-specific); Glassdoor CH comp satisfaction 4.3/5",
-        "salary_level": "high"
+        "scope": "ch"
       },
       "stats": {
         "open_positions": 1,
@@ -38529,7 +37943,6 @@
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Straumann-Group-Basel-Reviews-EI_IE40193.0,15_IL.16,21_IM1691.htm",
         "note": "Basel site rates 3.8 versus 3.5 for the group worldwide across 384 reviews",
-        "salary_level": null,
         "kununu_reviews": 87,
         "kununu_recommend": 43,
         "kununu_url": "https://www.kununu.com/ch/straumann",
@@ -38559,16 +37972,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "PHENOM. POST careers.straumann.com/widgets returns 175 postings, 5 of them with country Switzerland (Global Launch Education Manager, Basel; Apprentissage Mecanicien de production, Villeret) - content-verified 2026-09-02. One catch: the repo's a_phenom returns 0 for this tenant because Straumann's rows carry neither applyUrl nor jobSeoUrl, only jobId/reqId, so every row is skipped - the posting URL has to be built from jobId. www.straumann.com answers 403 to non-browser clients, which is why earlier passes found nothing.",
-      "salary": {
-        "currency": "CHF",
-        "low": 74700,
-        "high": 175000,
-        "median": 112700,
-        "roles": 7,
-        "reports": 17,
-        "source": "https://www.kununu.com/ch/straumann/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "straumann.com",
@@ -38728,8 +38131,6 @@
         "glassdoor_reviews": 2497,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Zimmer-Biomet-Reviews-E1017414.htm",
-        "note": "61% would recommend (global); Winterthur staff rate compensation/benefits 3.9/5, slightly above the global 3.6/5 average. Winterthur (CH) site, Glassdoor/Indeed, small samples: Regulatory Affairs Specialist ~CHF 93.4k, Senior Research Engineer ~CHF 101-123k, Manufacturing Engineer ~CHF 118.4k, Trainee ~CHF 110k.",
-        "salary_level": "mid",
         "kununu_reviews": 105,
         "kununu_recommend": 14,
         "kununu_url": "https://www.kununu.com/ch/zimmer-biomet",
@@ -38756,16 +38157,6 @@
       "stats": {
         "open_positions": 2,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 80500,
-        "high": 135200,
-        "median": 91400,
-        "roles": 7,
-        "reports": 18,
-        "source": "https://www.kununu.com/ch/zimmer-biomet/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -38887,16 +38278,6 @@
       "stats": {
         "open_positions": 14,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 95900,
-        "high": 165000,
-        "median": 120000,
-        "roles": 20,
-        "reports": 144,
-        "source": "https://www.kununu.com/ch/aveniq/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "aveniq.ch"
@@ -39192,7 +38573,6 @@
         "scope": null,
         "source": "https://www.glassdoor.com/Reviews/Xeltis-Reviews-E1561553.htm",
         "note": null,
-        "salary_level": null,
         "glassdoor_via": "bing-snippet"
       },
       "stats": {
@@ -39726,8 +39106,6 @@
         "glassdoor_reviews": 5526,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Eurofins-Reviews-E25113.htm",
-        "note": "Comp/benefits rated 2.6/5, career opportunities 2.9/5 (below other facets); only 48% would recommend to a friend",
-        "salary_level": null,
         "kununu_reviews": 343,
         "kununu_recommend": 39,
         "kununu_url": "https://www.kununu.com/de/eurofins",
@@ -39910,7 +39288,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Gerresheimer-Reviews-E10448.htm",
         "note": "Management rated 2.6/5, work-life balance 2.8/5 (Indeed shows a higher 3.0/5 overall for comparison)",
-        "salary_level": null,
         "kununu_reviews": 711,
         "kununu_recommend": 48,
         "kununu_url": "https://www.kununu.com/de/gerresheimer",
@@ -40296,8 +39673,6 @@
         "glassdoor_reviews": 1756,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Lonza-Reviews-E11133.htm",
-        "note": "Work-life balance 3.4/5, career opportunities 3.6/5, culture/values lower at 3.2/5 (Glassdoor) Process Engineer in Switzerland: median ~CHF 100k, typical range CHF 91.5k-111.5k (Glassdoor salary data)",
-        "salary_level": "mid",
         "kununu_reviews": 335,
         "kununu_recommend": 73,
         "kununu_url": "https://www.kununu.com/ch/lonza",
@@ -40324,16 +39699,6 @@
       "stats": {
         "open_positions": 0,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 71000,
-        "high": 133500,
-        "median": 90000,
-        "roles": 20,
-        "reports": 211,
-        "source": "https://www.kununu.com/ch/lonza/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -40678,7 +40043,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/SGS-Reviews-E10600.htm",
         "note": "Only 53% would recommend to a friend (Glassdoor); no Swiss-specific breakdown found",
-        "salary_level": null,
         "kununu_reviews": 586,
         "kununu_recommend": 48,
         "kununu_url": "https://www.kununu.com/de/sgs-gruppe-deutschland",
@@ -41302,16 +40666,6 @@
         "open_positions": 5,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 65200,
-        "high": 132500,
-        "median": 78000,
-        "roles": 20,
-        "reports": 77,
-        "source": "https://www.kununu.com/ch/burckhardt-compression-switzerland/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "burckhardtcompression.com",
@@ -41528,16 +40882,6 @@
         "open_positions": 1264,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 54100,
-        "high": 94800,
-        "median": 66400,
-        "roles": 20,
-        "reports": 996,
-        "source": "https://www.kununu.com/ch/coop/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "coopjobs.ch"
@@ -41600,7 +40944,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Datwyler-Holding-Reviews-E764111.htm",
         "note": "Good benefits and collegiality noted; some concerns on management practices (Glassdoor, small sample of 65 reviews)",
-        "salary_level": null,
         "kununu_reviews": 19,
         "kununu_recommend": 100,
         "kununu_url": "https://www.kununu.com/ch/daetwyler-schweiz1",
@@ -41628,16 +40971,6 @@
       "stats": {
         "open_positions": 10,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 71900,
-        "high": 108200,
-        "median": 95200,
-        "roles": 3,
-        "reports": 6,
-        "source": "https://www.kununu.com/ch/daetwyler-schweiz1/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "daetwyler.ch"
@@ -41995,7 +41328,6 @@
         "scope": null,
         "source": null,
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 24,
         "kununu_recommend": 50,
         "kununu_url": "https://www.kununu.com/ch/icotec",
@@ -42026,16 +41358,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "SuccessFactors - host jobs.icotec-medical.com, linked from /karriere/stellenangebote/. 3 postings, content-verified 2026-09-02 (Senior Konstrukteur 80-100% in Altstaetten; Regional Sales Director NW & Rockies; Regional Sales Manager Florida). Works with the repo's a_successfactors as-is. icotec.ch redirects to icotec-medical.com.",
-      "salary": {
-        "currency": "CHF",
-        "low": 71600,
-        "high": 71600,
-        "median": 71600,
-        "roles": 1,
-        "reports": 3,
-        "source": "https://www.kununu.com/ch/icotec/gehalt",
-        "checked": "2026-09-03"
-      },
       "facts": {
         "site": "icotec-medical.com",
         "wikidata": "Q140870518",
@@ -42083,8 +41405,6 @@
         "glassdoor_reviews": 141,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Idorsia-Pharmaceuticals-Switzerland-Reviews-EI_IE1806477.0,23_IL.24,35_IN226.htm",
-        "note": "Career opportunities only 2.6/5; management the most-criticised theme; 50% would recommend Senior Scientist Allschwil CHF 129k-138k total; Scientific Associate CHF 76,933 (Glassdoor, 47 salaries at that site)",
-        "salary_level": "high",
         "kununu_reviews": 18,
         "kununu_recommend": 33,
         "kununu_url": "https://www.kununu.com/ch/idorsia",
@@ -42114,16 +41434,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "SuccessFactors - host careers.idorsia.com. 17 postings, content-verified 2026-09-02 (Associate Director Technical Project Leader Drug Substance; Pharmareferent/in - Produkt Spezialist/in; Senior Payroll Specialist). This one works with the repo's a_successfactors unchanged - it returned the same 17 rows.",
-      "salary": {
-        "currency": "CHF",
-        "low": 63400,
-        "high": 147700,
-        "median": 105550,
-        "roles": 2,
-        "reports": 4,
-        "source": "https://www.kununu.com/ch/idorsia/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "idorsia.com",
@@ -42445,8 +41755,6 @@
         "glassdoor_reviews": 4059,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Novo-Nordisk-Reviews-E3498.htm",
-        "note": "Good work-life balance and benefits; recurring complaints about management quality and layoffs Biomedical Engineer in Zurich reported CHF 82k-120k/yr; Novo Nordisk employees in Zurich rate compensation & benefits 4.1/5 on Glassdoor. No Swiss-specific median found.",
-        "salary_level": "mid",
         "kununu_reviews": 17,
         "kununu_recommend": 75,
         "kununu_url": "https://www.kununu.com/ch/novo-nordisk",
@@ -42474,16 +41782,6 @@
       "stats": {
         "open_positions": 2,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 135400,
-        "high": 135400,
-        "median": 135400,
-        "roles": 1,
-        "reports": 2,
-        "source": "https://www.kununu.com/ch/novo-nordisk/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -42628,7 +41926,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Octapharma-Reviews-E3125653.htm",
         "note": "Split across Glassdoor entities: Octapharma AG 2.1/24, Octapharma Plasma (US) 2.6/1067",
-        "salary_level": null,
         "kununu_reviews": 31,
         "kununu_recommend": 64,
         "kununu_url": "https://www.kununu.com/de/octapharma-gmbh",
@@ -43325,16 +42622,6 @@
         "open_positions": 12,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 105500,
-        "high": 152700,
-        "median": 136700,
-        "roles": 3,
-        "reports": 8,
-        "source": "https://www.kununu.com/ch/skyguide-swiss-air-navigation-services-ltd/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "skyguide.ch",
@@ -43409,8 +42696,6 @@
         "glassdoor_reviews": 555,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Sonova-Reviews-E42380.htm",
-        "note": "Limited career growth and favoritism cited; only 54% would recommend to a friend Software Engineer median CHF 117k/yr in Switzerland (levels.fyi); Glassdoor Engineer range CHF 97k-161k on 14 submitted salaries",
-        "salary_level": "high",
         "kununu_reviews": 14,
         "kununu_recommend": 14,
         "kununu_url": "https://www.kununu.com/de/sonova",
@@ -43622,16 +42907,6 @@
         "open_positions": 14,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 70400,
-        "high": 180200,
-        "median": 140900,
-        "roles": 18,
-        "reports": 48,
-        "source": "https://www.kununu.com/ch/swiss-reinsurance-company/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "swissre.com",
@@ -43744,7 +43019,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Tecan-Reviews-E131219.htm",
         "note": "Below industry average rating; management effectiveness and limited career development cited as weak points",
-        "salary_level": null,
         "kununu_reviews": 121,
         "kununu_recommend": 29,
         "kununu_url": "https://www.kununu.com/ch/tecan-schweiz1",
@@ -43772,16 +43046,6 @@
       "stats": {
         "open_positions": 17,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 73100,
-        "high": 145000,
-        "median": 115950,
-        "roles": 16,
-        "reports": 56,
-        "source": "https://www.kununu.com/ch/tecan-schweiz1/gehalt",
-        "checked": "2026-09-03"
       },
       "facts": {
         "site": "tecan.com",
@@ -43939,16 +43203,6 @@
         "open_positions": 225,
         "last_run": "2026-09-21"
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 69400,
-        "high": 161400,
-        "median": 74600,
-        "roles": 9,
-        "reports": 37,
-        "source": "https://www.kununu.com/ch/ckw/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "ckw.ch",
@@ -44022,8 +43276,6 @@
         "glassdoor_reviews": 21,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Debiopharm-Reviews-E1063567.htm",
-        "note": "68% recommend; pay rated well; reviews criticise management and career development no figure found; comp/benefits rated 3.9/5, unusually high, suggesting pay is a strength",
-        "salary_level": null,
         "kununu_reviews": 1,
         "kununu_recommend": null,
         "kununu_url": "https://www.kununu.com/ch/debiopharm-international-sa",
@@ -44138,8 +43390,7 @@
         "glassdoor_reviews": 16,
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Distalmotion-Reviews-E1872564.htm",
-        "note": "Small team in Lausanne, positive senior-management environment reported; 72% would recommend to a friend",
-        "salary_level": null
+        "note": "Small team in Lausanne, positive senior-management environment reported; 72% would recommend to a friend"
       },
       "stats": {
         "open_positions": 19,
@@ -44845,8 +44096,7 @@
         "glassdoor_reviews": 9482,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Abbott-Reviews-E12.htm",
-        "note": "Described as political with inconsistent management quality; long hours in some units",
-        "salary_level": null
+        "note": "Described as political with inconsistent management quality; long hours in some units"
       },
       "stats": {
         "open_positions": 22,
@@ -45296,8 +44546,7 @@
         "glassdoor_reviews": 2527,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Alcon-Reviews-E10088.htm",
-        "note": "66% would recommend to a friend; work-life balance and culture both rated 3.6/5",
-        "salary_level": null
+        "note": "66% would recommend to a friend; work-life balance and culture both rated 3.6/5"
       },
       "stats": {
         "open_positions": 3,
@@ -45957,9 +45206,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 4454,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Baxter-Reviews-E83.htm",
-        "note": "Pay and work-life balance rated 3.7/5; career growth weaker at 3.4/5; some reviews cite frequent reorganizations. No Switzerland-specific salary evidence found: Glassdoor Salaries page returned 403, no reachable kununu Gehalt entry, not covered on levels.fyi.",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Baxter-Reviews-E83.htm"
       },
       "stats": {
         "open_positions": 2,
@@ -46220,9 +45467,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 2034,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Biogen-Reviews-E1336.htm",
-        "note": "Compensation rated strongly (4.2/5) and work-life balance well (3.8/5); culture/values and career growth more moderate (3.5/5). No Switzerland-specific salary evidence found: levels.fyi only lists US roles for Biogen (e.g. Software Engineer $140,760, Data Scientist $180,000), no CH kununu Gehalt entry reachable.",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Biogen-Reviews-E1336.htm"
       },
       "stats": {
         "open_positions": 14,
@@ -47029,8 +46274,6 @@
         "glassdoor_reviews": 643,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/CSL-Behring-Reviews-E5816.htm",
-        "note": "67% would recommend, 60% positive business outlook Bern area total comp CHF 134k-145k (Glassdoor, 75 salaries); PayScale Switzerland average CHF 109,138; Solution Architect CHF 163k-227k (levels.fyi). Rating is CSL Behring, first-named",
-        "salary_level": "high",
         "kununu_reviews": 73,
         "kununu_recommend": 100,
         "kununu_url": "https://www.kununu.com/ch/vifor-pharma-group",
@@ -47060,16 +46303,6 @@
         "last_run": "2026-09-21"
       },
       "notes": "WORKDAY - tenant csl, wd1, site CSL_External. POST /wday/cxs/csl/CSL_External/jobs returns total 188 with real CSL titles (Director Portfolio Planning; EHS Specialist; Sr. Director Market Access Analytics), content-verified 2026-09-02. The tenant URL is on csl.com/careers/explore-careers-at-csl, not on /careers - the /careers page (2.6MB) names nothing. Needs the usual country facet.",
-      "salary": {
-        "currency": "CHF",
-        "low": 71800,
-        "high": 155200,
-        "median": 89200,
-        "roles": 6,
-        "reports": 16,
-        "source": "https://www.kununu.com/ch/vifor-pharma-group/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "viforpharma.com",
@@ -47579,9 +46812,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 299,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Nobel-Biocare-Reviews-E40191.htm",
-        "note": "Only 51% of reviewers would recommend Nobel Biocare to a friend, below a typical sector benchmark. No Switzerland-specific salary evidence found (Nobel Biocare HQ is Kloten, ZH, but no CH kununu Gehalt or Glassdoor Swiss salary data was reachable).",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Nobel-Biocare-Reviews-E40191.htm"
       },
       "stats": {
         "open_positions": 4,
@@ -47887,8 +47118,6 @@
         "glassdoor_reviews": 483,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Ferring-Pharmaceuticals-Reviews-E38733.htm",
-        "note": "No Switzerland-specific salary evidence found (Ferring HQ is Saint-Prex, VD, but no CH kununu Gehalt or Glassdoor Swiss salary data was reachable).",
-        "salary_level": null,
         "kununu_reviews": 87,
         "kununu_recommend": 37,
         "kununu_url": "https://www.kununu.com/de/ferring3",
@@ -48162,9 +47391,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 718,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Galderma-Reviews-E494072.htm",
-        "note": "75% would recommend to a friend; career growth (4.0/5) and culture/values (3.9/5) rated highly, pay described as good. No Switzerland-specific salary evidence found: levels.fyi shows one unlocated figure (Sales role, $130,650 median total comp) with no country tag, not usable for a CH estimate.",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Reviews/Galderma-Reviews-E494072.htm"
       },
       "stats": {
         "open_positions": 5,
@@ -48422,16 +47649,6 @@
       "stats": {
         "open_positions": 15,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 60300,
-        "high": 181400,
-        "median": 89200,
-        "roles": 20,
-        "reports": 62,
-        "source": "https://www.kununu.com/ch/georg-fischer/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -48864,7 +48081,6 @@
         "scope": null,
         "source": "https://www.glassdoor.com/Overview/Working-at-Mnemo-Therapeutics-EI_IE6744459.11,29.htm",
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 23,
         "kununu_recommend": 33,
         "kununu_url": "https://www.kununu.com/de/memo2",
@@ -49022,7 +48238,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/DePuy-Synthes-Engineer-Reviews-EI_IE625188.0,13_KO14,22.htm",
         "note": "67% recommend; engineers rate 4.2; reviews cite layoffs and weak executive leadership",
-        "salary_level": null,
         "kununu_reviews": 515,
         "kununu_recommend": 75,
         "kununu_url": "https://www.kununu.com/de/johnsonandjohnson",
@@ -49990,8 +49205,6 @@
         "glassdoor_reviews": 253,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Medela-Reviews-E21913.htm",
-        "note": "Good work-life balance (4.0/5); cited cons include senior leadership and limited career development. No Switzerland-specific salary evidence found (Medela HQ is Baar, ZG, but no CH kununu Gehalt or Glassdoor Swiss salary data was reachable).",
-        "salary_level": null,
         "kununu_reviews": 157,
         "kununu_recommend": 82,
         "kununu_url": "https://www.kununu.com/ch/medela1",
@@ -50019,16 +49232,6 @@
       "stats": {
         "open_positions": 1,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 92200,
-        "high": 149100,
-        "median": 103000,
-        "roles": 7,
-        "reports": 17,
-        "source": "https://www.kununu.com/ch/medela1/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -50079,7 +49282,6 @@
         "scope": "ch",
         "source": "https://www.glassdoor.com/Reviews/Medtronic-Switzerland-Reviews-EI_IE436.0,9_IL.10,21_IN226.htm",
         "note": null,
-        "salary_level": null,
         "kununu_reviews": 539,
         "kununu_recommend": 83,
         "kununu_url": "https://www.kununu.com/de/medtronic",
@@ -50843,16 +50045,6 @@
         "open_positions": null,
         "last_run": null
       },
-      "salary": {
-        "currency": "CHF",
-        "low": 95700,
-        "high": 95700,
-        "median": 95700,
-        "roles": 1,
-        "reports": 2,
-        "source": "https://www.kununu.com/ch/partners-group1/gehalt",
-        "checked": "2026-09-03"
-      },
       "country": "Switzerland",
       "facts": {
         "site": "partnersgroup.net"
@@ -50913,7 +50105,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Philips-Reviews-E3496.htm",
         "note": "Good work-life balance (3.9/5) and culture (3.8/5); career opportunities weaker (3.5/5)",
-        "salary_level": null,
         "kununu_reviews": 584,
         "kununu_recommend": 83,
         "kununu_url": "https://www.kununu.com/de/philips",
@@ -51132,8 +50323,6 @@
         "glassdoor_reviews": 971,
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/QIAGEN-Reviews-E6170.htm",
-        "note": "Culture rated above biotech-industry average (3.6/5); work-life balance 3.7/5; mixed on salary/career growth",
-        "salary_level": null,
         "kununu_reviews": 314,
         "kununu_recommend": 52,
         "kununu_url": "https://www.kununu.com/de/qiagen",
@@ -51737,7 +50926,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Sartorius-Reviews-E264283.htm",
         "note": "Career opportunities rated weakest (3.0/5); compensation/benefits down 4% YoY; work-life balance 3.7/5",
-        "salary_level": null,
         "kununu_reviews": 647,
         "kununu_recommend": 74,
         "kununu_url": "https://www.kununu.com/de/sartorius",
@@ -52100,7 +51288,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Smith-Nephew-Reviews-E10233.htm",
         "note": "Highest-rated of the six: culture 4.2/5, work-life balance 4.0/5, 82% would recommend to a friend",
-        "salary_level": null,
         "kununu_reviews": 183,
         "kununu_recommend": 89,
         "kununu_url": "https://www.kununu.com/de/smith-nephew",
@@ -52278,9 +51465,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 309,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Overview/Working-at-Nelson-Labs-EI_IE313566.11,22.htm",
-        "note": "Only 24% recommend; recurring low-pay complaints; rating is US-dominated, not Swiss",
-        "salary_level": null
+        "source": "https://www.glassdoor.com/Overview/Working-at-Nelson-Labs-EI_IE313566.11,22.htm"
       },
       "stats": {
         "open_positions": null,
@@ -52457,7 +51642,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Stryker-Reviews-E1918.htm",
         "note": "Culture 4.1/5, 79% would recommend; sales roles rate it higher (4.1/5) than customer-service roles (2.3/5)",
-        "salary_level": null,
         "kununu_reviews": 478,
         "kununu_recommend": 75,
         "kununu_url": "https://www.kununu.com/de/stryker-leibinger-stryker-osteosynthesis1",
@@ -52710,16 +51894,6 @@
       "stats": {
         "open_positions": 47,
         "last_run": "2026-09-21"
-      },
-      "salary": {
-        "currency": "CHF",
-        "low": 56200,
-        "high": 157800,
-        "median": 118700,
-        "roles": 20,
-        "reports": 430,
-        "source": "https://www.kununu.com/ch/swisscom/gehalt",
-        "checked": "2026-09-03"
       },
       "country": "Switzerland",
       "facts": {
@@ -53014,7 +52188,6 @@
         "scope": "global",
         "source": "https://www.glassdoor.com/Reviews/Thermo-Fisher-Scientific-Reviews-E658.htm",
         "note": "Lowest-rated of the six: 61% would recommend, compensation/benefits only 3.2/5, rating declined 2% YoY",
-        "salary_level": null,
         "kununu_reviews": 491,
         "kununu_recommend": 51,
         "kununu_url": "https://www.kununu.com/de/thermo-fisher-scientific",
@@ -53345,8 +52518,7 @@
         "industry": "Medizintechnik",
         "industry_avg": 3.6,
         "pay_satisfaction": 85,
-        "scope": "global",
-        "note": "82% recommend; work-life 4.1, culture 4.1, career 3.7; no Swiss-specific rating found no figure; Glassdoor comp-and-benefits satisfaction 3.8/5 (not a salary)"
+        "scope": "global"
       },
       "stats": {
         "open_positions": 3,
@@ -53697,9 +52869,7 @@
         "checked": "2026-09-02",
         "glassdoor_reviews": 281,
         "scope": "global",
-        "source": "https://www.glassdoor.com/Reviews/Z%C3%BChlke-Reviews-E451902.htm",
-        "note": "Good work-life balance, accessible/transparent management; recent benefit and work-arrangement policy cuts criticized in reviews. Glassdoor CH estimate: Software Engineer avg base ~CHF 95k, total comp ~CHF 117.7k/yr; broader Zurich-area software engineer market runs CHF 113k-222k, so Zuhlke reads below-median for that role. kununu page exists but is 403-blocked to fetch and did not surface in search snippets.",
-        "salary_level": "mid"
+        "source": "https://www.glassdoor.com/Reviews/Z%C3%BChlke-Reviews-E451902.htm"
       },
       "stats": {
         "open_positions": 39,
@@ -53724,6 +52894,163 @@
         "listed": [],
         "via": "wikidata",
         "checked": "2026-09-16"
+      },
+      "field": "services"
+    },
+    {
+      "id": "manual:sygnum",
+      "name": "Sygnum",
+      "url": "https://www.sygnum.com/",
+      "jobs_url": "https://www.sygnum.com/careers-portal/",
+      "location": "Zurich",
+      "country": "Switzerland",
+      "categories": [],
+      "connector": {
+        "type": "custom",
+        "config": {
+          "url": "https://www.sygnum.com/wp-admin/admin-ajax.php?action=fetch_careers&_wpnonce={token}",
+          "row": "<a\\b[^>]*?href=[\"'](?P<url>https://sygnumpeopleportal\\.my\\.salesforce-sites\\.com/recruit/fRecruit__ApplyJob\\?[^\"'#]+)[\"'][^>]*>(?P<title>.*?)</a>",
+          "render": true,
+          "detail": true,
+          "token": {
+            "url": "https://www.sygnum.com/careers-portal/",
+            "regex": "class=\"careers-block\" data-nonce=\"([^\"]+)\""
+          },
+          "map": {
+            "title": "title",
+            "url": "application_url",
+            "location": "location",
+            "location_type_hint": "work_type"
+          }
+        },
+        "enabled": true,
+        "verified": "2026-09-24",
+        "notes": "WordPress admin-ajax fetch_careers behind the careers page; nonce read off the page each run. Postings live in Sage People fRecruit (Salesforce), whose own list pages 10 at a time by form postback."
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "finance"
+    },
+    {
+      "id": "manual:lumapps-com",
+      "name": "LumApps",
+      "url": "https://www.lumapps.com/",
+      "jobs_url": "https://job.lumapps.com/#jobs",
+      "location": "Lyon",
+      "country": "France",
+      "categories": [],
+      "connector": {
+        "type": "html",
+        "config": {
+          "url": "https://job.lumapps.com/#jobs",
+          "row": "<a\\b[^>]*?href=[\"'](?P<url>https://job\\.lumapps\\.com/jobs/[^\"'#]+)[\"'][^>]*>(?P<title>.*?)</a>",
+          "detail": true
+        },
+        "enabled": true,
+        "verified": "2026-09-27",
+        "notes": "connected automatically: html https://job.lumapps.com/#jobs, 5 postings, via https://job.lumapps.com/#jobs"
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "software-it"
+    },
+    {
+      "id": "ashby:domera-labs",
+      "name": "Domera Labs",
+      "url": "https://www.domeralabs.com",
+      "jobs_url": "https://www.domeralabs.com",
+      "location": null,
+      "country": null,
+      "categories": [],
+      "connector": {
+        "type": "ashby",
+        "config": {
+          "token": "domera-labs"
+        },
+        "enabled": true,
+        "verified": "2026-09-27",
+        "notes": "discovered from alerts:mail; token verified by content (9 postings)"
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "software-it"
+    },
+    {
+      "id": "greenhouse:digital-asset",
+      "name": "Digital Asset",
+      "url": "https://www.digitalasset.com",
+      "jobs_url": "https://job-boards.greenhouse.io/digitalassetcorp",
+      "location": null,
+      "country": null,
+      "categories": [],
+      "connector": {
+        "type": "greenhouse",
+        "config": {
+          "token": "digitalassetcorp"
+        },
+        "enabled": true,
+        "verified": "2026-09-27",
+        "notes": "discovered from alerts:mail; token verified by content (31 postings)"
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "software-it"
+    },
+    {
+      "id": "workday:eraneos",
+      "name": "Eraneos",
+      "url": "https://www.eraneos.ch",
+      "jobs_url": "https://www.eraneos.ch",
+      "location": null,
+      "country": "Switzerland",
+      "categories": [],
+      "connector": {
+        "type": "workday",
+        "config": {
+          "tenant": "eraneos",
+          "wd": "3",
+          "site": "Eraneos_External_Career_Site"
+        },
+        "enabled": true,
+        "verified": "2026-10-05",
+        "notes": "discovered from alerts:mail; token verified by content (53 postings)"
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
       },
       "field": "services"
     }
