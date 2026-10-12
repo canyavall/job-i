@@ -1,16 +1,18 @@
-/* Colours are the dashboard's own Job-I / Job-I Night themes (app/client/heroui/themes.ts). */
+/* Colours are the dashboard's own I-Jobs / I-Jobs Night themes (job-i-src
+   libs-fe/ui/theme/theme.constant.ts): Soft Paper / Charcoal Slate by day, Midnight Charcoal
+   by night, Horizon Orange deepened (day) or lifted (night) until it passes AA as text. */
 :root {
-  --bg: #f4f8f9; --surface: #ffffff; --surface2: #eef4f5; --border: #cfdddf;
-  --fg: #0d4c2d; --text: #1d3a30; --muted: #4a655d;
-  --accent: #0a7a74; --accent-fg: #ffffff; --teal: #0d9891;
+  --bg: #fafafa; --surface: #ffffff; --surface2: #f3f4f5; --border: #d9dde1;
+  --fg: #41474d; --text: #41474d; --muted: #5c636a;
+  --accent: #a33f0c; --accent-fg: #ffffff; --ring: #a33f0c;
   --radius: 14px;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #10231d; --surface: #162f28; --surface2: #1c3831; --border: #2e4f47;
-    --fg: #e8f2f0; --text: #d5e4e0; --muted: #a3bab5;
-    --accent: #2cb5ab; --accent-fg: #06201b; --teal: #4fc9c0;
+    --bg: #1e232a; --surface: #252b33; --surface2: #2c333c; --border: #3b444f;
+    --fg: #eef0f2; --text: #eef0f2; --muted: #a9b1ba;
+    --accent: #ff8140; --accent-fg: #1e232a; --ring: #ff8140;
   }
 }
 
@@ -52,7 +54,7 @@ section:nth-of-type(even) { background: var(--surface2); }
 .btn { display: inline-block; padding: .7rem 1.3rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--fg); font-weight: 600; text-decoration: none; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
 .btn:hover { filter: brightness(1.06); }
-.btn:focus-visible, a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
 
 .shot { margin: 0; }
 .shot img { border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 10px 40px rgb(0 0 0 / .12); }
@@ -80,7 +82,7 @@ section:nth-of-type(odd) .cols > div { background: var(--surface2); }
 .dl { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
 .dl th, .dl td { text-align: left; padding: .7rem .9rem; border-bottom: 1px solid var(--border); vertical-align: top; }
 .dl thead th { font-size: .85rem; color: var(--muted); }
-.dl tr.mine { background: color-mix(in srgb, var(--teal) 12%, transparent); }
+.dl tr.mine { background: color-mix(in srgb, var(--ring) 12%, transparent); }
 .dl td a { white-space: nowrap; }
 .dl .sha { font: .78rem/1.4 ui-monospace, Consolas, monospace; word-break: break-all; color: var(--muted); min-width: 12em; }
 .download h3 { margin-top: 2.5rem; }
