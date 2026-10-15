@@ -1,5 +1,6 @@
 {
-  "version": 38,
+  "version": 41,
+  "min_app": "0.2.5",
   "_readme": [
     "Word classes: one meaning, every spelling this market uses for it.",
     "",
@@ -13,8 +14,8 @@
     "",
     "THIS FILE IS THE SCORE, since 2026-09-22. A posting is labelled with every class",
     "it names (`skills` on the corpus row), and both numbers a profile puts against a",
-    "class - expertise and importance - are paid out over those labels: 90 points split",
-    "evenly over what one posting asks for. The `title` and `professions` axes are read",
+    "class - expertise and importance - are paid out over those labels: 100 points split",
+    "by criticality over what one posting asks for. The `title` and `professions` axes are read",
     "separately, to widen a profile's target titles into every other name for that job.",
     "",
     "axis  - which vocabulary the class is meant to widen: professions, domains, tags,",
@@ -41,10 +42,14 @@
     "except - phrases that hold one of the class's words and mean something else",
     "        (\"post-marketing\" for marketing, \"not screened by artificial intelligence\" for ai).",
     "        Blanked out of the posting before this class alone is tried.",
-    "criticality - how much doing a job depends on the skill, 1-10. The 90 skill points of",
+    "criticality - how much doing a job depends on the skill, 1-10. The 100 skill points of",
     "        both scores are split in proportion to it. Omitted, the section decides:",
-    "        technical 10, tooling 8, knowledge 6, managerial 4, personal 2 (CRITICALITY",
-    "        in app/server/fetch/profile.ts). Set it where the section is wrong for a class.",
+    "        technical 10, tooling 8, knowledge 7, managerial 4, personal 3 (CRITICALITY",
+    "        in libs-be/fetch/skill.constant.ts). Set it where the section is wrong for a class.",
+    "aliases - ids of classes merged into this one. Never matched in a posting: they re-key a",
+    "        profile rating, a stored posting and a pasted CV row from the old id to this class",
+    "        (skillIndex). A merge keeps the old id here forever; a profile that rated both keeps",
+    "        the row with the higher expertise + importance.",
     "",
     "Translations live in the same flat `words` list as the synonyms, in English, Spanish,",
     "German and French. Matching is lowercase over the posting's own text, so the language of a",
@@ -57,17 +62,18 @@
     "responsibility', 'innovative mindset'), never the bare adjective ('responsible',",
     "'innovative'), and each class records in `caution` what it still over-reaches into.",
     "",
-    "Matching (profile.ts buildSkills, normalise.ts detectSkills): every token of a word of 5+",
+    "Matching (skill.transformer.ts buildSkills, skill.util.ts detectSkills): every token of a word of 5+",
     "letters takes German/English endings, a 3-4 letter acronym a plural s (KPIs), a -y word",
     "-ies; a trailing * is a stem. German suspended compounds (\"Kommunikations- und",
     "Koordinationsfähigkeit\") and lists in front of a head noun (\"communication and",
     "presentation skills\") are spelled out first, and the sections a posting spends on the",
-    "employer (About us, Wir bieten, Benefits...) are dropped (text.ts dropOfferSections).",
+    "employer (About us, Wir bieten, Benefits...) are dropped (posting-text.util.ts dropOfferSections).",
     "Umlaut plurals (abschlüsse) and glued compounds (stakeholdermanagement) are NOT derived:",
     "list them. 2026-09-30: 107 classes added from an audit of 90 postings over 18 professions.",
-    "A class's FIRST word is its skill name in the CV prompt (cv.ts skillNames): keep it the plain",
+    "A class's FIRST word is its skill name in the CV prompt (cv.transformer.ts skillNames): keep it the plain",
     "English name a CV would use (\"microsoft office\", not \"vba\"). Round 2 the same day: 32 more",
-    "classes and 41 renamed first words after 72 fresh postings and 36 sample CVs were checked."
+    "classes and 41 renamed first words after 72 fresh postings and 36 sample CVs were checked.",
+    "v39 (2026-10-13): 20 near-duplicate classes merged into 14 (see each target's `aliases`)."
   ],
   "classes": [
     {
@@ -176,7 +182,7 @@
     },
     {
       "id": "llm",
-      "label": "Large language model",
+      "label": "Large language models / LLM applications",
       "axis": "knowledge",
       "words": [
         "llm",
@@ -188,7 +194,19 @@
         "sprachmodell",
         "transformer architecture",
         "transformer-based",
-        "chatgpt"
+        "chatgpt",
+        "llm application development",
+        "llm engineering",
+        "llm apps",
+        "llm integration",
+        "building with llms",
+        "desarrollo de aplicaciones llm",
+        "ingeniería de llm",
+        "llm-anwendungsentwicklung",
+        "llm-entwicklung"
+      ],
+      "aliases": [
+        "llm-engineering"
       ]
     },
     {
@@ -232,7 +250,7 @@
     },
     {
       "id": "frontend",
-      "label": "Frontend / client-side",
+      "label": "Frontend / client-side architecture",
       "axis": "knowledge",
       "words": [
         "frontend",
@@ -245,9 +263,29 @@
         "web frontend",
         "frontend development",
         "frontend-entwicklung",
-        "développement front-end"
+        "développement front-end",
+        "frontend architecture",
+        "front-end architecture",
+        "ui architecture",
+        "client-side architecture",
+        "arquitectura frontend",
+        "arquitectura de front-end",
+        "frontend-architektur",
+        "modular ui",
+        "modular ui architecture",
+        "component architecture",
+        "micro frontend",
+        "micro-frontend",
+        "arquitectura de ui modular",
+        "micro frontends",
+        "modulare ui-architektur",
+        "micro-frontend-architektur"
       ],
-      "caution": "Not bare 'browser': every cookie banner names it."
+      "caution": "Not bare 'browser': every cookie banner names it.",
+      "aliases": [
+        "frontend-architecture",
+        "modular-ui"
+      ]
     },
     {
       "id": "platform",
@@ -584,20 +622,6 @@
       ]
     },
     {
-      "id": "frontend-architecture",
-      "label": "Frontend architecture",
-      "axis": "knowledge",
-      "words": [
-        "frontend architecture",
-        "front-end architecture",
-        "ui architecture",
-        "client-side architecture",
-        "arquitectura frontend",
-        "arquitectura de front-end",
-        "frontend-architektur"
-      ]
-    },
-    {
       "id": "react",
       "label": "React",
       "axis": "technical",
@@ -629,23 +653,6 @@
         "es6",
         "es2015",
         "vanilla js"
-      ]
-    },
-    {
-      "id": "modular-ui",
-      "label": "Modular UI architecture",
-      "about": "Splitting a frontend into independent parts: component architecture, micro-frontends.",
-      "axis": "knowledge",
-      "words": [
-        "modular ui",
-        "modular ui architecture",
-        "component architecture",
-        "micro frontend",
-        "micro-frontend",
-        "arquitectura de ui modular",
-        "micro frontends",
-        "modulare ui-architektur",
-        "micro-frontend-architektur"
       ]
     },
     {
@@ -699,23 +706,6 @@
       ]
     },
     {
-      "id": "llm-engineering",
-      "label": "LLM application development",
-      "axis": "technical",
-      "words": [
-        "llm application development",
-        "llm engineering",
-        "llm apps",
-        "llm integration",
-        "building with llms",
-        "desarrollo de aplicaciones llm",
-        "ingeniería de llm",
-        "llm-anwendungsentwicklung",
-        "llm-entwicklung"
-      ],
-      "caution": "The `llm` class names the model; this one names building on top of it. A posting that only mentions the noun is not evidence of this skill."
-    },
-    {
       "id": "generative-ai",
       "label": "Generative AI",
       "axis": "technical",
@@ -736,8 +726,8 @@
     },
     {
       "id": "ai-assisted-development",
-      "label": "AI-assisted development",
-      "about": "Coding with an AI assistant at your side: GitHub Copilot, Cursor, AI pair programming.",
+      "label": "AI-assisted development / coding agents",
+      "about": "Coding with AI assistants and agents: GitHub Copilot, Cursor, Claude Code, agentic coding workflows.",
       "axis": "technical",
       "words": [
         "ai-assisted development",
@@ -749,16 +739,7 @@
         "ki-gestützte entwicklung",
         "ki-unterstützte programmierung",
         "github copilot",
-        "cursor ai"
-      ],
-      "caution": "Not bare 'copilot': Microsoft 365 Copilot is an office product an admin rolls out."
-    },
-    {
-      "id": "agentic-coding",
-      "label": "Agentic coding workflows",
-      "about": "Working with autonomous coding agents that write and change code on their own.",
-      "axis": "technical",
-      "words": [
+        "cursor ai",
         "agentic coding workflows",
         "agentic coding",
         "agentic workflows",
@@ -768,27 +749,21 @@
         "flujos de trabajo agénticos",
         "agentes de codificación",
         "agentische coding-workflows",
-        "autonome coding-agenten"
-      ]
-    },
-    {
-      "id": "context-engineering",
-      "label": "Context engineering",
-      "about": "Deciding what an LLM sees in its context window: retrieval, prompt context, memory.",
-      "axis": "technical",
-      "words": [
-        "context engineering",
-        "context window",
-        "prompt context",
-        "retrieval context",
-        "ingeniería de contexto",
-        "kontext-engineering",
-        "kontextgestaltung"
+        "autonome coding-agenten",
+        "claude code",
+        "claude-code",
+        "anthropic claude",
+        "claude cli"
+      ],
+      "caution": "Not bare 'copilot': Microsoft 365 Copilot is an office product an admin rolls out.",
+      "aliases": [
+        "agentic-coding",
+        "claude-code"
       ]
     },
     {
       "id": "prompt-engineering",
-      "label": "Prompt engineering",
+      "label": "Prompt / context engineering",
       "axis": "technical",
       "words": [
         "prompt engineering",
@@ -798,8 +773,19 @@
         "ingeniería de prompts",
         "diseño de prompts",
         "prompt-engineering",
-        "prompt-gestaltung"
-      ]
+        "prompt-gestaltung",
+        "context engineering",
+        "context window",
+        "prompt context",
+        "retrieval context",
+        "ingeniería de contexto",
+        "kontext-engineering",
+        "kontextgestaltung"
+      ],
+      "aliases": [
+        "context-engineering"
+      ],
+      "about": "Shaping what an LLM is told and sees: prompts, system prompts, retrieval and context windows."
     },
     {
       "id": "llm-evaluation",
@@ -1109,7 +1095,6 @@
         "cloud-migrationen",
         "migration in die cloud",
         "migration vers le cloud",
-        "oracle cloud infrastructure",
         "platform migrations",
         "platform migration"
       ]
@@ -1225,7 +1210,9 @@
         "sql-datenbank",
         "oracle database",
         "oracle datenbank",
-        "pl/sql"
+        "oracle db",
+        "pl/sql",
+        "plsql"
       ],
       "caution": "The product names are spellings of the skill, not tooling rows: nobody advertises 'postgres' meaning anything but SQL work."
     },
@@ -1307,7 +1294,7 @@
     },
     {
       "id": "sap-abap",
-      "label": "SAP ABAP",
+      "label": "SAP ABAP / forms",
       "axis": "technical",
       "words": [
         "abap",
@@ -1315,7 +1302,17 @@
         "abap objects",
         "abap development",
         "desarrollo abap",
-        "abap-entwicklung"
+        "abap-entwicklung",
+        "sap smart forms",
+        "smart forms",
+        "smartforms",
+        "sap script",
+        "sapscript",
+        "formularios sap",
+        "sap-formulare"
+      ],
+      "aliases": [
+        "sap-smart-forms"
       ]
     },
     {
@@ -1373,17 +1370,6 @@
         "gestion de la paie",
         "traitement de la paie",
         "remuneraciones"
-      ]
-    },
-    {
-      "id": "claude-code",
-      "label": "Claude Code",
-      "axis": "tooling",
-      "words": [
-        "claude code",
-        "claude-code",
-        "anthropic claude",
-        "claude cli"
       ]
     },
     {
@@ -1518,7 +1504,11 @@
         "sap cpi",
         "cloud platform integration",
         "sap pi/po",
-        "sap pm"
+        "sap pm",
+        "idoc",
+        "idocs",
+        "intermediate document",
+        "sap idoc"
       ],
       "except": [
         "saps",
@@ -1528,7 +1518,43 @@
         "sap schweiz ag",
         "sap (schweiz) ag",
         "sap ag"
+      ],
+      "aliases": [
+        "idoc"
       ]
+    },
+    {
+      "id": "oracle",
+      "label": "Oracle",
+      "about": "Oracle's enterprise software: E-Business Suite, Fusion Cloud ERP/HCM, Oracle Database.",
+      "axis": "tooling",
+      "words": [
+        "oracle",
+        "oracle fusion",
+        "oracle e-business suite",
+        "oracle ebs",
+        "oracle cloud erp",
+        "oracle hrms",
+        "oracle cpq",
+        "oracle otm",
+        "oracle fccs",
+        "oracle forms",
+        "oracle apex"
+      ],
+      "except": [
+        "oracle cloud infrastructure"
+      ],
+      "caution": "Bare 'oracle' is kept like bare 'sap': in the 2026-10-14 corpus it was mostly the ERP suite, sometimes the database. Database spellings also fire `sql`; Oracle Cloud Infrastructure is `oci` and blanked here. The employer Oracle itself is blanked by blankEmployer."
+    },
+    {
+      "id": "oci",
+      "label": "Oracle Cloud Infrastructure",
+      "axis": "tooling",
+      "words": [
+        "oracle cloud infrastructure",
+        "oracle cloud vmware solution"
+      ],
+      "caution": "Bare 'oci' is left out: it is also the Open Container Initiative (OCI images) in every container posting."
     },
     {
       "id": "sap-fico",
@@ -1558,44 +1584,6 @@
         "sap hr/payroll",
         "recursos humanos sap",
         "sap personalwirtschaft"
-      ]
-    },
-    {
-      "id": "idoc",
-      "label": "IDoc",
-      "about": "SAP's IDoc format for exchanging documents between systems.",
-      "axis": "tooling",
-      "words": [
-        "idoc",
-        "idocs",
-        "intermediate document",
-        "sap idoc"
-      ]
-    },
-    {
-      "id": "sap-smart-forms",
-      "label": "SAP Smart Forms",
-      "about": "SAP's tool for designing printed forms.",
-      "axis": "tooling",
-      "words": [
-        "sap smart forms",
-        "smart forms",
-        "smartforms",
-        "sap script",
-        "sapscript",
-        "formularios sap",
-        "sap-formulare"
-      ]
-    },
-    {
-      "id": "android-tv",
-      "label": "Android TV",
-      "axis": "tooling",
-      "words": [
-        "android tv",
-        "androidtv",
-        "google tv",
-        "leanback"
       ]
     },
     {
@@ -2129,7 +2117,12 @@
         ".net",
         "dotnet",
         "asp.net",
-        "csharp"
+        "csharp",
+        "vb.net",
+        "blazor",
+        "entity framework",
+        "xamarin",
+        ".net maui"
       ]
     },
     {
@@ -2337,7 +2330,14 @@
       "words": [
         "android",
         "android sdk",
-        "jetpack"
+        "jetpack",
+        "android tv",
+        "androidtv",
+        "google tv",
+        "leanback"
+      ],
+      "aliases": [
+        "android-tv"
       ]
     },
     {
@@ -2555,7 +2555,7 @@
     },
     {
       "id": "statistics",
-      "label": "Statistics",
+      "label": "Statistics / biostatistics",
       "axis": "technical",
       "words": [
         "statistics",
@@ -2578,20 +2578,31 @@
         "bayesian methods",
         "bayesian modelling",
         "bayesian modeling",
-        "generalized linear models"
-      ]
-    },
-    {
-      "id": "biostatistics",
-      "label": "Biostatistics",
-      "axis": "technical",
-      "words": [
+        "generalized linear models",
         "biostatistics",
         "clinical statistics",
         "sample size calculation",
         "bioestadística",
-        "biostatistik"
-      ]
+        "biostatistik",
+        "statistical software",
+        "spss",
+        "sas programming",
+        "graphpad",
+        "prism",
+        "stata",
+        "minitab",
+        "statistische software",
+        "statistiksoftware",
+        "statistical packages",
+        "winbugs",
+        "sas/stat",
+        "sas enterprise guide"
+      ],
+      "aliases": [
+        "biostatistics",
+        "stats-software"
+      ],
+      "about": "Statistical analysis and the packages it is done in (SPSS, SAS, Stata, Prism, Minitab)."
     },
     {
       "id": "bi-tools",
@@ -2888,10 +2899,9 @@
     {
       "id": "design-tools",
       "label": "Design tools",
-      "about": "UI design tools: Figma, Sketch, Adobe XD.",
+      "about": "UI design tools other than Figma (its own class): Sketch, Adobe XD.",
       "axis": "tooling",
       "words": [
-        "figma",
         "sketch",
         "adobe xd",
         "invision",
@@ -2899,6 +2909,16 @@
         "framer",
         "axure",
         "protopie"
+      ]
+    },
+    {
+      "id": "figma",
+      "label": "Figma",
+      "about": "Split out of design-tools (v41): asked for by name often enough to rate on its own.",
+      "axis": "tooling",
+      "words": [
+        "figma",
+        "figjam"
       ]
     },
     {
@@ -2928,12 +2948,11 @@
     {
       "id": "project-tools",
       "label": "Project tracking tools",
-      "about": "Project tracking tools: Jira, Confluence, Asana, MS Project.",
+      "about": "Project tracking tools other than Jira (its own class): Confluence, Asana, MS Project.",
       "axis": "tooling",
       "criticality": 2,
       "words": [
         "project management tools",
-        "jira",
         "confluence",
         "asana",
         "trello",
@@ -2946,6 +2965,18 @@
       ],
       "except": [
         "form.asana.com"
+      ]
+    },
+    {
+      "id": "jira",
+      "label": "Jira",
+      "about": "Split out of project-tools (v41): asked for by name often enough to rate on its own.",
+      "axis": "tooling",
+      "criticality": 2,
+      "words": [
+        "jira",
+        "atlassian jira",
+        "jira software"
       ]
     },
     {
@@ -4892,27 +4923,6 @@
       ]
     },
     {
-      "id": "stats-software",
-      "label": "Statistics software",
-      "about": "Statistics packages: SPSS, SAS, Stata, GraphPad Prism, Minitab.",
-      "axis": "tooling",
-      "words": [
-        "statistical software",
-        "spss",
-        "sas programming",
-        "graphpad",
-        "prism",
-        "stata",
-        "minitab",
-        "statistische software",
-        "statistiksoftware",
-        "statistical packages",
-        "winbugs",
-        "sas/stat",
-        "sas enterprise guide"
-      ]
-    },
-    {
       "id": "office-tools",
       "label": "Office and collaboration tools",
       "axis": "tooling",
@@ -5005,6 +5015,15 @@
         "mobile application",
         "app development",
         "mobile engineering",
+        "mobile developer",
+        "mobile engineer",
+        "native mobile",
+        "mobile-entwicklung",
+        "app-entwicklung",
+        "desarrollo móvil",
+        "aplicaciones móviles",
+        "développement mobile",
+        "applications mobiles",
         "on web and on mobile"
       ],
       "caution": "'Mobile' alone also appears in 'mobile workforce' and 'mobility solutions'; the second does not match, the first does. Kept because a mobile-app posting says the bare word more often than any phrase. Bare 'mobile' is mobile phones, mobile robotics, 'mobile-abos' - facilities was 13% of hits."
@@ -5182,7 +5201,7 @@
     },
     {
       "id": "proactive",
-      "label": "Proactive / takes initiative",
+      "label": "Proactive / self-starter / ownership",
       "axis": "personal",
       "words": [
         "proactive",
@@ -5205,15 +5224,7 @@
         "proattiva",
         "proattivamente",
         "spirito d'iniziativa",
-        "high level of initiative"
-      ],
-      "caution": "'Proactive monitoring' and 'proactive maintenance' are duties, not a trait - accepted, since the word still asks for the same behaviour."
-    },
-    {
-      "id": "self-starter",
-      "label": "Autonomy / self-starter",
-      "axis": "personal",
-      "words": [
+        "high level of initiative",
         "self-starter",
         "self starter",
         "self-motivated",
@@ -5244,19 +5255,59 @@
         "autonomamente",
         "in autonomia",
         "self-reliant",
-        "self-reliant way of working"
+        "self-reliant way of working",
+        "sense of responsibility",
+        "take ownership",
+        "takes ownership",
+        "taking ownership",
+        "ownership mindset",
+        "strong ownership",
+        "sense of ownership",
+        "high degree of ownership",
+        "verantwortungsbewusst",
+        "verantwortungsbewusstsein",
+        "verantwortungsbewusste",
+        "eigenverantwortung",
+        "eigenverantwortlich",
+        "eigenverantwortliches arbeiten",
+        "sentido de la responsabilidad",
+        "sentido de la propiedad",
+        "sens des responsabilités",
+        "sens de la responsabilité",
+        "zuverlässige arbeitsweise",
+        "dependable",
+        "fiabilité",
+        "verlässlichkeit",
+        "zuverlässige person",
+        "zuverlässige persönlichkeit",
+        "verantwortung übernehmen",
+        "übernimmst du verantwortung",
+        "zuverlässigkeit",
+        "ownership mentality",
+        "sense of accountability",
+        "übernahme von verantwortung",
+        "takes full ownership",
+        "take full ownership"
       ],
-      "caution": "'autonomie' is also battery life or a vehicle's range in a French medtech or automotive posting.",
+      "caution": "'Proactive monitoring' and 'proactive maintenance' are duties, not a trait - accepted, since the word still asks for the same behaviour. Autonomy / self-starter: 'autonomie' is also battery life or a vehicle's range in a French medtech or automotive posting. Ownership / sense of responsibility: Bare 'responsible' is left out - 'you will be responsible for' opens half the duties lists in the corpus.",
       "except": [
         "eigenständige tochter",
         "eigenständiges denken fördert",
         "selbstständig erwerbende",
-        "selbständig erwerbende"
-      ]
+        "selbständig erwerbende",
+        "empowered to take ownership",
+        "verantwortungsbewusst urlaub",
+        "selbstbestimmung und eigenverantwortung"
+      ],
+      "aliases": [
+        "self-starter",
+        "ownership"
+      ],
+      "about": "Takes initiative, works independently and takes responsibility for the outcome."
     },
     {
       "id": "curious",
-      "label": "Curious",
+      "label": "Curious / quick learner",
       "axis": "personal",
       "words": [
         "curious",
@@ -5273,13 +5324,43 @@
         "curieux",
         "curieuse",
         "curiosité",
-        "neugierde"
+        "neugierde",
+        "quick learner",
+        "fast learner",
+        "learns quickly",
+        "learn quickly",
+        "quick thinking",
+        "quick thinker",
+        "fast thinking",
+        "willingness to learn",
+        "eager to learn",
+        "schnelle auffassungsgabe",
+        "rasche auffassungsgabe",
+        "auffassungsgabe",
+        "lernbereitschaft",
+        "aprendizaje rápido",
+        "capacidad de aprendizaje",
+        "ganas de aprender",
+        "apprend vite",
+        "facilité d'apprentissage",
+        "capacité d'apprentissage",
+        "envie d'apprendre",
+        "schnelle einarbeitung",
+        "auffassungsvermögen",
+        "growth mindset",
+        "growth-mindset",
+        "neues zu lernen",
+        "neues lernen",
+        "learning agility"
       ],
       "except": [
         "the curious, the courageous",
         "neugierig? sind wir auch",
         "the curious",
         "curious adventurers"
+      ],
+      "aliases": [
+        "quick-learner"
       ]
     },
     {
@@ -5374,113 +5455,8 @@
       "caution": "Bare 'responsive' is responsive web design and is left out; 'responsiveness' can still be a UI performance word in a frontend posting."
     },
     {
-      "id": "ownership",
-      "label": "Ownership / sense of responsibility",
-      "about": "Taking responsibility for an outcome without being told to.",
-      "axis": "personal",
-      "words": [
-        "sense of responsibility",
-        "take ownership",
-        "takes ownership",
-        "taking ownership",
-        "ownership mindset",
-        "strong ownership",
-        "sense of ownership",
-        "high degree of ownership",
-        "verantwortungsbewusst",
-        "verantwortungsbewusstsein",
-        "verantwortungsbewusste",
-        "eigenverantwortung",
-        "eigenverantwortlich",
-        "eigenverantwortliches arbeiten",
-        "sentido de la responsabilidad",
-        "sentido de la propiedad",
-        "sens des responsabilités",
-        "sens de la responsabilité",
-        "zuverlässige arbeitsweise",
-        "dependable",
-        "fiabilité",
-        "verlässlichkeit",
-        "zuverlässige person",
-        "zuverlässige persönlichkeit",
-        "verantwortung übernehmen",
-        "übernimmst du verantwortung",
-        "zuverlässigkeit",
-        "ownership mentality",
-        "sense of accountability",
-        "übernahme von verantwortung",
-        "takes full ownership",
-        "take full ownership"
-      ],
-      "caution": "Bare 'responsible' is left out - 'you will be responsible for' opens half the duties lists in the corpus.",
-      "except": [
-        "empowered to take ownership",
-        "verantwortungsbewusst urlaub",
-        "selbstbestimmung und eigenverantwortung"
-      ]
-    },
-    {
-      "id": "efficiency",
-      "label": "Efficient / structured way of working",
-      "about": "A structured, efficient way of working.",
-      "axis": "personal",
-      "words": [
-        "structured way of working",
-        "work efficiently",
-        "working efficiently",
-        "efficient way of working",
-        "structured and efficient",
-        "effiziente arbeitsweise",
-        "strukturierte arbeitsweise",
-        "strukturierte und effiziente arbeitsweise",
-        "manera eficiente",
-        "trabajo eficiente",
-        "forma de trabajar estructurada",
-        "travail efficace",
-        "méthode de travail structurée",
-        "rigueur et efficacité",
-        "speditive arbeitsweise",
-        "structured approach"
-      ],
-      "caution": "Bare 'efficient' is left out - 'efficient processes' describes the employer's systems, not the candidate."
-    },
-    {
-      "id": "quick-learner",
-      "label": "Quick learner / fast thinking",
-      "axis": "personal",
-      "words": [
-        "quick learner",
-        "fast learner",
-        "learns quickly",
-        "learn quickly",
-        "quick thinking",
-        "quick thinker",
-        "fast thinking",
-        "willingness to learn",
-        "eager to learn",
-        "schnelle auffassungsgabe",
-        "rasche auffassungsgabe",
-        "auffassungsgabe",
-        "lernbereitschaft",
-        "aprendizaje rápido",
-        "capacidad de aprendizaje",
-        "ganas de aprender",
-        "apprend vite",
-        "facilité d'apprentissage",
-        "capacité d'apprentissage",
-        "envie d'apprendre",
-        "schnelle einarbeitung",
-        "auffassungsvermögen",
-        "growth mindset",
-        "growth-mindset",
-        "neues zu lernen",
-        "neues lernen",
-        "learning agility"
-      ]
-    },
-    {
       "id": "problem-solving",
-      "label": "Problem solving",
+      "label": "Problem solving / analytical thinking",
       "axis": "personal",
       "words": [
         "problem solving",
@@ -5499,8 +5475,70 @@
         "résolution de problèmes",
         "orienté solutions",
         "orientée solutions",
-        "lösungsorientierung"
-      ]
+        "lösungsorientierung",
+        "analytical thinking",
+        "analytical mind",
+        "analytical mindset",
+        "analytical skills",
+        "strong analytical",
+        "analytical thinker",
+        "analytisches denken",
+        "analytische fähigkeiten",
+        "analytisch denkend",
+        "analytisches denkvermögen",
+        "pensamiento analítico",
+        "capacidad analítica",
+        "esprit d'analyse",
+        "esprit analytique",
+        "capacités d'analyse",
+        "analytische denkweise",
+        "analytisches verständnis",
+        "analytische kompetenz",
+        "analytisches flair",
+        "analytisches geschick",
+        "analytical ability",
+        "analytical abilities",
+        "analytique",
+        "capacité d'analyse",
+        "flair für zahlen",
+        "zahlenaffin",
+        "zahlenaffinität",
+        "zahlenverständnis",
+        "analytische arbeitsweise",
+        "konzeptionelle fähigkeiten",
+        "analytische und konzeptionelle fähigkeiten",
+        "logisches denkvermögen",
+        "abstraktes denkvermögen",
+        "logisches denken",
+        "abstraktes denken",
+        "logical thinking",
+        "abstract thinking",
+        "pensée logique",
+        "strukturiert und analytisch",
+        "analytisch und strukturiert",
+        "quantitative skills",
+        "denken analytisch",
+        "analyse komplexer",
+        "strukturiertes denken",
+        "analytical capabilities",
+        "analytischen denken",
+        "analytischem denken",
+        "data-driven approach",
+        "data-driven mindset",
+        "critical thinking",
+        "critical thinker",
+        "critical attitude",
+        "critical mindset",
+        "kritisches denken",
+        "kritisches denkvermögen",
+        "esprit critique",
+        "pensamiento crítico"
+      ],
+      "aliases": [
+        "analytical-thinking",
+        "critical-thinking"
+      ],
+      "caution": "Analytical thinking: Bare 'analytical' is analytical chemistry and analytical methods in a lab posting."
     },
     {
       "id": "communication",
@@ -5707,63 +5745,6 @@
         "ruhe in hektischen situationen"
       ],
       "caution": "Bare 'resilience' and 'resilient' are system properties in an engineering posting and are left out."
-    },
-    {
-      "id": "analytical-thinking",
-      "label": "Analytical thinking",
-      "axis": "personal",
-      "words": [
-        "analytical thinking",
-        "analytical mind",
-        "analytical mindset",
-        "analytical skills",
-        "strong analytical",
-        "analytical thinker",
-        "analytisches denken",
-        "analytische fähigkeiten",
-        "analytisch denkend",
-        "analytisches denkvermögen",
-        "pensamiento analítico",
-        "capacidad analítica",
-        "esprit d'analyse",
-        "esprit analytique",
-        "capacités d'analyse",
-        "analytische denkweise",
-        "analytisches verständnis",
-        "analytische kompetenz",
-        "analytisches flair",
-        "analytisches geschick",
-        "analytical ability",
-        "analytical abilities",
-        "analytique",
-        "capacité d'analyse",
-        "flair für zahlen",
-        "zahlenaffin",
-        "zahlenaffinität",
-        "zahlenverständnis",
-        "analytische arbeitsweise",
-        "konzeptionelle fähigkeiten",
-        "analytische und konzeptionelle fähigkeiten",
-        "logisches denkvermögen",
-        "abstraktes denkvermögen",
-        "logisches denken",
-        "abstraktes denken",
-        "logical thinking",
-        "abstract thinking",
-        "pensée logique",
-        "strukturiert und analytisch",
-        "analytisch und strukturiert",
-        "quantitative skills",
-        "denken analytisch",
-        "analyse komplexer",
-        "strukturiertes denken",
-        "analytical capabilities",
-        "analytischen denken",
-        "analytischem denken",
-        "data-driven approach",
-        "data-driven mindset"
-      ],
-      "caution": "Bare 'analytical' is analytical chemistry and analytical methods in a lab posting."
     },
     {
       "id": "team-advocacy",
@@ -8069,8 +8050,8 @@
     },
     {
       "id": "organisation",
-      "label": "Organisational skills",
-      "about": "Being well organised: planning and keeping things in order.",
+      "label": "Organisation / time management",
+      "about": "Being well organised: planning, prioritising, a structured and efficient way of working.",
       "axis": "personal",
       "words": [
         "organisational skills",
@@ -8097,8 +8078,65 @@
         "organising skills",
         "organizing skills",
         "planning and organising",
-        "planning and organizing"
-      ]
+        "planning and organizing",
+        "time management",
+        "competing priorities",
+        "mehrere projekte parallel",
+        "multiple priorities",
+        "prioritisation",
+        "prioritization",
+        "ability to prioritise",
+        "ability to prioritize",
+        "multitasking",
+        "multi-tasking",
+        "manage multiple priorities",
+        "managing multiple priorities",
+        "multiple projects simultaneously",
+        "zeitmanagement",
+        "priorisierung",
+        "prioritätensetzung",
+        "setzen von prioritäten",
+        "gestion du temps",
+        "gestion des priorités",
+        "gestión del tiempo",
+        "prioritize tasks",
+        "prioritise tasks",
+        "prioritisation skills",
+        "prioritise effectively",
+        "prioritize effectively",
+        "coordinating multiple priorities",
+        "prioritäten setzen",
+        "multiple cases simultaneously",
+        "cases simultaneously",
+        "mehrere themen gleichzeitig",
+        "mehrere aufgaben gleichzeitig",
+        "prioritize activities",
+        "prioritise activities",
+        "multiple deadlines",
+        "priority setting",
+        "plusieurs priorités",
+        "structured way of working",
+        "work efficiently",
+        "working efficiently",
+        "efficient way of working",
+        "structured and efficient",
+        "effiziente arbeitsweise",
+        "strukturierte arbeitsweise",
+        "strukturierte und effiziente arbeitsweise",
+        "manera eficiente",
+        "trabajo eficiente",
+        "forma de trabajar estructurada",
+        "travail efficace",
+        "méthode de travail structurée",
+        "rigueur et efficacité",
+        "speditive arbeitsweise",
+        "structured approach"
+      ],
+      "aliases": [
+        "time-management",
+        "efficiency"
+      ],
+      "caution": "Time management / prioritisation: priorisierung also reads a backlog-prioritisation task (Product Owner), which is the same skill. Efficient / structured way of working: Bare 'efficient' is left out - 'efficient processes' describes the employer's systems, not the candidate."
     },
     {
       "id": "decision-making",
@@ -8958,22 +8996,6 @@
       ]
     },
     {
-      "id": "graphic-design-tools",
-      "label": "Adobe / graphic design tools",
-      "axis": "tooling",
-      "words": [
-        "adobe creative suite",
-        "creative cloud",
-        "suite adobe",
-        "photoshop",
-        "indesign",
-        "adobe illustrator",
-        "after effects",
-        "premiere pro"
-      ],
-      "caution": "Not bare 'illustrator': a job title."
-    },
-    {
       "id": "dutch-language",
       "label": "Dutch (language)",
       "axis": "personal",
@@ -9535,51 +9557,6 @@
         "subunternehmer",
         "sous-traitants"
       ],
-      "except": []
-    },
-    {
-      "id": "time-management",
-      "label": "Time management / prioritisation",
-      "axis": "personal",
-      "words": [
-        "time management",
-        "competing priorities",
-        "mehrere projekte parallel",
-        "multiple priorities",
-        "prioritisation",
-        "prioritization",
-        "ability to prioritise",
-        "ability to prioritize",
-        "multitasking",
-        "multi-tasking",
-        "manage multiple priorities",
-        "managing multiple priorities",
-        "multiple projects simultaneously",
-        "zeitmanagement",
-        "priorisierung",
-        "prioritätensetzung",
-        "setzen von prioritäten",
-        "gestion du temps",
-        "gestion des priorités",
-        "gestión del tiempo",
-        "prioritize tasks",
-        "prioritise tasks",
-        "prioritisation skills",
-        "prioritise effectively",
-        "prioritize effectively",
-        "coordinating multiple priorities",
-        "prioritäten setzen",
-        "multiple cases simultaneously",
-        "cases simultaneously",
-        "mehrere themen gleichzeitig",
-        "mehrere aufgaben gleichzeitig",
-        "prioritize activities",
-        "prioritise activities",
-        "multiple deadlines",
-        "priority setting",
-        "plusieurs priorités"
-      ],
-      "caution": "priorisierung also reads a backlog-prioritisation task (Product Owner), which is the same skill.",
       "except": []
     },
     {
@@ -10334,22 +10311,6 @@
         "análisis de redes"
       ],
       "caution": "'network analysis' can mean traffic analysis in an IT-networking posting",
-      "except": []
-    },
-    {
-      "id": "critical-thinking",
-      "label": "Critical thinking",
-      "axis": "personal",
-      "words": [
-        "critical thinking",
-        "critical thinker",
-        "critical attitude",
-        "critical mindset",
-        "kritisches denken",
-        "kritisches denkvermögen",
-        "esprit critique",
-        "pensamiento crítico"
-      ],
       "except": []
     },
     {
@@ -12874,7 +12835,7 @@
     },
     {
       "id": "graphic-design",
-      "label": "Graphic design",
+      "label": "Graphic design / Adobe tools",
       "axis": "technical",
       "words": [
         "graphic design",
@@ -12891,9 +12852,21 @@
         "typografie",
         "gestaltung von werbemitteln",
         "werbemittelgestaltung",
-        "conception graphique"
+        "conception graphique",
+        "adobe creative suite",
+        "creative cloud",
+        "suite adobe",
+        "photoshop",
+        "indesign",
+        "adobe illustrator",
+        "after effects",
+        "premiere pro"
       ],
-      "except": []
+      "except": [],
+      "aliases": [
+        "graphic-design-tools"
+      ],
+      "caution": "Adobe / graphic design tools: Not bare 'illustrator': a job title."
     },
     {
       "id": "internal-communications",
@@ -13243,7 +13216,7 @@
     {
       "id": "talent-sourcing",
       "label": "Talent sourcing",
-      "about": "Finding and approaching candidates who did not apply: Boolean / X-ray search, talent mapping, direct outreach to passive talent.",
+      "about": "Finding and approaching candidates who did not apply: Boolean / X-ray search, talent mapping, direct outreach to passive talent, and the tools for it (LinkedIn Recruiter).",
       "axis": "technical",
       "words": [
         "talent sourcing",
@@ -13286,20 +13259,7 @@
         "source candidates",
         "source talent",
         "sourcing talent",
-        "source and engage"
-      ],
-      "caution": "Bare 'sourcing', 'sourcing strategy' and 'sourcing experience' left out: they are procurement words ('strategic sourcing', 'sourcing manager') and fired on all three procurement controls. 'talent pool' left out: 'join our talent pool' is applicant boilerplate. 'sourcer' left out: procurement and fashion have sourcers too.",
-      "except": [
-        "join our talent pipeline",
-        "join our talent pipelines"
-      ]
-    },
-    {
-      "id": "sourcing-tools",
-      "label": "Sourcing tools (LinkedIn Recruiter)",
-      "about": "Paid candidate-search products a sourcer logs into.",
-      "axis": "tooling",
-      "words": [
+        "source and engage",
         "linkedin recruiter",
         "linkedin recruiter lite",
         "linkedin talent solutions",
@@ -13314,7 +13274,14 @@
         "xing talent manager",
         "xing recruiter"
       ],
-      "caution": "Bare 'linkedin' left out: it is where every posting tells you to follow the company. 'Gem' (a sourcing CRM) left out: 'hidden gem'."
+      "caution": "Bare 'sourcing', 'sourcing strategy' and 'sourcing experience' left out: they are procurement words ('strategic sourcing', 'sourcing manager') and fired on all three procurement controls. 'talent pool' left out: 'join our talent pool' is applicant boilerplate. 'sourcer' left out: procurement and fashion have sourcers too. Sourcing tools (LinkedIn Recruiter): Bare 'linkedin' left out: it is where every posting tells you to follow the company. 'Gem' (a sourcing CRM) left out: 'hidden gem'.",
+      "except": [
+        "join our talent pipeline",
+        "join our talent pipelines"
+      ],
+      "aliases": [
+        "sourcing-tools"
+      ]
     },
     {
       "id": "applicant-tracking",

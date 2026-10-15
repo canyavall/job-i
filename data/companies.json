@@ -1,5 +1,5 @@
 {
-  "version": 64,
+  "version": 65,
   "min_app": "0.2.0",
   "companies": [
     {
@@ -53053,6 +53053,34 @@
         "last_run": null
       },
       "field": "services"
+    },
+    {
+      "id": "ashby:finary",
+      "name": "Finary",
+      "url": "https://finary.com",
+      "jobs_url": "https://finary.com/en/careers",
+      "location": "Paris",
+      "country": "France",
+      "categories": [],
+      "connector": {
+        "type": "ashby",
+        "config": {
+          "token": "finary"
+        },
+        "enabled": true,
+        "verified": "2026-10-15",
+        "notes": "added by hand from finary.com/en/careers (embeds jobs.ashbyhq.com/finary); token verified by content (6 postings: Gérant Privé - Clientèle HNW / Operations Lead / Internal Control Officer), fake-token control returns nothing"
+      },
+      "ratings": {
+        "kununu": null,
+        "glassdoor": null,
+        "checked": null
+      },
+      "stats": {
+        "open_positions": null,
+        "last_run": null
+      },
+      "field": "finance"
     }
   ]
 }
